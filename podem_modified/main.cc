@@ -128,13 +128,15 @@ int main(int argc, char ** argv)
             Circuit.Atpg();
             vector<vector<char> >& PIvector = Circuit.getPIvector();
             cout<<"-------------------------------------------------"<<endl;
-            //Circuit.printPI(PIvector);
-            Circuit.printParameters();
+            Circuit.printPI(PIvector);
+            //Circuit.printParameters();
             int count = Circuit.CalSwitchActivity(PIvector);
             cout<<"count = "<<count<<endl;
 
             vector<vector<char> >& reorderedPI = Circuit.reorder(PIvector);
             //Circuit.printPI(reorderedPI);
+
+            double faulrCoverage = Circuit.ComputeFaultCoverage(reorderedPI);
 
 
 // output file

@@ -13,7 +13,12 @@ int BestReorderedSwitchActivit;
 int NumOfX;
 int TotalNumOfX = 0;
 int NonRedundencyComb = 0;
+vector<vector<GATE*> > TestPI;
+vector<GATE*> PreviousNetlist;
+int BeginCompare = 0;
+int totalSwitchActivity = 0;
 extern GetLongOpt option;
+
 
 //generate all stuck-at fault list
 void CIRCUIT::GenerateAllFaultList()
@@ -89,11 +94,17 @@ void CIRCUIT::Atpg()
                 ++pattern_num;
                 //run fault simulation for fault dropping
                 for (i = 0;i < PIlist.size();++i) { 
-			ScheduleFanout(PIlist[i]); 
-                        if (option.retrieve("output")){ OutputStrm <<PIlist[i]->GetValue();}
-		}
+			    ScheduleFanout(PIlist[i]); 
+                if (option.retrieve("output")){ OutputStrm <<PIlist[i]->GetValue();}
+		    }
                 if (option.retrieve("output")){ OutputStrm << endl;}
-                for (i = PIlist.size();i<Netlist.size();++i) {Netlist[i]->SetValue(X);}
+
+                // save prvious netlist state
+                //PreviousNetlist = Netlist;
+
+                for (i = PIlist.size();i<Netlist.size();++i) {
+                    Netlist[i]->SetValue(X);}
+
                 LogicSim();
                 FaultSim();
                 break;
@@ -104,6 +115,8 @@ void CIRCUIT::Atpg()
                 fptr->SetStatus(ABORT);
                 break;
         }
+
+        //BeginCompare = 1;
 
 
     } //end all faults
@@ -262,13 +275,15 @@ ATPG_STATUS CIRCUIT::Podem(FAULT* fptr, unsigned &total_backtrack_num)
 			case D: {PIvector[testsNum].push_back('1'); PIlist[i]->SetValue(S1); break;}
 			case B: {PIvector[testsNum].push_back('0'); PIlist[i]->SetValue(S0); break;}
             // set unknown value for experiment
-			case X: PIvector[testsNum].push_back('X'); NumOfX = NumOfX + 1;Xindex.push_back(i); TotalNumOfX = TotalNumOfX + 1; PIlist[i]->SetValue(VALUE(2.0 * rand()/(RAND_MAX + 1.0))); break;
+			case X: PIvector[testsNum].push_back('0'); NumOfX = NumOfX + 1;Xindex.push_back(i); TotalNumOfX = TotalNumOfX + 1; PIlist[i]->SetValue(S0);break;// PIlist[i]->SetValue(VALUE(2.0 * rand()/(RAND_MAX + 1.0))); break;
 			default: cerr << "Illigal value" << endl; break;
 		    } 
 		}//end for all PI
         testsNum = testsNum + 1;
         NonRedundencyComb = NonRedundencyComb + 1;
     } //end status == TRUE
+
+/*
 
 // X-filling to 0 and 1
 
@@ -294,6 +309,7 @@ else {
     }
 }
 /////////////////////////////////////////////////////////////////////
+*/
     total_backtrack_num += backtrack_num;
     return status;
 }
@@ -333,6 +349,7 @@ int CIRCUIT::CalSwitchActivity(vector<vector<char> >& testvector){
 
     return count;
 }
+
 
 vector<vector<char> >& CIRCUIT::greedy(vector<vector<char> >& vectorin){
     int NumOfTest = vectorin.size();
@@ -392,6 +409,88 @@ vector<vector<char> >& CIRCUIT::reorder(vector<vector<char> >& vectorin){
 }
 
 
+double CIRCUIT::ComputeFaultCoverage(vector<vector<char> >& vectorin){
+    int testNum = vectorin.size();
+    cout << "testNum" << testNum<<endl;
+    list<FAULT*>::iterator fite;
+    FAULT* fptr;
+    for (fite = Flist.begin();fite!=Flist.end();++fite) {
+        fptr = *fite;
+        fptr->SetStatus(UNKNOWN);
+    }
+
+    UFlist = Flist;
+
+
+    for(int i = 0; i < testNum; i++){
+        for (int j = 0;j<PIlist.size();++j){
+            switch(vectorin[i][j]){
+                case '0': PIlist[j]->SetValue(S0);break;
+                case '1': PIlist[j]->SetValue(S1);break;
+                default: cout<<"what??"<<endl; break;
+            }
+
+            ScheduleFanout(PIlist[j]); 
+        }
+        for (int k = PIlist.size();k<Netlist.size();++k) {Netlist[k]->SetValue(X);}
+            LogicSim();
+            FaultSim();
+    }
+
+    int remain_fault = 0;
+    for (fite = UFlist.begin();fite!=UFlist.end();++fite) {
+        remain_fault ++;
+    }
+    //compute fault coverage
+    unsigned total_num(0);
+    unsigned abort_num(0), redundant_num(0), detected_num(0), unknown_fault(0);
+    unsigned eqv_abort_num(0), eqv_redundant_num(0), eqv_detected_num(0);
+
+    int debug = 0;
+
+    for (fite = Flist.begin();fite!=Flist.end();++fite) {
+        fptr = *fite;
+        debug = debug + 1;
+        switch (fptr->GetStatus()) {
+            case DETECTED:
+                ++eqv_detected_num;
+                detected_num += 1;//fptr->GetEqvFaultNum();
+                break;
+            case REDUNDANT:
+                ++eqv_redundant_num;
+                redundant_num += 1;//fptr->GetEqvFaultNum();
+                break;
+            case ABORT:
+                ++eqv_abort_num;
+                abort_num += 1;//fptr->GetEqvFaultNum();
+                break;
+            default:
+                cerr << "Unknown fault type exists" << endl;
+                unknown_fault++;
+                break;
+        }
+    }
+    total_num = detected_num + abort_num + redundant_num + unknown_fault;
+    double FaultCoverge = 100*detected_num/double(total_num);
+
+    cout << "**************************************" << endl;
+    cout << "Total fault number = " << total_num << endl;
+    cout << "Detected fault number = " << detected_num << endl;
+    cout << "Undetected fault number = " << abort_num + redundant_num << endl;
+    cout << "Abort fault number = " << abort_num << endl;
+    cout << "Redundant fault number = " << redundant_num << endl;
+    cout << "**************************************" << endl;
+    cout << "Fault Coverge = " << 100*detected_num/double(total_num) << "%" << endl;
+    cout << "Equivalent FC = " << 100*eqv_detected_num/double(Flist.size()) << "%" << endl;
+    cout << "Fault Efficiency = " << 100*detected_num/double(total_num - redundant_num) << "%" << endl;
+    cout << "**************************************" << endl;
+
+    cout << "debug = " << debug<<endl;
+    cout << "remain_fault = " << remain_fault << endl;
+
+    return FaultCoverge;
+
+}
 
 //inject fault-free value and do simple backward implication
 //TRUE: fault can be backward propagated to PI

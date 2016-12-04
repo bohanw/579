@@ -90,6 +90,7 @@ class CIRCUIT
         vector<vector<char> >& reorder(vector<vector<char> >& vectorin);
         vector<vector<char> >& greedy(vector<vector<char> >& vectorin);
         void printParameters();
+        double ComputeFaultCoverage(vector<vector<char> >& vectorin);
         /// //////////////
 
         //defined in circuit.cc
