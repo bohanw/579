@@ -6,14 +6,18 @@
 # include <cmath>
 # include <ctime>
 # include <cstring>
+#include <sstream>
+#include <vector>
+#include <random>
 
 using namespace std;
 // 
 //  Change any of these parameters to match your needs 
 //
-# define POPSIZE 50
+# define POPSIZE 8
 # define MAXGENS 1000
-# define NVARS 3
+# define NVARS 20
+# define DISTR 10
 # define PXOVER 0.8
 # define PMUTATION 0.15
 //
@@ -27,34 +31,35 @@ using namespace std;
 //
 struct genotype
 {
-  double gene[NVARS];
+  vector<int> gene;
   double fitness;
   double upper[NVARS];
   double lower[NVARS];
   double rfitness;
   double cfitness;
+  double size;
 };
 
-struct genotype population[POPSIZE+1];
-struct genotype newpopulation[POPSIZE+1]; 
+struct genotype population[POPSIZE + 1];
+struct genotype newpopulation[POPSIZE + 1];
 
-int main ( );
-void crossover ( int &seed );
-void elitist ( );
-void evaluate ( );
-int i4_uniform_ab ( int a, int b, int &seed );
-void initialize ( string filename, int &seed );
-void keep_the_best ( );
-void mutate ( int &seed );
-double r8_uniform_ab ( double a, double b, int &seed );
-void report ( int generation );
-void selector ( int &seed );
-void timestamp ( );
-void Xover ( int one, int two, int &seed );
+int main();
+void crossover(int &seed);
+void elitist();
+void evaluate();
+int i4_uniform_ab(int a, int b, int &seed);
+void initialize(string filename, int &seed);
+void keep_the_best();
+void mutate(int &seed);
+double r8_uniform_ab(double a, double b, int &seed);
+void report(int generation);
+void selector(int &seed);
+void timestamp();
+void Xover(int one, int two, int &seed);
 
 //****************************************************************************80
 
-int main ( )
+int main()
 
 //****************************************************************************80
 //
@@ -74,27 +79,6 @@ int main ( )
 //    fitness of an individual is the same as the value of the 
 //    objective function.  
 //
-//  Licensing:
-//
-//    This code is distributed under the GNU LGPL license. 
-//
-//  Modified:
-//
-//    28 April 2014
-//
-//  Author:
-//
-//    Original version by Dennis Cormier and Sita Raghavan.
-//    This C++ version by John Burkardt.
-//
-//  Reference:
-//
-//    Zbigniew Michalewicz,
-//    Genetic Algorithms + Data Structures = Evolution Programs,
-//    Third Edition,
-//    Springer, 1996,
-//    ISBN: 3-540-60676-9,
-//    LC: QA76.618.M53.
 //
 //  Parameters:
 //
@@ -109,18 +93,25 @@ int main ( )
 //    PXOVER is the probability of crossover.                          
 //
 {
+
   string filename = "simple_ga_input.txt";
+
+  ofstream outfile;
+  outfile.open("simple_ga_output.txt");
+  freopen("simple_ga_output.txt", "w", stdout);
+
   int generation;
   int i;
   int seed;
 
-  timestamp ( );
+
+  timestamp();
   cout << "\n";
   cout << "SIMPLE_GA:\n";
   cout << "  C++ version\n";
   cout << "  A simple example of a genetic algorithm.\n";
 
-  if ( NVARS < 2 )
+  if (NVARS < 2)
   {
     cout << "\n";
     cout << "  The crossover modification will not be available,\n";
@@ -129,47 +120,48 @@ int main ( )
 
   seed = 123456789;
 
-  initialize ( filename, seed );
+  initialize(filename, seed);
 
-  evaluate ( );
+  evaluate();
 
-  keep_the_best ( );
+  keep_the_best();
 
-  for ( generation = 0; generation < MAXGENS; generation++ )
+
+  for (generation = 0; generation < MAXGENS; generation++)
   {
-    selector ( seed );
-    crossover ( seed );
-    mutate ( seed );
-    report ( generation );
-    evaluate ( );
-    elitist ( );
+    selector(seed);
+    crossover(seed);
+    mutate(seed);
+    report(generation);
+    evaluate();
+    elitist();
   }
 
   cout << "\n";
   cout << "  Best member after " << MAXGENS << " generations:\n";
   cout << "\n";
 
-  for ( i = 0; i < NVARS; i++ )
+  for (i = 0; i < population[POPSIZE].size; i++)
   {
     cout << "  var(" << i << ") = " << population[POPSIZE].gene[i] << "\n";
   }
 
   cout << "\n";
   cout << "  Best fitness = " << population[POPSIZE].fitness << "\n";
-//
-//  Terminate.
-//
+  //
+  //  Terminate.
+  //
   cout << "\n";
   cout << "SIMPLE_GA:\n";
   cout << "  Normal end of execution.\n";
   cout << "\n";
-  timestamp ( );
+  timestamp();
 
   return 0;
 }
 //****************************************************************************80
 
-void crossover ( int &seed )
+void crossover(int &seed)
 
 //****************************************************************************80
 // 
@@ -206,17 +198,17 @@ void crossover ( int &seed )
   int first = 0;
   double x;
 
-  for ( mem = 0; mem < POPSIZE; ++mem )
+  for (mem = 0; mem < POPSIZE; ++mem)
   {
-    x = r8_uniform_ab ( a, b, seed );
+    x = r8_uniform_ab(a, b, seed);
 
-    if ( x < PXOVER )
+    if (x < PXOVER)
     {
       ++first;
 
-      if ( first % 2 == 0 )
+      if (first % 2 == 0)
       {
-        Xover ( one, mem, seed );
+        Xover(one, mem, seed);
       }
       else
       {
@@ -229,7 +221,7 @@ void crossover ( int &seed )
 }
 //****************************************************************************80
 
-void elitist ( )
+void elitist()
 
 //****************************************************************************80
 // 
@@ -274,20 +266,20 @@ void elitist ( )
   best = population[0].fitness;
   worst = population[0].fitness;
 
-  for ( i = 0; i < POPSIZE - 1; ++i )
+  for (i = 0; i < POPSIZE - 1; ++i)
   {
-    if ( population[i+1].fitness < population[i].fitness )
+    if (population[i + 1].fitness < population[i].fitness)
     {
 
-      if ( best <= population[i].fitness )
+      if (best <= population[i].fitness)
       {
         best = population[i].fitness;
         best_mem = i;
       }
 
-      if ( population[i+1].fitness <= worst )
+      if (population[i + 1].fitness <= worst)
       {
-        worst = population[i+1].fitness;
+        worst = population[i + 1].fitness;
         worst_mem = i + 1;
       }
 
@@ -295,50 +287,52 @@ void elitist ( )
     else
     {
 
-      if ( population[i].fitness <= worst )
+      if (population[i].fitness <= worst)
       {
         worst = population[i].fitness;
         worst_mem = i;
       }
 
-      if ( best <= population[i+1].fitness )
+      if (best <= population[i + 1].fitness)
       {
-        best = population[i+1].fitness;
+        best = population[i + 1].fitness;
         best_mem = i + 1;
       }
 
     }
 
   }
-// 
-//  If the best individual from the new population is better than 
-//  the best individual from the previous population, then 
-//  copy the best from the new population; else replace the 
-//  worst individual from the current population with the 
-//  best one from the previous generation                     
-//
-  if ( population[POPSIZE].fitness <= best )
+  // 
+  //  If the best individual from the new population is better than 
+  //  the best individual from the previous population, then 
+  //  copy the best from the new population; else replace the 
+  //  worst individual from the current population with the 
+  //  best one from the previous generation                     
+  //
+  if (population[POPSIZE].fitness <= best)
   {
-    for ( i = 0; i < NVARS; i++ )
+    population[POPSIZE].gene.resize(population[best_mem].gene.size());
+    for (i = 0; i < population[best_mem].gene.size(); i++)
     {
-      population[POPSIZE].gene[i] = population[best_mem].gene[i];
+      population[POPSIZE].gene = population[best_mem].gene;
     }
     population[POPSIZE].fitness = population[best_mem].fitness;
   }
   else
   {
-    for ( i = 0; i < NVARS; i++ )
+    population[worst_mem].gene.resize(population[POPSIZE].gene.size());
+    for (i = 0; i < population[POPSIZE].gene.size(); i++)
     {
-      population[worst_mem].gene[i] = population[POPSIZE].gene[i];
+      population[worst_mem].gene = population[POPSIZE].gene;
     }
     population[worst_mem].fitness = population[POPSIZE].fitness;
-  } 
+  }
 
   return;
 }
 //****************************************************************************80
 
-void evaluate ( )
+void evaluate()
 
 //****************************************************************************80
 // 
@@ -367,21 +361,32 @@ void evaluate ( )
 {
   int member;
   int i;
-  double x[NVARS+1];
+  int switching;
+  vector<int> x;
 
-  for ( member = 0; member < POPSIZE; member++ )
+
+  for (member = 0; member < POPSIZE; member++)
   {
-    for ( i = 0; i < NVARS; i++ )
+    x = population[member].gene;
+  //  for (i = 0; i < population[member].gene.size(); i++)
+  //  {
+  //    x[i + 1] = population[member].gene[i];
+  //  }
+    switching = 0;
+    for (i = 0; i < population[member].gene.size()-1; i++)
     {
-      x[i+1] = population[member].gene[i];
-    } 
-    population[member].fitness = ( x[1] * x[1] ) - ( x[1] * x[2] ) + x[3];
+      switching = switching + !(x[i + 1]== x[i]);
+    }
+
+  //  population[member].fitness = (x[1] * x[1]) - (x[1] * x[2]) + x[3];
+    population[member].fitness = switching;
+    population[member].size = population[member].gene.size();
   }
   return;
 }
 //****************************************************************************80
 
-int i4_uniform_ab ( int a, int b, int &seed )
+int i4_uniform_ab(int a, int b, int &seed)
 
 //****************************************************************************80
 //
@@ -451,17 +456,17 @@ int i4_uniform_ab ( int a, int b, int &seed )
   float r;
   int value;
 
-  if ( seed == 0 )
+  if (seed == 0)
   {
     cerr << "\n";
     cerr << "I4_UNIFORM_AB - Fatal error!\n";
     cerr << "  Input value of SEED = 0.\n";
-    exit ( 1 );
+    exit(1);
   }
-//
-//  Guarantee A <= B.
-//
-  if ( b < a )
+  //
+  //  Guarantee A <= B.
+  //
+  if (b < a)
   {
     c = a;
     a = b;
@@ -470,31 +475,31 @@ int i4_uniform_ab ( int a, int b, int &seed )
 
   k = seed / 127773;
 
-  seed = 16807 * ( seed - k * 127773 ) - k * 2836;
+  seed = 16807 * (seed - k * 127773) - k * 2836;
 
-  if ( seed < 0 )
+  if (seed < 0)
   {
     seed = seed + i4_huge;
   }
 
-  r = ( float ) ( seed ) * 4.656612875E-10;
-//
-//  Scale R to lie between A-0.5 and B+0.5.
-//
-  r = ( 1.0 - r ) * ( ( float ) a - 0.5 ) 
-    +         r   * ( ( float ) b + 0.5 );
-//
-//  Use rounding to convert R to an integer between A and B.
-//
-  value = round ( r );
-//
-//  Guarantee A <= VALUE <= B.
-//
-  if ( value < a )
+  r = (float)(seed) * 4.656612875E-10;
+  //
+  //  Scale R to lie between A-0.5 and B+0.5.
+  //
+  r = (1.0 - r) * ((float)a - 0.5)
+    + r   * ((float)b + 0.5);
+  //
+  //  Use rounding to convert R to an integer between A and B.
+  //
+  value = round(r);
+  //
+  //  Guarantee A <= VALUE <= B.
+  //
+  if (value < a)
   {
     value = a;
   }
-  if ( b < value )
+  if (b < value)
   {
     value = b;
   }
@@ -503,7 +508,7 @@ int i4_uniform_ab ( int a, int b, int &seed )
 }
 //****************************************************************************80
 
-void initialize ( string filename, int &seed )
+void initialize(string filename, int &seed)
 
 //****************************************************************************80
 // 
@@ -549,40 +554,67 @@ void initialize ( string filename, int &seed )
   double lbound;
   double ubound;
 
-  input.open ( filename.c_str ( ) );
+  input.open(filename.c_str());
 
-  if ( !input )
+  if (!input)
   {
     cerr << "\n";
     cerr << "INITIALIZE - Fatal error!\n";
     cerr << "  Cannot open the input file!\n";
-    exit ( 1 );
+    exit(1);
   }
-// 
-//  Initialize variables within the bounds 
-//
-  for ( i = 0; i < NVARS; i++ )
-  {
-    input >> lbound >> ubound;
 
-    for ( j = 0; j < POPSIZE; j++ )
+
+/*  string str;
+  while (getline(input, str))
+  {
+    istringstream ss(str);
+    int num;
+    while (ss >> num)
     {
+      cout << num << " ";
+    }
+    cout << std::endl;
+  }
+*/
+
+
+  // 
+  //  Initialize variables within the bounds 
+  //
+
+//  for (i = 0; i < NVARS; i++)
+//  {
+//    input >> lbound >> ubound;
+
+    for (j = 0; j < POPSIZE; j++)
+    {
+      input >> lbound >> ubound;
       population[j].fitness = 0;
       population[j].rfitness = 0;
       population[j].cfitness = 0;
-      population[j].lower[i] = lbound;
-      population[j].upper[i]= ubound;
-      population[j].gene[i] = r8_uniform_ab ( lbound, ubound, seed );
+      population[j].size = rand() % ((NVARS+ DISTR) - (NVARS - DISTR) + 1) + (NVARS - DISTR);
+    //  population[j].gene(individual_size,0);
+      for (i = 0; i < population[j].size; i++)
+      {
+        population[j].lower[i] = lbound;
+        population[j].upper[i] = ubound;
+      //  int randomBit = rand() % 2;
+        population[j].gene.push_back(rand() % 2);
+      }
     }
-  }
 
-  input.close ( );
+
+    //  population[j].gene[i] = r8_uniform_ab(lbound, ubound, seed);
+
+    
+  input.close();
 
   return;
 }
 //****************************************************************************80
 
-void keep_the_best ( )
+void keep_the_best()
 
 //****************************************************************************80
 // 
@@ -616,30 +648,37 @@ void keep_the_best ( )
   int cur_best;
   int mem;
   int i;
-
+  int previous_size;
   cur_best = 0;
 
-  for ( mem = 0; mem < POPSIZE; mem++ )
+  for (mem = 0; mem < POPSIZE; mem++)
   {
-    if ( population[POPSIZE].fitness < population[mem].fitness )
+    if (population[POPSIZE].fitness < population[mem].fitness)
     {
       cur_best = mem;
       population[POPSIZE].fitness = population[mem].fitness;
     }
   }
-// 
-//  Once the best member in the population is found, copy the genes.
-//
-  for ( i = 0; i < NVARS; i++ )
+  // 
+  //  Once the best member in the population is found, copy the genes.
+  //
+  population[POPSIZE].gene.resize(population[cur_best].gene.size());
+
+  for (i = 0; i < population[cur_best].gene.size(); i++)
   {
-    population[POPSIZE].gene[i] = population[cur_best].gene[i];
+    //previous_size = population[cur_best].gene.size();
+
+
+    population[POPSIZE].gene[i]=population[cur_best].gene[i];
   }
+
+  population[POPSIZE].size = population[POPSIZE].gene.size();
 
   return;
 }
 //****************************************************************************80
 
-void mutate ( int &seed )
+void mutate(int &seed)
 
 //****************************************************************************80
 // 
@@ -678,16 +717,18 @@ void mutate ( int &seed )
   double ubound;
   double x;
 
-  for ( i = 0; i < POPSIZE; i++ )
+  for (i = 0; i < POPSIZE; i++)
   {
-    for ( j = 0; j < NVARS; j++ )
+    for (j = 0; j < population[i].gene.size(); j++)
     {
-      x = r8_uniform_ab ( a, b, seed );
-      if ( x < PMUTATION )
+      x = r8_uniform_ab(a, b, seed);
+      if (x < PMUTATION)
       {
         lbound = population[i].lower[j];
-        ubound = population[i].upper[j];  
-        population[i].gene[j] = r8_uniform_ab ( lbound, ubound, seed );
+        ubound = population[i].upper[j];
+      //  population[i].gene[j] = r8_uniform_ab(lbound, ubound, seed);
+        int randomBit = rand() % 2;
+        population[i].gene[j] = randomBit;
       }
     }
   }
@@ -696,7 +737,7 @@ void mutate ( int &seed )
 }
 //****************************************************************************80
 
-double r8_uniform_ab ( double a, double b, int &seed )
+double r8_uniform_ab(double a, double b, int &seed)
 
 //****************************************************************************80
 //
@@ -735,32 +776,32 @@ double r8_uniform_ab ( double a, double b, int &seed )
   int k;
   double value;
 
-  if ( seed == 0 )
+  if (seed == 0)
   {
     cerr << "\n";
     cerr << "R8_UNIFORM_AB - Fatal error!\n";
     cerr << "  Input value of SEED = 0.\n";
-    exit ( 1 );
+    exit(1);
   }
 
   k = seed / 127773;
 
-  seed = 16807 * ( seed - k * 127773 ) - k * 2836;
+  seed = 16807 * (seed - k * 127773) - k * 2836;
 
-  if ( seed < 0 )
+  if (seed < 0)
   {
     seed = seed + i4_huge;
   }
 
-  value = ( double ) ( seed ) * 4.656612875E-10;
+  value = (double)(seed) * 4.656612875E-10;
 
-  value = a + ( b - a ) * value;
+  value = a + (b - a) * value;
 
   return value;
 }
 //****************************************************************************80
 
-void report ( int generation )
+void report(int generation)
 
 //****************************************************************************80
 // 
@@ -803,39 +844,55 @@ void report ( int generation )
   double stddev;
   double sum;
   double sum_square;
+  double best_indiv_size;
 
-  if ( generation == 0 )
+
+  if (generation == 0)
   {
     cout << "\n";
-    cout << "  Generation       Best            Average       Standard \n";
-    cout << "  number           value           fitness       deviation \n";
+    cout << "  Generation       Best      Individual       Average       Standard              Best indivisual\n";
+    cout << "  number           value        size          fitness       deviation                  is \n";
+    cout << "  " << setw(77);
+    for (i = 0; i < NVARS; i++)
+    {
+      cout << "  " << setw(1) << "V" << i;
+    }
     cout << "\n";
   }
 
   sum = 0.0;
   sum_square = 0.0;
 
-  for ( i = 0; i < POPSIZE; i++ )
+  for (i = 0; i < POPSIZE; i++)
   {
     sum = sum + population[i].fitness;
     sum_square = sum_square + population[i].fitness * population[i].fitness;
   }
 
-  avg = sum / ( double ) POPSIZE;
+  avg = sum / (double)POPSIZE;
   square_sum = avg * avg * POPSIZE;
-  stddev = sqrt ( ( sum_square - square_sum ) / ( POPSIZE - 1 ) );
+  stddev = sqrt((sum_square - square_sum) / (POPSIZE - 1));
   best_val = population[POPSIZE].fitness;
+  best_indiv_size = population[POPSIZE].size;
 
-  cout << "  " << setw(8) << generation 
-       << "  " << setw(14) << best_val 
-       << "  " << setw(14) << avg 
-       << "  " << setw(14) << stddev << "\n";
+  cout << "  " << setw(4) << generation
+    << "  " << setw(14) << best_val
+    << "  " << setw(10) << best_indiv_size
+    << "  " << setw(15) << avg
+    << "  " << setw(15) << stddev;
 
+  cout << "  " << setw(10);
+
+  for (i = 0; i < population[POPSIZE].gene.size(); i++)
+  {
+    cout << "  " << setw(2) << population[POPSIZE].gene[i];
+  }
+  cout << "\n";
   return;
 }
 //****************************************************************************80
 
-void selector ( int &seed )
+void selector(int &seed)
 
 //****************************************************************************80
 // 
@@ -873,64 +930,64 @@ void selector ( int &seed )
   int mem;
   double p;
   double sum;
-//
-//  Find the total fitness of the population.
-//
+  //
+  //  Find the total fitness of the population.
+  //
   sum = 0.0;
-  for ( mem = 0; mem < POPSIZE; mem++ )
+  for (mem = 0; mem < POPSIZE; mem++)
   {
     sum = sum + population[mem].fitness;
   }
-//
-//  Calculate the relative fitness of each member.
-//
-  for ( mem = 0; mem < POPSIZE; mem++ )
+  //
+  //  Calculate the relative fitness of each member.
+  //
+  for (mem = 0; mem < POPSIZE; mem++)
   {
     population[mem].rfitness = population[mem].fitness / sum;
   }
-// 
-//  Calculate the cumulative fitness.
-//
+  // 
+  //  Calculate the cumulative fitness.
+  //
   population[0].cfitness = population[0].rfitness;
-  for ( mem = 1; mem < POPSIZE; mem++ )
+  for (mem = 1; mem < POPSIZE; mem++)
   {
-    population[mem].cfitness = population[mem-1].cfitness +       
+    population[mem].cfitness = population[mem - 1].cfitness +
       population[mem].rfitness;
   }
-// 
-//  Select survivors using cumulative fitness. 
-//
-  for ( i = 0; i < POPSIZE; i++ )
-  { 
-    p = r8_uniform_ab ( a, b, seed );
-    if ( p < population[0].cfitness )
+  // 
+  //  Select survivors using cumulative fitness. 
+  //
+  for (i = 0; i < POPSIZE; i++)
+  {
+    p = r8_uniform_ab(a, b, seed);
+    if (p < population[0].cfitness)
     {
-      newpopulation[i] = population[0];      
+      newpopulation[i] = population[0];
     }
     else
     {
-      for ( j = 0; j < POPSIZE; j++ )
-      { 
-        if ( population[j].cfitness <= p && p < population[j+1].cfitness )
+      for (j = 0; j < POPSIZE; j++)
+      {
+        if (population[j].cfitness <= p && p < population[j + 1].cfitness)
         {
-          newpopulation[i] = population[j+1];
+          newpopulation[i] = population[j + 1];
         }
       }
     }
   }
-// 
-//  Overwrite the old population with the new one.
-//
-  for ( i = 0; i < POPSIZE; i++ )
+  // 
+  //  Overwrite the old population with the new one.
+  //
+  for (i = 0; i < POPSIZE; i++)
   {
-    population[i] = newpopulation[i]; 
+    population[i] = newpopulation[i];
   }
 
-  return;     
+  return;
 }
 //****************************************************************************80
 
-void timestamp ( )
+void timestamp()
 
 //****************************************************************************80
 //
@@ -962,10 +1019,10 @@ void timestamp ( )
   size_t len;
   time_t now;
 
-  now = time ( NULL );
-  tm = localtime ( &now );
+  now = time(NULL);
+  tm = localtime(&now);
 
-  len = strftime ( time_buffer, TIME_SIZE, "%d %B %Y %I:%M:%S %p", tm );
+  len = strftime(time_buffer, TIME_SIZE, "%d %B %Y %I:%M:%S %p", tm);
 
   cout << time_buffer << "\n";
 
@@ -974,7 +1031,7 @@ void timestamp ( )
 }
 //****************************************************************************80
 
-void Xover ( int one, int two, int &seed )
+void Xover(int one, int two, int &seed)
 
 //****************************************************************************80
 // 
@@ -1009,19 +1066,47 @@ void Xover ( int one, int two, int &seed )
   int i;
   int point;
   double t;
-// 
-//  Select the crossover point.
-//
-  point = i4_uniform_ab ( 0, NVARS - 1, seed );
-//
-//  Swap genes in positions 0 through POINT-1.
-//
-  for ( i = 0; i < point; i++ )
+  int size_of_one;
+  int size_of_two;
+  int new_size;
+  // 
+  //  Select the crossover point.
+  //
+  point = i4_uniform_ab(0, NVARS - 1, seed);
+  //
+  //  Swap genes in positions 0 through POINT-1.
+  //
+
+/*
+  for (i = 0; i < point; i++)
   {
-    t                       = population[one].gene[i];
+    t = population[one].gene[i];
     population[one].gene[i] = population[two].gene[i];
     population[two].gene[i] = t;
   }
+*/
+
+
+  size_of_one = population[one].size;
+  size_of_two = population[two].size;
+  new_size = ceil((size_of_one + size_of_two) / 2);
+
+  population[one].gene.resize(new_size);
+  population[one].size = new_size;
+
+  for (i = 0; i < population[one].size; i++)
+  {
+    if (i < size_of_one/2)
+    {
+      
+    }
+    else
+    {
+      population[one].gene[i] = population[two].gene[i - floor(size_of_one / 2)];
+    }
+  }
+
+
 
   return;
 }
