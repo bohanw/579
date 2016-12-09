@@ -411,7 +411,8 @@ vector<vector<char> >& CIRCUIT::reorder(vector<vector<char> >& vectorin){
 
 double CIRCUIT::ComputeFaultCoverage(vector<vector<char> >& vectorin){
     int testNum = vectorin.size();
-    cout << "testNum" << testNum<<endl;
+    if(testNum == 0) return 0.0;
+    //cout << "testNum" << testNum<<endl;
     list<FAULT*>::iterator fite;
     FAULT* fptr;
     for (fite = Flist.begin();fite!=Flist.end();++fite) {
@@ -423,7 +424,7 @@ double CIRCUIT::ComputeFaultCoverage(vector<vector<char> >& vectorin){
 
 
     for(int i = 0; i < testNum; i++){
-        for (int j = 0;j<PIlist.size();++j){
+        for (int j = 0;j<vectorin[i].size();++j){
             switch(vectorin[i][j]){
                 case '0': PIlist[j]->SetValue(S0);break;
                 case '1': PIlist[j]->SetValue(S1);break;
@@ -465,28 +466,28 @@ double CIRCUIT::ComputeFaultCoverage(vector<vector<char> >& vectorin){
                 abort_num += 1;//fptr->GetEqvFaultNum();
                 break;
             default:
-                cerr << "Unknown fault type exists" << endl;
+                //cerr << "Unknown fault type exists" << endl;
                 unknown_fault++;
                 break;
         }
     }
     total_num = detected_num + abort_num + redundant_num + unknown_fault;
-    double FaultCoverge = 100*detected_num/double(total_num);
+    double FaultCoverge = detected_num/double(total_num);
 
-    cout << "**************************************" << endl;
-    cout << "Total fault number = " << total_num << endl;
-    cout << "Detected fault number = " << detected_num << endl;
-    cout << "Undetected fault number = " << abort_num + redundant_num << endl;
-    cout << "Abort fault number = " << abort_num << endl;
-    cout << "Redundant fault number = " << redundant_num << endl;
-    cout << "**************************************" << endl;
-    cout << "Fault Coverge = " << 100*detected_num/double(total_num) << "%" << endl;
-    cout << "Equivalent FC = " << 100*eqv_detected_num/double(Flist.size()) << "%" << endl;
-    cout << "Fault Efficiency = " << 100*detected_num/double(total_num - redundant_num) << "%" << endl;
-    cout << "**************************************" << endl;
+    // cout << "**************************************" << endl;
+    // cout << "Total fault number = " << total_num << endl;
+    // cout << "Detected fault number = " << detected_num << endl;
+    // cout << "Undetected fault number = " << abort_num + redundant_num << endl;
+    // cout << "Abort fault number = " << abort_num << endl;
+    // cout << "Redundant fault number = " << redundant_num << endl;
+    // cout << "**************************************" << endl;
+    // cout << "Fault Coverge = " << 100*detected_num/double(total_num) << "%" << endl;
+    // cout << "Equivalent FC = " << 100*eqv_detected_num/double(Flist.size()) << "%" << endl;
+    // cout << "Fault Efficiency = " << 100*detected_num/double(total_num - redundant_num) << "%" << endl;
+    // cout << "**************************************" << endl;
 
-    cout << "debug = " << debug<<endl;
-    cout << "remain_fault = " << remain_fault << endl;
+    // cout << "debug = " << debug<<endl;
+    // cout << "remain_fault = " << remain_fault << endl;
 
     return FaultCoverge;
 

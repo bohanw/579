@@ -3,6 +3,24 @@
 #include "circuit.h"
 #include "GetLongOpt.h"
 #include "ReadPattern.h"
+#include "genetic.h"
+
+# include <cstdlib>
+# include <iostream>
+# include <iomanip>
+# include <fstream>
+# include <iomanip>
+# include <cmath>
+# include <ctime>
+# include <cstring>
+#include <sstream>
+#include <vector>
+#include <random>
+
+#include <unordered_map>
+
+
+
 using namespace std;
 
 // All defined in readcircuit.l
@@ -15,6 +33,8 @@ extern bool ParseError;
 extern void Interactive();
 
 GetLongOpt option;
+
+
 
 int SetupOption(int argc, char ** argv)
 {
@@ -48,6 +68,7 @@ int SetupOption(int argc, char ** argv)
 
 int main(int argc, char ** argv)
 {
+    try_1();
     int optind = SetupOption(argc, argv);
     clock_t time_init, time_end;
     time_init = clock();
@@ -129,14 +150,124 @@ int main(int argc, char ** argv)
             vector<vector<char> >& PIvector = Circuit.getPIvector();
             cout<<"-------------------------------------------------"<<endl;
             Circuit.printPI(PIvector);
-            //Circuit.printParameters();
-            int count = Circuit.CalSwitchActivity(PIvector);
-            cout<<"count = "<<count<<endl;
 
-            vector<vector<char> >& reorderedPI = Circuit.reorder(PIvector);
+            double gold_faultCoverage = Circuit.ComputeFaultCoverage(PIvector);
+            //Circuit.printParameters();
+            //int count = Circuit.CalSwitchActivity(PIvector);
+            //cout<<"count = "<<count<<endl;
+
+            //vector<vector<char> >& reorderedPI = Circuit.reorder(PIvector);
             //Circuit.printPI(reorderedPI);
 
-            double faulrCoverage = Circuit.ComputeFaultCoverage(reorderedPI);
+            
+// genetic algorithm - first phase
+//******************************************************************************
+
+            //initialization:
+            // PIvector_pool is the gene pool with total X genes
+            // generate POPSIZE individules
+            // the number of gene each individual has is gaussian random distribution N ~ (X/2, X/4)
+            // gene is selected randomly from the gene pool and assigned to each individual
+            vector<vector<char> >& PIvector_pool = PIvector;
+            int seed = 123456789;
+            initialize(seed, PIvector_pool);
+//*******************************************************************************
+            // compute fault converage for each individual
+            for(int m = 0; m < POPSIZE; m++){
+                double fc = Circuit.ComputeFaultCoverage(population[m].gene);
+                population[m].fault_coverage = fc;
+                // in first phase, the fitness of an individual is its fault_coverage
+                population[m].fitness = fc;
+            }
+            cout<<endl;
+            for(int m = 0; m < POPSIZE; m++){
+                cout<< "faultCoverage = " <<population[m].fault_coverage<<endl;
+            }
+            cout << "gold_faultCoverage = " << gold_faultCoverage << endl;
+ 
+
+ //
+                keep_the_best();
+
+                unordered_map<int, int> phase1_pool;
+
+    for (int generation = 0; generation < MAXGENS; generation++)
+    {
+        selector(seed);
+        vector<int> newborn_individual = crossover(seed);
+        vector<int> mutated_individual = mutate(seed, PIvector);
+        report(generation, PIvector);
+
+        //cout << "mutated_individual" << mutated_individual.size() << endl;
+        // recompute the fault_coverage for modified individual
+        // for(int m = 0; m < newborn_individual.size(); m++){
+
+
+        //     double fc = Circuit.ComputeFaultCoverage(population[newborn_individual[m]].gene);
+
+        //     cout<<"newborn_individual[m] = " << newborn_individual[m] << endl;
+        //     cout << fc << endl;
+        //     //cout << "newborn_individual_fc = " << m <<'-'<<fc;
+        //     population[m].fault_coverage = fc;
+        //     // in first phase, the fitness of an individual is its fault_coverage
+        //     population[m].fitness = fc;
+        // }
+
+        // for(int m = 0; m < mutated_individual.size(); m++){
+        //     double fc = Circuit.ComputeFaultCoverage(population[mutated_individual[m]].gene);
+        //     population[m].fault_coverage = fc;
+        //     // in first phase, the fitness of an individual is its fault_coverage
+        //     population[m].fitness = fc;
+        // }
+
+        //cout << "POPSIZE=" << POPSIZE<< endl;
+            for(int m = 0; m < POPSIZE; m++){
+                double fc = Circuit.ComputeFaultCoverage(population[m].gene);
+                population[m].fault_coverage = fc;
+                // in first phase, the fitness of an individual is its fault_coverage
+                population[m].fitness = fc;
+
+                if(fc >= gold_faultCoverage){
+
+                }
+            }
+        //evaluate(PIvector);
+        elitist();
+    }           
+
+// genetic phase 1 output file
+
+    string filename = "phase1.txt";
+
+    ofstream outfile;
+    outfile.open("phase1.txt");
+    freopen("phase1.txt", "w", stdout);
+
+    cout << "\n";
+    cout << "SIMPLE_GA:\n";
+    cout << "  C++ version\n";
+    cout << "  A simple example of a genetic algorithm.\n";
+
+    if (NVARS < 2)
+    {
+        cout << "\n";
+        cout << "  The crossover modification will not be available,\n";
+        cout << "  since it requires 2 <= NVARS.\n";
+    }
+
+    cout << "\n";
+    cout << "  Best member after " << MAXGENS << " generations:\n";
+    cout << "\n";
+
+    cout << "\n";
+    cout << "  Best fitness = " << population[POPSIZE].fitness << "\n";
+    //
+    //  Terminate.
+    //
+    cout << "\n";
+    cout << "SIMPLE_GA:\n";
+    cout << "  Normal end of execution.\n";
+    cout << "\n";
 
 
 // output file
@@ -165,5 +296,8 @@ int main(int argc, char ** argv)
     time_end = clock();
     cout << "Total CPU Time = " << double(time_end - time_init)/CLOCKS_PER_SEC << endl;
     cout << endl;
+
+
+
     return 0;
 }

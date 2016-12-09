@@ -2,18 +2,18 @@
 CXX      = g++
 LINK     = g++
 CXXFLAGS = -O2 -Wall -DDEBUG
-#CXXFLAGS = -g -DDEBUG_ATPG -Wall #Turn on debugging
+CXXFLAGS = -g -DDEBUG_ATPG -Wall #Turn on debugging
 INCPATH  =
 LIBS     = -lreadline -lcurses
 DEL_FILE = rm -f
 
 ####### Files
 
-HEADERS = gate.h fault.h circuit.h GetLongOpt.h typeemu.h readcircuit.tab.h ReadPattern.h hash.h tfault.h
+HEADERS = gate.h fault.h circuit.h GetLongOpt.h typeemu.h readcircuit.tab.h ReadPattern.h hash.h tfault.h genetic.h
 
-SOURCES = readcircuit.tab.cc lex.yy.cc circuit.cc main.cc GetLongOpt.cc atpg.cc fsim.cc sim.cc psim.cc stfsim.cc tfatpg.cc
+SOURCES = readcircuit.tab.cc lex.yy.cc circuit.cc main.cc GetLongOpt.cc atpg.cc fsim.cc sim.cc psim.cc stfsim.cc tfatpg.cc 
 
-OBJECTS = readcircuit.tab.o lex.yy.o circuit.o main.o GetLongOpt.o atpg.o fsim.o sim.o psim.o stfsim.o tfatpg.o
+OBJECTS = readcircuit.tab.o lex.yy.o circuit.o main.o GetLongOpt.o atpg.o fsim.o sim.o psim.o stfsim.o tfatpg.o 
 
 TARGET  = atpg
 
