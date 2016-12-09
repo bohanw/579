@@ -87,6 +87,7 @@ class CIRCUIT
         void printPI(vector<vector<char> >& PIprint);
         int CalSwitchActivity(vector<vector<char> >& testvector);
         vector<vector<char> >& getPIvector();
+        vector<vector<char> >& getRedunPI();
         vector<vector<char> >& reorder(vector<vector<char> >& vectorin);
         vector<vector<char> >& greedy(vector<vector<char> >& vectorin);
         void printParameters();

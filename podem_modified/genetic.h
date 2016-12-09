@@ -17,10 +17,12 @@ using namespace std;
 //
 # define POPSIZE 20
 # define MAXGENS 1000
+# define MAXGENS_p2 1000
 # define NVARS 30
 # define DISTR 10
 # define PXOVER 0.8
-# define PMUTATION 0.05
+# define PMUTATION 0.15
+# define PMUTATION_P2_DELET 0.5
 //
 //  Each GENOTYPE is a member of the population, with
 //  gene: a string of variables,
@@ -42,28 +44,33 @@ struct genotype
   int size;
 };
 struct genotype population[POPSIZE + 1];
+struct genotype Oldpopulation[POPSIZE + 1];
+
 struct genotype newpopulation[POPSIZE + 1];
 
-vector<int> crossover(int &seed);
+vector<int> crossover_p1(int &seed, int individual_to_be_killed);
 void elitist();
+void elitist_p2();
 void evaluate(vector<vector<char> > &PIvector);
 int i4_uniform_ab(int a, int b, int &seed);
-void initialize(int &seed, vector<vector<char> > &PIvector);
+void initialize(int &seed, vector<vector<char> > &PIvector,int xfilling_ratio);
 void keep_the_best();
-vector<int> mutate(int &seed, vector<vector<char> > &PIvector);
+void keep_the_best_p2();
+vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector);
+vector<int> mutate_p2(int &seed, vector<vector<char> > &PIvector);
 double r8_uniform_ab(double a, double b, int &seed);
 void report(int generation, vector<vector<char> > &PIvector);
-void selector(int &seed);
+int selector_p1(int &seed, int pop_size);
 void timestamp();
-void Xover(int one, int two, int &seed);
+void Xover_p1(int one, int two, int &seed, int individual_to_be_killed);
 
 void try_1();
 
 void try_1(){
-  cout << "try_1"<<endl;}
+  cout << "try_2"<<endl;}
 
 
-vector<int> crossover(int &seed)
+vector<int> crossover_p1(int &seed, int individual_to_be_killed)
 {
   const double a = 0.0;
   const double b = 1.0;
@@ -81,7 +88,8 @@ vector<int> crossover(int &seed)
           ++first;
           //cout << "newborn_individual 1"<<endl;
           if (first % 2 == 0){
-            Xover(one, mem, seed);
+
+            Xover_p1(one, mem, seed, individual_to_be_killed);
 
           //cout << "newborn_individual 2"<<endl;
             newborn_individual.push_back(one);
@@ -97,6 +105,9 @@ vector<int> crossover(int &seed)
   // }
   return newborn_individual;
 }
+
+
+
 //****************************************************************************80
 
 void elitist()
@@ -209,6 +220,116 @@ void elitist()
   return;
 }
 //****************************************************************************80
+
+void elitist_p2()
+
+//****************************************************************************80
+// 
+//  Purpose:
+//
+//    ELITIST stores the best member of the previous generation.
+//
+//  Discussion:
+//
+//    The best member of the previous generation is stored as 
+//    the last in the array. If the best member of the current 
+//    generation is worse then the best member of the previous 
+//    generation, the latter one would replace the worst member 
+//    of the current population.
+//
+//  Licensing:
+//
+//    This code is distributed under the GNU LGPL license. 
+//
+//  Modified:
+//
+//    29 December 2007
+//
+//  Author:
+//
+//    Original version by Dennis Cormier and Sita Raghavan.
+//    This C++ version by John Burkardt.
+//
+//  Local parameters:
+//
+//    Local, double BEST, the best fitness value.
+//
+//    Local, double WORST, the worst fitness value.
+//
+{
+  int i;
+  double best;
+  int best_mem;
+  double worst;
+  int worst_mem;
+
+  best = population[0].fitness;
+  worst = population[0].fitness;
+
+  for (i = 0; i < POPSIZE - 1; ++i)
+  {
+    if (population[i + 1].fitness > population[i].fitness)
+    {
+
+      if (best <= population[i].fitness)
+      {
+        best = population[i].fitness;
+        best_mem = i;
+      }
+
+      if (population[i + 1].fitness <= worst)
+      {
+        worst = population[i + 1].fitness;
+        worst_mem = i + 1;
+      }
+
+    }
+    else
+    {
+
+      if (population[i].fitness <= worst)
+      {
+        worst = population[i].fitness;
+        worst_mem = i;
+      }
+
+      if (best <= population[i + 1].fitness)
+      {
+        best = population[i + 1].fitness;
+        best_mem = i + 1;
+      }
+
+    }
+
+  }
+  // 
+  //  If the best individual from the new population is better than 
+  //  the best individual from the previous population, then 
+  //  copy the best from the new population; else replace the 
+  //  worst individual from the current population with the 
+  //  best one from the previous generation                     
+  //
+  if (population[POPSIZE].fitness > best)
+  {
+    population[POPSIZE].gene.resize(population[best_mem].gene.size());
+    for (i = 0; i < population[best_mem].gene.size(); i++)
+    {
+      population[POPSIZE].gene = population[best_mem].gene;
+    }
+    population[POPSIZE].fitness = population[best_mem].fitness;
+  }
+  else
+  {
+    population[worst_mem].gene.resize(population[POPSIZE].gene.size());
+    for (i = 0; i < population[POPSIZE].gene.size(); i++)
+    {
+      population[worst_mem].gene = population[POPSIZE].gene;
+    }
+    population[worst_mem].fitness = population[POPSIZE].fitness;
+  }
+
+  return;
+}
 
 void evaluate(vector<vector<char> > &PIvector)
 
@@ -398,45 +519,7 @@ int i4_uniform_ab(int a, int b, int &seed)
 }
 //****************************************************************************80
 
-void initialize(int &seed, vector<vector<char> > &PIvector)
-
-//****************************************************************************80
-// 
-//  Purpose:
-//
-//    INITIALIZE initializes the genes within the variables bounds. 
-//
-//  Discussion:
-//
-//    It also initializes (to zero) all fitness values for each
-//    member of the population. It reads upper and lower bounds 
-//    of each variable from the input file `gadata.txt'. It 
-//    randomly generates values between these bounds for each 
-//    gene of each genotype in the population. The format of 
-//    the input file `gadata.txt' is 
-//
-//      var1_lower_bound var1_upper bound
-//      var2_lower_bound var2_upper bound ...
-//
-//  Licensing:
-//
-//    This code is distributed under the GNU LGPL license. 
-//
-//  Modified:
-//
-//    28 April 2014
-//
-//  Author:
-//
-//    Original version by Dennis Cormier and Sita Raghavan.
-//    This C++ version by John Burkardt.
-//
-//  Parameters:
-//
-//    Input, string FILENAME, the name of the input file.
-//
-//    Input/output, int &SEED, a seed for the random number generator.
-//
+void initialize(int &seed, vector<vector<char> > &PIvector, int xfilling_ratio)
 {
   int i;
   ifstream input;
@@ -474,7 +557,7 @@ void initialize(int &seed, vector<vector<char> > &PIvector)
 
   // values near the mean are the most likely
   // standard deviation affects the dispersion of generated values from the mean
-  std::normal_distribution<double> d(genpool_size/2, genpool_size / 4);
+  std::normal_distribution<double> d(genpool_size/(2*xfilling_ratio), genpool_size / (4*xfilling_ratio));
 
   vector<int> store;
   for (i = 0; i < 1000; i++)
@@ -529,34 +612,6 @@ void initialize(int &seed, vector<vector<char> > &PIvector)
 
 void keep_the_best()
 
-//****************************************************************************80
-// 
-//  Purpose:
-//
-//    KEEP_THE_BEST keeps track of the best member of the population. 
-//
-//  Discussion:
-//
-//    Note that the last entry in the array Population holds a 
-//    copy of the best individual.
-//
-//  Licensing:
-//
-//    This code is distributed under the GNU LGPL license. 
-//
-//  Modified:
-//
-//    29 December 2007
-//
-//  Author:
-//
-//    Original version by Dennis Cormier and Sita Raghavan.
-//    This C++ version by John Burkardt.
-//
-//  Local parameters:
-//
-//    Local, int CUR_BEST, the index of the best individual.
-//
 {
   int cur_best;
   int mem;
@@ -589,38 +644,44 @@ void keep_the_best()
 
   return;
 }
+
+void keep_the_best_p2()
+
+{
+  int cur_best;
+  int mem;
+  int i;
+  int previous_size;
+  cur_best = 0;
+
+  for (mem = 0; mem < POPSIZE; mem++)
+  {
+    if (population[POPSIZE].fitness > population[mem].fitness)
+    {
+      cur_best = mem;
+      population[POPSIZE].fitness = population[mem].fitness;
+    }
+  }
+  // 
+  //  Once the best member in the population is found, copy the genes.
+  //
+  population[POPSIZE].gene.resize(population[cur_best].gene.size());
+
+  for (i = 0; i < population[cur_best].gene.size(); i++)
+  {
+    //previous_size = population[cur_best].gene.size();
+
+
+    population[POPSIZE].gene[i]=population[cur_best].gene[i];
+  }
+
+  population[POPSIZE].size = population[POPSIZE].gene.size();
+
+  return;
+}
 //****************************************************************************80
 
-vector<int> mutate(int &seed, vector<vector<char> > &PIvector)
-
-//****************************************************************************80
-// 
-//  Purpose:
-//
-//    MUTATE performs a random uniform mutation. 
-//
-//  Discussion:
-//
-//    A variable selected for mutation is replaced by a random value 
-//    between the lower and upper bounds of this variable.
-//
-//  Licensing:
-//
-//    This code is distributed under the GNU LGPL license. 
-//
-//  Modified:
-//
-//    28 April 2014
-//
-//  Author:
-//
-//    Original version by Dennis Cormier and Sita Raghavan.
-//    This C++ version by John Burkardt.
-//
-//  Parameters:
-//
-//    Input/output, int &SEED, a seed for the random number generator.
-//
+vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
 {
   const double a = 0.0;
   const double b = 1.0;
@@ -686,6 +747,92 @@ vector<int> mutate(int &seed, vector<vector<char> > &PIvector)
       }
     }
 
+    population[i].size = population[i].gene.size();
+  }
+
+
+  return mutated_individual;
+}
+
+
+vector<int> mutate_p2(int &seed, vector<vector<char> > &PIvector)
+{
+  const double a = 0.0;
+  const double b = 1.0;
+  int i;
+  int j;
+  double lbound;
+  double ubound;
+  double x;
+  double y;
+  double z;
+  int genpool_size = PIvector.size();
+
+  // return the index of the individual that has been mutated
+  vector<int> mutated_individual;
+  int has_been_recorded = 0;
+
+  for (i = 0; i < POPSIZE; i++)
+  {
+    Oldpopulation[i] = population[i];
+  }
+
+  for (i = 0; i < POPSIZE; i++)                                           
+  {
+    has_been_recorded = 0;
+    x = r8_uniform_ab(a, b, seed);                                    // randomly insert a gene into that location
+    int current_pop_gen_size = population[i].gene.size();
+
+
+        // if ((x < PMUTATION) && (genpool_size != 0) && (current_pop_gen_size != 0))
+        // {
+        //   int genpool_loc = rand() % genpool_size;
+        //   int gene_loc = rand() % current_pop_gen_size;
+        //   population[i].gene.insert(population[i].gene.begin() + gene_loc, PIvector[genpool_loc]);
+        //   if(has_been_recorded == 0){
+        //     mutated_individual.push_back(i);
+        //     has_been_recorded = 1;
+        //   }
+        // }
+
+                                                         // randomly delete one of the gene from that indiv
+      // for(j=0; j< population[i].gene.size(); j++)
+      // {
+      //      y = r8_uniform_ab(a, b, seed);    
+      //    if ((y < PMUTATION) && (current_pop_gen_size != 0))
+      //    {
+      //      population[i].gene.erase(population[i].gene.begin() + j);
+      //   //   if(has_been_recorded == 0){
+      //   //     mutated_individual.push_back(i);
+      //   //     has_been_recorded = 1;
+      //   //   }
+      //    }
+        
+      //   }
+
+    y = r8_uniform_ab(a, b, seed);                                 // randomly delete one of the gene from that indiv
+        if ((y < PMUTATION_P2_DELET) && (current_pop_gen_size != 0) && (current_pop_gen_size != 1))
+        {
+          int gene_loc2 = rand() % current_pop_gen_size;
+          population[i].gene.erase(population[i].gene.begin() + gene_loc2);
+        }
+
+    z = r8_uniform_ab(a, b, seed);                                 // randomly swap two genes of a individual
+
+    if ((z < PMUTATION) && (current_pop_gen_size != 0) && (current_pop_gen_size != 1))
+    {
+      
+      int gene_loc3 = rand() % current_pop_gen_size;
+      int gene_loc4 = rand() % current_pop_gen_size;
+      while(gene_loc3 == gene_loc4) gene_loc4 = rand() % current_pop_gen_size;
+     // cout << i << " current_pop_gen_size1 = " << current_pop_gen_size <<endl;
+      vector<char> temp;
+      temp = population[i].gene[gene_loc3];
+      population[i].gene[gene_loc3] = population[i].gene[gene_loc4];
+      population[i].gene[gene_loc4] = temp;
+    }
+
+    //cout << i<<" current_pop_gen_size2 = " << current_pop_gen_size <<endl;
     population[i].size = population[i].gene.size();
   }
 
@@ -759,40 +906,6 @@ double r8_uniform_ab(double a, double b, int &seed)
 //****************************************************************************80
 
 void report(int generation, vector<vector<char> > &PIvector)
-
-//****************************************************************************80
-// 
-//  Purpose:
-//
-//    REPORT reports progress of the simulation. 
-//
-//  Licensing:
-//
-//    This code is distributed under the GNU LGPL license. 
-//
-//  Modified:
-//
-//    29 December 2007
-//
-//  Author:
-//
-//    Original version by Dennis Cormier and Sita Raghavan.
-//    This C++ version by John Burkardt.
-//
-//  Local parameters:
-//
-//    Local, double avg, the average population fitness.
-//
-//    Local, best_val, the best population fitness.
-//
-//    Local, double square_sum, square of sum for std calc.
-//
-//    Local, double stddev, standard deviation of population fitness.
-//
-//    Local, double sum, the total population fitness.
-//
-//    Local, double sum_square, sum of squares for std calc.
-//
 {
   double avg;
   double best_val;
@@ -837,49 +950,20 @@ void report(int generation, vector<vector<char> > &PIvector)
 
   cout << "  " << setw(10);
 
-  for (i = 0; i < population[POPSIZE].gene.size(); i++)
-  {
-    cout << "  " << setw(2);
-    for (j = 0; j < PI_num; j++)
-    {
-      cout <<population[POPSIZE].gene[i][j];
-    }
-  }
+  // for (i = 0; i < population[POPSIZE].gene.size(); i++)
+  // {
+  //   cout << "  " << setw(2);
+  //   for (j = 0; j < PI_num; j++)
+  //   {
+  //     cout <<population[POPSIZE].gene[i][j];
+  //   }
+  // }
   cout << "\n";
   return;
 }
 //****************************************************************************80
 
-void selector(int &seed)
-
-//****************************************************************************80
-// 
-//  Purpose:
-//
-//    SELECTOR is the selection function.
-//
-//  Discussion:
-//
-//    Standard proportional selection for maximization problems incorporating 
-//    the elitist model.  This makes sure that the best member always survives.
-//
-//  Licensing:
-//
-//    This code is distributed under the GNU LGPL license. 
-//
-//  Modified:
-//
-//    28 April 2014
-//
-//  Author:
-//
-//    Original version by Dennis Cormier and Sita Raghavan.
-//    This C++ version by John Burkardt.
-//
-//  Parameters:
-//
-//    Input/output, int &SEED, a seed for the random number generator.
-//
+int selector_p1(int &seed, int pop_size)
 {
   const double a = 0.0;
   const double b = 1.0;
@@ -888,60 +972,73 @@ void selector(int &seed)
   int mem;
   double p;
   double sum;
+
+  int individual_to_be_killed = -1;
+
+  double min_fault_coverage = 1.1;
+
+  for(int i = 0; i < pop_size; i++){
+    if(population[i].fault_coverage < min_fault_coverage){
+      individual_to_be_killed = i;
+      min_fault_coverage = population[i].fault_coverage;
+    }
+  }
+
+  return individual_to_be_killed;
+
   //
   //  Find the total fitness of the population.
   //
-  sum = 0.0;
-  for (mem = 0; mem < POPSIZE; mem++)
-  {
-    sum = sum + population[mem].fitness;
-  }
-  //
-  //  Calculate the relative fitness of each member.
-  //
-  for (mem = 0; mem < POPSIZE; mem++)
-  {
-    population[mem].rfitness = population[mem].fitness / sum;
-  }
-  // 
-  //  Calculate the cumulative fitness.
-  //
-  population[0].cfitness = population[0].rfitness;
-  for (mem = 1; mem < POPSIZE; mem++)
-  {
-    population[mem].cfitness = population[mem - 1].cfitness +
-      population[mem].rfitness;
-  }
-  // 
-  //  Select survivors using cumulative fitness. 
-  //
-  for (i = 0; i < POPSIZE; i++)
-  {
-    p = r8_uniform_ab(a, b, seed);
-    if (p < population[0].cfitness)
-    {
-      newpopulation[i] = population[0];
-    }
-    else
-    {
-      for (j = 0; j < POPSIZE; j++)
-      {
-        if (population[j].cfitness <= p && p < population[j + 1].cfitness)
-        {
-          newpopulation[i] = population[j + 1];
-        }
-      }
-    }
-  }
-  // 
-  //  Overwrite the old population with the new one.
-  //
-  for (i = 0; i < POPSIZE; i++)
-  {
-    population[i] = newpopulation[i];
-  }
+  // sum = 0.0;
+  // for (mem = 0; mem < POPSIZE; mem++){
+  //   sum = sum + population[mem].fitness;
+  // }
+  // //
+  // //  Calculate the relative fitness of each member.
+  // //
+  // for (mem = 0; mem < POPSIZE; mem++)
+  // {
+  //   population[mem].rfitness = population[mem].fitness / sum;
+  // }
+  // // 
+  // //  Calculate the cumulative fitness.
+  // //
+  // population[0].cfitness = population[0].rfitness;
+  // for (mem = 1; mem < POPSIZE; mem++)
+  // {
+  //   population[mem].cfitness = population[mem - 1].cfitness +
+  //     population[mem].rfitness;
+  // }
+  // // 
+  // //  Select survivors using cumulative fitness. 
+  // //
+  // for (i = 0; i < POPSIZE; i++)
+  // {
+  //   p = r8_uniform_ab(a, b, seed);
+  //   if (p < population[0].cfitness)
+  //   {
+  //     newpopulation[i] = population[0];
+  //   }
+  //   else
+  //   {
+  //     for (j = 0; j < POPSIZE; j++)
+  //     {
+  //       if (population[j].cfitness <= p && p < population[j + 1].cfitness)
+  //       {
+  //         newpopulation[i] = population[j + 1];
+  //       }
+  //     }
+  //   }
+  // }
+  // // 
+  // //  Overwrite the old population with the new one.
+  // //
+  // for (i = 0; i < POPSIZE; i++)
+  // {
+  //   population[i] = newpopulation[i];
+  // }
 
-  return;
+
 }
 //****************************************************************************80
 
@@ -989,7 +1086,7 @@ void timestamp()
 }
 //****************************************************************************80
 
-void Xover(int one, int two, int &seed)
+void Xover_p1(int one, int two, int &seed, int individual_to_be_killed)
 
 //****************************************************************************80
 // 
@@ -1044,6 +1141,10 @@ void Xover(int one, int two, int &seed)
   }
 */
 
+  for (i = 0; i < POPSIZE; i++)
+  {
+    Oldpopulation[i] = population[i];
+  }
 
   size_of_one = population[one].size;
   size_of_two = population[two].size;
@@ -1054,12 +1155,10 @@ void Xover(int one, int two, int &seed)
 
   for (i = 0; i < population[one].size; i++)
   {
-    if (i < size_of_one/2)
-    {
+    if (i < size_of_one/2){
       
     }
-    else
-    {
+    else{
       population[one].gene[i] = population[two].gene[i - floor(size_of_one / 2)];
     }
   }

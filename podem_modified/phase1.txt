@@ -3,7 +3,7 @@ SIMPLE_GA:
   C++ version
   A simple example of a genetic algorithm.
 
-  Best member after 1000 generations:
+  Best member after 100 generations:
 
 
   Best fitness = 1.00
@@ -11,5 +11,5 @@ SIMPLE_GA:
 SIMPLE_GA:
   Normal end of execution.
 
-Total CPU Time = 1.83
+Total CPU Time = 0.40
 

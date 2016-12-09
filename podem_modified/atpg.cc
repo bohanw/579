@@ -7,7 +7,9 @@
 using namespace std;
 
 vector<vector<char> > PIvector;
+vector<vector<char> > Redun_PIvector;
 int testsNum = 0;
+int testsNumX = 0;
 int TotalReorderedswitchActivity;
 int BestReorderedSwitchActivit;
 int NumOfX;
@@ -266,54 +268,66 @@ ATPG_STATUS CIRCUIT::Podem(FAULT* fptr, unsigned &total_backtrack_num)
     vector<int> Xindex;
     if (status ==  TRUE) {
         vector<char> temp;
+        vector<char> temp2;
         NumOfX = 0;
         PIvector.push_back(temp);
+        Redun_PIvector.push_back(temp2);
 		for (i = 0;i<PIlist.size();++i) {
 		    switch (PIlist[i]->GetValue()) {
-			case S1: {PIvector[testsNum].push_back('1'); break;}
-			case S0: {PIvector[testsNum].push_back('0');break;}
-			case D: {PIvector[testsNum].push_back('1'); PIlist[i]->SetValue(S1); break;}
-			case B: {PIvector[testsNum].push_back('0'); PIlist[i]->SetValue(S0); break;}
+			case S1: {PIvector[testsNum].push_back('1'); Redun_PIvector[testsNumX].push_back('1');break;}
+			case S0: {PIvector[testsNum].push_back('0'); Redun_PIvector[testsNumX].push_back('0');break;}
+			case D: {PIvector[testsNum].push_back('1'); Redun_PIvector[testsNumX].push_back('1'); PIlist[i]->SetValue(S1); break;}
+			case B: {PIvector[testsNum].push_back('0'); Redun_PIvector[testsNumX].push_back('0'); PIlist[i]->SetValue(S0); break;}
             // set unknown value for experiment
-			case X: PIvector[testsNum].push_back('0'); NumOfX = NumOfX + 1;Xindex.push_back(i); TotalNumOfX = TotalNumOfX + 1; PIlist[i]->SetValue(S0);break;// PIlist[i]->SetValue(VALUE(2.0 * rand()/(RAND_MAX + 1.0))); break;
+			case X: PIvector[testsNum].push_back('0'); Redun_PIvector[testsNumX].push_back('0'); NumOfX = NumOfX + 1;Xindex.push_back(i); TotalNumOfX = TotalNumOfX + 1; PIlist[i]->SetValue(S0);break;// PIlist[i]->SetValue(VALUE(2.0 * rand()/(RAND_MAX + 1.0))); break;
 			default: cerr << "Illigal value" << endl; break;
 		    } 
 		}//end for all PI
         testsNum = testsNum + 1;
+        testsNumX = testsNumX + 1;
         NonRedundencyComb = NonRedundencyComb + 1;
     } //end status == TRUE
 
-/*
+
 
 // X-filling to 0 and 1
 
 // if too many X in a vector - random filling
 
+cout << "NumOfX =" << NumOfX;
 int NumOfBits = PIlist.size();
 if((NumOfX > NumOfBits/2) || (NumOfX > 10)){
     // for(int k = 0; k < Xindex.size(); k++){
-    //     PIvector[testsNum - 1][Xindex[k]] = (char)(VALUE(2.0 * rand()/(RAND_MAX + 1.0)) + 48);
+    //     Redun_PIvector[testsNumX - 1][Xindex[k]] = (char)(VALUE(2.0 * rand()/(RAND_MAX + 1.0)) + 48);
     // }
 } 
 else {
 //if not too many X in a vector - exhasusted all combanation
+
     int comb = pow(2,NumOfX);
-    int ParentTestIndex = testsNum - 1;
+    int ParentTestIndex = testsNumX - 1;
     for(int j = 1; j < comb; j++){
-        PIvector.push_back(PIvector[ParentTestIndex]);
+        Redun_PIvector.push_back(Redun_PIvector[ParentTestIndex]);
         for(int k = 0; k < Xindex.size(); k++){
-            PIvector[testsNum][Xindex[k]] = (char)(((j >> k) & 1) + 48);
+            Redun_PIvector[testsNumX][Xindex[k]] = (char)(((j >> k) & 1) + 48);
         }
-        testsNum = testsNum + 1;
+        testsNumX = testsNumX + 1;
+ //       cout << "testsNumX"<< testsNumX <<endl;
         
+
     }
 }
 /////////////////////////////////////////////////////////////////////
-*/
+
     total_backtrack_num += backtrack_num;
     return status;
 }
 
+
+vector<vector<char> >& CIRCUIT::getRedunPI(){
+    //cout << "redsize = " << Redun_PIvector.size();
+    return Redun_PIvector;
+}
 void CIRCUIT::printParameters(){
     cout << "NumOfX = " << TotalNumOfX << endl;
     cout << "NonRedundencyComb = " << NonRedundencyComb << endl;
@@ -323,7 +337,7 @@ void CIRCUIT::printParameters(){
 // print the assigned input in termimal
 
 void CIRCUIT::printPI(vector<vector<char> >& PIprint){
-    for(int i = 0; i < testsNum; i++){
+    for(int i = 0; i < PIprint.size(); i++){
         cout<<"test"<< i << '=';
         for(int j = 0; j < PIprint[i].size(); j++){
             cout << PIprint[i][j]<<',';
@@ -341,8 +355,10 @@ vector<vector<char> >& CIRCUIT::getPIvector(){
 int CIRCUIT::CalSwitchActivity(vector<vector<char> >& testvector){
     int count = 0;
     int size1 = testvector.size();
+    //cout << "size1 = "<<size1<<endl;
     for(int i = 1; i < size1; i++){
-        for(int j = 0; j < testvector[i].size(); j++){
+        for(int j = 0; j < testvector[i].size() && j < testvector[i-1].size(); j++){
+           // cout << "i = " <<  testvector[i].size() <<',' << " j=" <<testvector[i-1].size()<<endl;
             if(testvector[i][j] != testvector[i-1][j]) count = count + 1;
         }
     }
