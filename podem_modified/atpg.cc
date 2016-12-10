@@ -21,7 +21,7 @@ int BeginCompare = 0;
 int totalSwitchActivity = 0;
 extern GetLongOpt option;
 
-
+int test = 0;
 //generate all stuck-at fault list
 void CIRCUIT::GenerateAllFaultList()
 {
@@ -293,17 +293,27 @@ ATPG_STATUS CIRCUIT::Podem(FAULT* fptr, unsigned &total_backtrack_num)
 // X-filling to 0 and 1
 
 // if too many X in a vector - random filling
-
-cout << "NumOfX =" << NumOfX;
+if (status ==  TRUE) {
+cout << "NumOfX =" << NumOfX << ',';
+test = test + 1;
+cout << test <<endl;
 int NumOfBits = PIlist.size();
 if((NumOfX > NumOfBits/2) || (NumOfX > 10)){
+
+    int ParentTestIndex_1 = testsNumX - 1;
+    Redun_PIvector.push_back(Redun_PIvector[ParentTestIndex_1]);
+        for(int k = 0; k < Xindex.size(); k++){
+            Redun_PIvector[testsNumX][Xindex[k]] = '1';
+        }
+        
+        testsNumX = testsNumX + 1;
+        
     // for(int k = 0; k < Xindex.size(); k++){
     //     Redun_PIvector[testsNumX - 1][Xindex[k]] = (char)(VALUE(2.0 * rand()/(RAND_MAX + 1.0)) + 48);
     // }
 } 
 else {
 //if not too many X in a vector - exhasusted all combanation
-
     int comb = pow(2,NumOfX);
     int ParentTestIndex = testsNumX - 1;
     for(int j = 1; j < comb; j++){
@@ -313,9 +323,9 @@ else {
         }
         testsNumX = testsNumX + 1;
  //       cout << "testsNumX"<< testsNumX <<endl;
-        
-
     }
+}
+
 }
 /////////////////////////////////////////////////////////////////////
 

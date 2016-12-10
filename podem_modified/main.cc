@@ -175,8 +175,8 @@ int main(int argc, char ** argv)
             // the number of gene each individual has is gaussian random distribution N ~ (X/2, X/4)
             // gene is selected randomly from the gene pool and assigned to each individual
 
-            string phase1_evolution = "result_c880_phase1_evolution";
-            string phase2_evolution = "result_c880_phase2_evolution";
+            string phase1_evolution = "test";//"result_c880_phase1_evolution";
+            string phase2_evolution = "test2";//result_c880_phase2_evolution";
             srand(time(NULL));
             cout.precision(5);
             int pop_size = POPSIZE;
@@ -187,6 +187,7 @@ int main(int argc, char ** argv)
 //*******************************************************************************
             // compute fault converage for each individual
             for(int m = 0; m < POPSIZE; m++){
+                cout << "compute fc "<<m<<endl;
                 double fc = Circuit.ComputeFaultCoverage(population[m].gene);
                 population[m].fault_coverage = fc;
                 // in first phase, the fitness of an individual is its fault_coverage

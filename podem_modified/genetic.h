@@ -523,6 +523,8 @@ int i4_uniform_ab(int a, int b, int &seed)
 
 void initialize(int &seed, vector<vector<char> > &PIvector, int xfilling_ratio)
 {
+
+  cout << "initialize"<<endl;
   int i;
   ifstream input;
   int j;
@@ -715,12 +717,13 @@ vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
         if ((x < PMUTATION) && (genpool_size != 0) && (current_pop_gen_size != 0))
         {
           int genpool_loc = rand() % genpool_size;
-          int gene_loc = rand() % current_pop_gen_size;
-          population[i].gene.insert(population[i].gene.begin() + gene_loc, PIvector[genpool_loc]);
-          if(has_been_recorded == 0){
-            mutated_individual.push_back(i);
-            has_been_recorded = 1;
-          }
+          //int gene_loc = rand() % current_pop_gen_size;
+          //population[i].gene.insert(population[i].gene.begin() + gene_loc, PIvector[genpool_loc]);
+          population[i].gene.push_back(PIvector[genpool_loc]);
+          // if(has_been_recorded == 0){
+          //   mutated_individual.push_back(i);
+          //   has_been_recorded = 1;
+          // }
         }
 
       num_insert --;
@@ -731,12 +734,14 @@ vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
         if ((y < PMUTATION) && (current_pop_gen_size > 2))
         {
           int gene_loc2 = rand() % current_pop_gen_size;
-          population[i].gene.erase(population[i].gene.begin() + gene_loc2);
+          population[i].gene[gene_loc2] = population[i].gene[population[i].gene.size() - 1];
+          population[i].gene.pop_back();
+          //population[i].gene.erase(population[i].gene.begin() + gene_loc2);
 
-          if(has_been_recorded == 0){
-            mutated_individual.push_back(i);
-            has_been_recorded = 1;
-          }
+          // if(has_been_recorded == 0){
+          //   mutated_individual.push_back(i);
+          //   has_been_recorded = 1;
+          // }
         }
 
     z = r8_uniform_ab(a, b, seed);                                 // randomly swap two genes in two individuals
@@ -755,10 +760,10 @@ vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
       population[i].gene[gene_loc3] = population[swap_pop].gene[gene_loc4];
       population[swap_pop].gene[gene_loc4] = temp;
 
-      if(has_been_recorded == 0){
-        mutated_individual.push_back(i);
-        has_been_recorded = 1;
-      }
+      // if(has_been_recorded == 0){
+      //   mutated_individual.push_back(i);
+      //   has_been_recorded = 1;
+      // }
     }
 
     population[i].size = population[i].gene.size();
@@ -831,7 +836,9 @@ vector<int> mutate_p2(int &seed, vector<vector<char> > &PIvector)
         if ((y < PMUTATION_P2_DELET) && (current_pop_gen_size != 0) && (current_pop_gen_size > 2))
         {
           int gene_loc2 = rand() % current_pop_gen_size;
-          population[i].gene.erase(population[i].gene.begin() + gene_loc2);
+          population[i].gene[gene_loc2] = population[i].gene[population[i].gene.size() - 1];
+          population[i].gene.pop_back();
+          //population[i].gene.erase(population[i].gene.begin() + gene_loc2);
         }
 
     z = r8_uniform_ab(a, b, seed);                                 // randomly swap two genes of a individual
