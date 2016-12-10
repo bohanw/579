@@ -174,6 +174,11 @@ int main(int argc, char ** argv)
             // generate POPSIZE individules
             // the number of gene each individual has is gaussian random distribution N ~ (X/2, X/4)
             // gene is selected randomly from the gene pool and assigned to each individual
+
+            string phase1_evolution = "result_c880_phase1_evolution";
+            string phase2_evolution = "result_c880_phase2_evolution";
+            srand(time(NULL));
+            cout.precision(5);
             int pop_size = POPSIZE;
             int good_individual_num = 0;
             vector<vector<char> >& PIvector_pool = Redun_PIvector;
@@ -197,6 +202,14 @@ int main(int argc, char ** argv)
  //
                 keep_the_best();
 
+//evolution starts ------------------------------------------------------------------
+    ofstream OutputStrm;
+    OutputStrm.open(phase1_evolution, ofstream::out);
+    if(!OutputStrm){
+        cout << "Unable to open output file: " << endl;
+        cout << "Unsaved output!\n";
+        exit(-1);}
+
 
     for (int generation = 0; generation < MAXGENS; generation++)
     {
@@ -207,31 +220,9 @@ int main(int argc, char ** argv)
         vector<int> mutated_individual = mutate_p1(seed, Redun_PIvector);
         //report(generation, PIvector);
 
-        //cout << "mutated_individual" << mutated_individual.size() << endl;
-        // recompute the fault_coverage for modified individual
-        // for(int m = 0; m < newborn_individual.size(); m++){
-
-
-        //     double fc = Circuit.ComputeFaultCoverage(population[newborn_individual[m]].gene);
-
-        //     cout<<"newborn_individual[m] = " << newborn_individual[m] << endl;
-        //     cout << fc << endl;
-        //     //cout << "newborn_individual_fc = " << m <<'-'<<fc;
-        //     population[m].fault_coverage = fc;
-        //     // in first phase, the fitness of an individual is its fault_coverage
-        //     population[m].fitness = fc;
-        // }
-
-        // for(int m = 0; m < mutated_individual.size(); m++){
-        //     double fc = Circuit.ComputeFaultCoverage(population[mutated_individual[m]].gene);
-        //     population[m].fault_coverage = fc;
-        //     // in first phase, the fitness of an individual is its fault_coverage
-        //     population[m].fitness = fc;
-        // }
-
         //cout << "POPSIZE=" << POPSIZE<< endl;
             for(int m = 0; m < pop_size; m++){
-                double fc_old = Circuit.ComputeFaultCoverage(Oldpopulation[m].gene);
+                double fc_old = Oldpopulation[m].fault_coverage; //Circuit.ComputeFaultCoverage(Oldpopulation[m].gene);
                 double fc = Circuit.ComputeFaultCoverage(population[m].gene);
 
                 if(fc_old>fc) {
@@ -255,17 +246,33 @@ int main(int argc, char ** argv)
 
         double largest_fc = population[0].fitness;
         int size_p1 = population[0].gene.size();
+        double sum_fc = population[0].fitness;
         for(int m = 1; m < pop_size; m++){
-            if(largest_fc < population[m].fitness) {
-                largest_fc = population[m].fitness;
-                size_p1 = population[m].gene.size();
-            }
+            sum_fc = sum_fc + population[m].fitness;
+                if(largest_fc < population[m].fitness) {
+                    largest_fc = population[m].fitness;
+                    size_p1 = population[m].gene.size();
+                }
         }
+ 
+        cout<<"run generation: "<<generation<< " largest_fc = "<< largest_fc << ',' << "average fc = " << (double)sum_fc/pop_size <<','<<"gene_size = "<< size_p1<<endl;
 
-        cout << "largest_fc = "<< largest_fc << ',' << "gene_size = "<< size_p1<<endl;
-
+        OutputStrm <<"run generation: "<<generation<< " largest_fc = "<< largest_fc << ',' << "average fc = " << (double)sum_fc/pop_size <<','<<"gene_size = "<< size_p1<<endl;
         if(good_individual_num == pop_size) break;
-    }           
+    }    
+
+ // add base genes to individual
+
+    for(int m = 0; m < pop_size; m++){
+        for(int n = 0; n < PIvector.size(); n++){
+            population[m].gene.push_back(PIvector[n]);
+        }
+    }  
+
+    for(int m = 0; m < POPSIZE; m++){
+        double fc = Circuit.ComputeFaultCoverage(population[m].gene);
+        population[m].fault_coverage = fc;
+        }     
 
     cout << setw(14) << population[POPSIZE].fitness;
     for(int m = 0; m < pop_size; m++){
@@ -278,8 +285,15 @@ int main(int argc, char ** argv)
         //     cout <<' ';
         // }
         cout<<endl;
-    }
 
+        OutputStrm << m << " gene size = "<< population[m].gene.size()<<' ';
+        OutputStrm << m << " fault coverage = "<< population[m].fault_coverage<<endl;
+    }
+//evolution ends ------------------------------------------------------------------  
+
+
+
+ OutputStrm.close();
 
 //phase 2
     for(int m = 0; m < pop_size; m++){
@@ -289,13 +303,22 @@ int main(int argc, char ** argv)
     //population[pop_size] = population[0];
     //keep_the_best_p2();
 
+    ofstream OutputStrm2;
+
+    OutputStrm2.open(phase2_evolution, ofstream::out);
+        if(!OutputStrm){
+        cout << "Unable to open output file: " << endl;
+        cout << "Unsaved output!\n";
+        exit(-1);}
+
+    int final_tests = 0;
     for (int generation = 0; generation < MAXGENS_p2; generation++)
     {
         good_individual_num = 0;
         int individual_to_be_killed = 0;//= selector_p1(seed,pop_size);
 
         //vector<int> newborn_individual = crossover_p1(seed,individual_to_be_killed);
-        vector<int> mutated_individual = mutate_p2(seed, Redun_PIvector);
+        vector<int> mutated_individual = mutate_p2(seed, PIvector_pool);
         //report(generation, PIvector);
         //report(generation, PIvector);
 
@@ -304,10 +327,10 @@ int main(int argc, char ** argv)
                 //cout << m<<endl;
                 //cout << "*******";
                 //cout << Oldpopulation[m].gene.size() << ',' << population[m].gene.size()<<endl;
-                double fc_old = Circuit.ComputeFaultCoverage(Oldpopulation[m].gene);
+                double fc_old = Oldpopulation[m].fault_coverage; //Circuit.ComputeFaultCoverage(Oldpopulation[m].gene);
                 double fc = Circuit.ComputeFaultCoverage(population[m].gene);
 
-                int sw_old = Circuit.CalSwitchActivity(Oldpopulation[m].gene);
+                int sw_old = Oldpopulation[m].fitness; //Circuit.CalSwitchActivity(Oldpopulation[m].gene);
                 int sw = Circuit.CalSwitchActivity(population[m].gene);
 
                 if(fc < gold_faultCoverage) {
@@ -327,11 +350,15 @@ int main(int argc, char ** argv)
 
             }
 
+            //selector_p2(seed, pop_size);
+
             int smallest_sw = population[0].fitness;
             int size = population[0].gene.size();
             double f = population[0].fault_coverage;
+            double sum_sw = population[0].fitness;
             int index = 0;
             for(int m = 1; m < pop_size; m++){
+                sum_sw = sum_sw + population[m].fitness;
             if(smallest_sw > population[m].fitness) {
                 smallest_sw = population[m].fitness;
                 size = population[m].gene.size();
@@ -340,15 +367,29 @@ int main(int argc, char ** argv)
             }
         }
 
-        cout << "index = "<< index <<"smallest_sw = "<< smallest_sw << ',' << "gene_size = "<< size<<" fault_coverage =" << f <<endl;
-
-
+        cout<<"run generation: "<<generation<< " index = "<< index <<"smallest_sw = "<< smallest_sw << ',' <<"average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
+        OutputStrm2 << cout<<"run generation: "<<generation<< " index = "<< index <<"smallest_sw = "<< smallest_sw << ',' <<"average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
+        
+        final_tests = index;
         //evaluate(PIvector);
         //elitist_p2();
 
        // if(good_individual_num == pop_size) break;
     } 
+        cout << "final test vector =";
+        OutputStrm2 << "final test vector =";
+    for(int m = 0; m < population[final_tests].gene.size(); m++){
+        for(int n = 0; n < population[final_tests].gene[m].size(); n++){
+            cout <<population[final_tests].gene[m][n];
+            OutputStrm2<<population[final_tests].gene[m][n];
+        }
+        cout <<' ';
+        OutputStrm2 <<' ';
 
+    }
+    cout << endl;
+    OutputStrm2<<endl;
+    OutputStrm2.close();
 // output file
             // ofstream OutputStrm;
 

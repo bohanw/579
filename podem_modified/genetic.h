@@ -36,6 +36,7 @@ struct genotype
 {
   vector<vector<char> > gene;
   double fitness;
+  double d_fitness;
   double fault_coverage;
   double upper[NVARS];
   double lower[NVARS];
@@ -61,6 +62,7 @@ vector<int> mutate_p2(int &seed, vector<vector<char> > &PIvector);
 double r8_uniform_ab(double a, double b, int &seed);
 void report(int generation, vector<vector<char> > &PIvector);
 int selector_p1(int &seed, int pop_size);
+void selector_p2(int &seed, int pop_size);
 void timestamp();
 void Xover_p1(int one, int two, int &seed, int individual_to_be_killed);
 
@@ -582,6 +584,7 @@ void initialize(int &seed, vector<vector<char> > &PIvector, int xfilling_ratio)
     {
       input >> lbound >> ubound;
       population[j].fitness = 0;
+      population[j].d_fitness = 0;
       population[j].rfitness = 0;
       population[j].cfitness = 0;
 //      population[j].size = rand() % ((NVARS+ DISTR) - (NVARS - DISTR) + 1) + (NVARS - DISTR);
@@ -589,6 +592,7 @@ void initialize(int &seed, vector<vector<char> > &PIvector, int xfilling_ratio)
       while(x < 1.0) x = d(gen);
       population[j].size = (int)x;
 
+      population[j].size = genpool_size/xfilling_ratio;
       for (i = 0; i < population[j].size; i++)
       {
         int genpool_num = rand() % genpool_size;
@@ -701,8 +705,13 @@ vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
   for (i = 0; i < POPSIZE; i++)                                           
   {
     has_been_recorded = 0;
-    x = r8_uniform_ab(a, b, seed);                                    // randomly insert a gene into that location
+
+    int num_insert = 3;
     int current_pop_gen_size = population[i].gene.size();
+
+    while(num_insert > 0){
+    x = r8_uniform_ab(a, b, seed);                                    // randomly insert a gene into that location
+    current_pop_gen_size = population[i].gene.size();
         if ((x < PMUTATION) && (genpool_size != 0) && (current_pop_gen_size != 0))
         {
           int genpool_loc = rand() % genpool_size;
@@ -714,8 +723,12 @@ vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
           }
         }
 
+      num_insert --;
+      }
+
+    current_pop_gen_size = population[i].gene.size();
     y = r8_uniform_ab(a, b, seed);                                 // randomly delete one of the gene from that indiv
-        if ((y < PMUTATION) && (current_pop_gen_size != 0))
+        if ((y < PMUTATION) && (current_pop_gen_size > 2))
         {
           int gene_loc2 = rand() % current_pop_gen_size;
           population[i].gene.erase(population[i].gene.begin() + gene_loc2);
@@ -728,6 +741,7 @@ vector<int> mutate_p1(int &seed, vector<vector<char> > &PIvector)
 
     z = r8_uniform_ab(a, b, seed);                                 // randomly swap two genes in two individuals
 
+    current_pop_gen_size = population[i].gene.size();
     int swap_pop = rand() % (POPSIZE - 1);
     int swap_size = population[swap_pop].gene.size();
 
@@ -810,15 +824,22 @@ vector<int> mutate_p2(int &seed, vector<vector<char> > &PIvector)
         
       //   }
 
-    y = r8_uniform_ab(a, b, seed);                                 // randomly delete one of the gene from that indiv
-        if ((y < PMUTATION_P2_DELET) && (current_pop_gen_size != 0) && (current_pop_gen_size != 1))
+    int num_delete = 3;
+    while(num_delete > 0){
+      current_pop_gen_size = population[i].gene.size();
+      y = r8_uniform_ab(a, b, seed);                                 // randomly delete one of the gene from that indiv
+        if ((y < PMUTATION_P2_DELET) && (current_pop_gen_size != 0) && (current_pop_gen_size > 2))
         {
           int gene_loc2 = rand() % current_pop_gen_size;
           population[i].gene.erase(population[i].gene.begin() + gene_loc2);
         }
 
     z = r8_uniform_ab(a, b, seed);                                 // randomly swap two genes of a individual
+    num_delete --;
+  }
 
+
+    current_pop_gen_size = population[i].gene.size();
     if ((z < PMUTATION) && (current_pop_gen_size != 0) && (current_pop_gen_size != 1))
     {
       
@@ -1039,6 +1060,77 @@ int selector_p1(int &seed, int pop_size)
   // }
 
 
+}
+
+void selector_p2(int &seed, int pop_size)
+{
+  const double a = 0.0;
+  const double b = 1.0;
+  int i;
+  int j;
+  int mem;
+  double p;
+  double sum;
+
+  
+   //Find the total fitness of the population.
+  
+  sum = 0.0;
+  for (mem = 0; mem < POPSIZE; mem++){
+    if(population[mem].fitness != 0) population[mem].d_fitness = (double)1/population[mem].fitness;
+    else population[mem].d_fitness = 0.0;
+
+    sum = sum + population[mem].d_fitness;
+  }
+  //
+  //  Calculate the relative fitness of each member.
+  //
+
+  if(sum == 0) {
+    cout << "sum == 0 ???????"<<endl;
+    return;
+  }
+  for (mem = 0; mem < POPSIZE; mem++)
+  {
+    population[mem].rfitness = population[mem].d_fitness / sum;
+  }
+  // 
+  //  Calculate the cumulative fitness.
+  //
+  population[0].cfitness = population[0].rfitness;
+  for (mem = 1; mem < POPSIZE; mem++)
+  {
+    population[mem].cfitness = population[mem - 1].cfitness +
+      population[mem].rfitness;
+  }
+  // 
+  //  Select survivors using cumulative fitness. 
+  //
+  for (i = 0; i < POPSIZE; i++)
+  {
+    p = r8_uniform_ab(a, b, seed);
+    if (p < population[0].cfitness)
+    {
+      newpopulation[i] = population[0];
+    }
+    else
+    {
+      for (j = 0; j < POPSIZE; j++)
+      {
+        if (population[j].cfitness <= p && p < population[j + 1].cfitness)
+        {
+          newpopulation[i] = population[j + 1];
+        }
+      }
+    }
+  }
+  // 
+  //  Overwrite the old population with the new one.
+  //
+  for (i = 0; i < POPSIZE; i++)
+  {
+    population[i] = newpopulation[i];
+  }
 }
 //****************************************************************************80
 
