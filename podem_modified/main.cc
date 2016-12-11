@@ -175,8 +175,8 @@ int main(int argc, char ** argv)
             // the number of gene each individual has is gaussian random distribution N ~ (X/2, X/4)
             // gene is selected randomly from the gene pool and assigned to each individual
 
-            string phase1_evolution = "result_s298_opt_phase1_evolution";
-            string phase2_evolution = "result_s298_opt_phase2_evolution";
+            string phase1_evolution = "result_s344_opt_phase1_evolution";
+            string phase2_evolution = "result_s344_opt_phase2_evolution";
             srand(time(NULL));
             cout.precision(5);
             int pop_size = POPSIZE;
@@ -385,7 +385,7 @@ int main(int argc, char ** argv)
         }
 
         cout<<"run generation: "<<generation<< " index = "<< index <<" smallest_sw = "<< smallest_sw << ',' <<" average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
-        OutputStrm2 << cout<<"run generation: "<<generation<< " index = "<< index <<" smallest_sw = "<< smallest_sw << ',' <<" average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
+        OutputStrm2 << "run generation: "<<generation<< " index = "<< index <<" smallest_sw = "<< smallest_sw << ',' <<" average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
         
         final_tests = index;
         //evaluate(PIvector);
