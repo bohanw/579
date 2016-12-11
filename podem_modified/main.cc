@@ -175,8 +175,8 @@ int main(int argc, char ** argv)
             // the number of gene each individual has is gaussian random distribution N ~ (X/2, X/4)
             // gene is selected randomly from the gene pool and assigned to each individual
 
-            string phase1_evolution = "test";//"result_c880_phase1_evolution";
-            string phase2_evolution = "test2";//result_c880_phase2_evolution";
+            string phase1_evolution = "result_s298_opt_phase1_evolution";
+            string phase2_evolution = "result_s298_opt_phase2_evolution";
             srand(time(NULL));
             cout.precision(5);
             int pop_size = POPSIZE;
@@ -194,6 +194,12 @@ int main(int argc, char ** argv)
                 population[m].fitness = fc;
             }
             cout<<endl;
+
+            for (int m = 0; m < POPSIZE; m++)
+               {
+                Oldpopulation[m] = population[m];
+               }
+
             for(int m = 0; m < POPSIZE; m++){
                 cout<< "faultCoverage = " <<population[m].fault_coverage<<endl;
             }
@@ -226,6 +232,7 @@ int main(int argc, char ** argv)
                 double fc_old = Oldpopulation[m].fault_coverage; //Circuit.ComputeFaultCoverage(Oldpopulation[m].gene);
                 double fc = Circuit.ComputeFaultCoverage(population[m].gene);
 
+
                 if(fc_old>fc) {
                     population[m] = Oldpopulation[m];
                     population[m].fault_coverage = fc_old;
@@ -234,7 +241,8 @@ int main(int argc, char ** argv)
                 else{
                     population[m].fault_coverage = fc;
                     // in first phase, the fitness of an individual is its fault_coverage
-                    population[m].fitness = fc;                  
+                    population[m].fitness = fc;   
+                    Oldpopulation[m] = population[m];               
                 }
 
 
@@ -256,9 +264,9 @@ int main(int argc, char ** argv)
                 }
         }
  
-        cout<<"run generation: "<<generation<< " largest_fc = "<< largest_fc << ',' << "average fc = " << (double)sum_fc/pop_size <<','<<"gene_size = "<< size_p1<<endl;
+        cout<<"run generation: "<<generation<< " largest_fc = "<< largest_fc << ',' << "average_fc = " << (double)sum_fc/pop_size <<','<<"gene_size = "<< size_p1<<endl;
 
-        OutputStrm <<"run generation: "<<generation<< " largest_fc = "<< largest_fc << ',' << "average fc = " << (double)sum_fc/pop_size <<','<<"gene_size = "<< size_p1<<endl;
+        OutputStrm <<"run generation: "<<generation<< " largest_fc = "<< largest_fc << ',' << "average_fc = " << (double)sum_fc/pop_size <<','<<"gene_size = "<< size_p1<<endl;
         if(good_individual_num == pop_size) break;
     }    
 
@@ -267,6 +275,7 @@ int main(int argc, char ** argv)
     for(int m = 0; m < pop_size; m++){
         for(int n = 0; n < PIvector.size(); n++){
             population[m].gene.push_back(PIvector[n]);
+            Oldpopulation[m].gene.push_back(PIvector[n]);
         }
     }  
 
@@ -279,6 +288,9 @@ int main(int argc, char ** argv)
     for(int m = 0; m < pop_size; m++){
         cout << m << " gene size = "<< population[m].gene.size()<<' ';
         cout << m << " fault coverage = "<< population[m].fault_coverage<<endl;
+
+        //cout << m << " gene size = "<< Oldpopulation[m].gene.size()<<' ';
+        //cout << m << " fault coverage = "<< Oldpopulation[m].fault_coverage<<endl;  
         // for(int n = 0; n < population[m].gene.size(); n++){
         //     for(int k = 0; k < population[m].gene[n].size(); k++){
         //         //cout<<population[m].gene[n][k];
@@ -303,6 +315,9 @@ int main(int argc, char ** argv)
     }
     //population[pop_size] = population[0];
     //keep_the_best_p2();
+
+    for (int m = 0; m < POPSIZE; m++){
+        Oldpopulation[m] = population[m];}
 
     ofstream OutputStrm2;
 
@@ -346,7 +361,8 @@ int main(int argc, char ** argv)
                 }
                 else{
                     population[m].fault_coverage = fc;
-                    population[m].fitness = sw;                   
+                    population[m].fitness = sw;  
+                    Oldpopulation[m] = population[m];                 
                 }
 
             }
@@ -368,8 +384,8 @@ int main(int argc, char ** argv)
             }
         }
 
-        cout<<"run generation: "<<generation<< " index = "<< index <<"smallest_sw = "<< smallest_sw << ',' <<"average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
-        OutputStrm2 << cout<<"run generation: "<<generation<< " index = "<< index <<"smallest_sw = "<< smallest_sw << ',' <<"average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
+        cout<<"run generation: "<<generation<< " index = "<< index <<" smallest_sw = "<< smallest_sw << ',' <<" average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
+        OutputStrm2 << cout<<"run generation: "<<generation<< " index = "<< index <<" smallest_sw = "<< smallest_sw << ',' <<" average sw =" <<(double)sum_sw/pop_size << ','<< "gene_size = "<< size<<" fault_coverage =" << f <<endl;
         
         final_tests = index;
         //evaluate(PIvector);
@@ -390,7 +406,42 @@ int main(int argc, char ** argv)
     }
     cout << endl;
     OutputStrm2<<endl;
+
+// reordering
+    vector<vector<char> > reorderedPI = Circuit.reorder(population[final_tests].gene);
+    int final_sw = Circuit.CalSwitchActivity(reorderedPI);
+    double final_fc = Circuit.ComputeFaultCoverage(reorderedPI);
+
+    int ini_sw = Circuit.CalSwitchActivity(PIvector);
+    int ini_tests_size = PIvector.size();
+
+    cout << "reordered sw = " << final_sw << endl;
+    cout << "reordered fc = " << final_fc << endl;
+
+    cout << "sw before algorithm = " << ini_sw << endl;
+    cout << "initial test number = " << ini_tests_size << endl;
+
+    OutputStrm2 << "reordered sw = " << final_sw << endl;
+    OutputStrm2 << "reordered fc = " << final_fc << endl;    
+
+    OutputStrm2 << "sw before algorithm = " << ini_sw << endl;
+    OutputStrm2 << "initial test number = " << ini_tests_size << endl;
+
+    for(int m = 0; m < reorderedPI.size(); m++){
+        for(int n = 0; n < reorderedPI[m].size(); n++){
+            cout <<reorderedPI[m][n] ;
+            OutputStrm2<<reorderedPI[m][n] <<' ';
+        }
+        cout <<' '<<endl;
+        OutputStrm2 <<' '<<endl;
+    }
+    cout << endl;
+    int Total_sw_after = Circuit.ComputeTotalsw(reorderedPI);
+    int Total_sw_before = Circuit.ComputeTotalsw(PIvector);
+    cout <<"Total_sw_after = "<<Total_sw_after << " ,Total_sw_before = " << Total_sw_before << endl;
+    OutputStrm2 <<"Total_sw_after = "<<Total_sw_after << " ,Total_sw_before = " << Total_sw_before << endl;
     OutputStrm2.close();
+
 // output file
             // ofstream OutputStrm;
 

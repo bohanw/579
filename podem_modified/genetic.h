@@ -38,8 +38,8 @@ struct genotype
   double fitness;
   double d_fitness;
   double fault_coverage;
-  double upper[NVARS];
-  double lower[NVARS];
+  //double upper[NVARS];
+  //double lower[NVARS];
   double rfitness;
   double cfitness;
   int size;
@@ -791,10 +791,7 @@ vector<int> mutate_p2(int &seed, vector<vector<char> > &PIvector)
   vector<int> mutated_individual;
   int has_been_recorded = 0;
 
-  for (i = 0; i < POPSIZE; i++)
-  {
-    Oldpopulation[i] = population[i];
-  }
+
 
   for (i = 0; i < POPSIZE; i++)                                           
   {

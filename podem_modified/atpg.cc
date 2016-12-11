@@ -377,13 +377,13 @@ int CIRCUIT::CalSwitchActivity(vector<vector<char> >& testvector){
 }
 
 
-vector<vector<char> >& CIRCUIT::greedy(vector<vector<char> >& vectorin){
+vector<vector<char> > CIRCUIT::greedy(vector<vector<char> >& vectorin){
     int NumOfTest = vectorin.size();
     TotalReorderedswitchActivity = 0;
     int switchActivity;
-    for(int i = 0; i < NumOfTest - 2; i++){
+    for(int i = 0; i < NumOfTest - 1; i++){
         switchActivity = NumOfTest;
-        //cout<<"process test" << i << endl;
+        cout<<"process test" << i << endl;
         int nextvector = 0;
         for(int j = i+1; j < NumOfTest; j++){
             int count = 0;
@@ -403,15 +403,29 @@ vector<vector<char> >& CIRCUIT::greedy(vector<vector<char> >& vectorin){
         vectorin[i+1] = vectorin[nextvector];
         vectorin[nextvector] = temp;
     }
-
+    // for(int m = 0; m < vectorin.size(); m++){
+    //     for(int n = 0; n < vectorin[m].size(); n++){
+    //         cout <<vectorin[m][n];
+    //     }
+    //     cout <<' '<<endl;
+    // }
     //cout << "reordered switchActivity=" << TotalReorderedswitchActivity << endl;
     return vectorin;
 }
 
-vector<vector<char> >& CIRCUIT::reorder(vector<vector<char> >& vectorin){
+vector<vector<char> > CIRCUIT::reorder(vector<vector<char> >& vectorin){
     int NumOfTest = vectorin.size();
 
-    vector<vector<char> >& best = greedy(vectorin);
+    vector<vector<char> > best = greedy(vectorin);
+
+    // for(int m = 0; m < best.size(); m++){
+    //     for(int n = 0; n < best[m].size(); n++){
+    //         cout <<best[m][n];
+    //     }
+    //     cout <<' '<<endl;
+    // }
+
+    //cout << "TotalReorderedswitchActivity = "<<TotalReorderedswitchActivity << endl;
     BestReorderedSwitchActivit = TotalReorderedswitchActivity;
     //cout<<"BestReorderedSwitchActivit = "<< BestReorderedSwitchActivit<< endl;
 
@@ -420,7 +434,7 @@ vector<vector<char> >& CIRCUIT::reorder(vector<vector<char> >& vectorin){
         vector<char> temp_v = vectorin[i];
         vectorin[i] = vectorin[0];
         vectorin[0] = temp_v;
-        vector<vector<char> >& temp2 = greedy(vectorin);
+        vector<vector<char> > temp2 = greedy(vectorin);
         //cout<<"BestReorderedSwitchActivit = "<< BestReorderedSwitchActivit<< endl;
         if(TotalReorderedswitchActivity < BestReorderedSwitchActivit){
             BestReorderedSwitchActivit = TotalReorderedswitchActivity;
@@ -428,12 +442,58 @@ vector<vector<char> >& CIRCUIT::reorder(vector<vector<char> >& vectorin){
         }
 
     }
+
+    for(int m = 0; m < best.size(); m++){
+        for(int n = 0; n < best[m].size(); n++){
+            cout <<best[m][n];
+        }
+        cout <<' '<<endl;
+    }
     cout<<"BestReorderedSwitchActivit = "<< BestReorderedSwitchActivit<< endl;
     return best;
     // choose the start vector
 
 }
 
+int CIRCUIT::ComputeTotalsw(vector<vector<char> >& vectorin){
+    int testNum = vectorin.size();
+    if(testNum == 0) return 0;
+
+    for (int j = 0;j<vectorin[0].size();++j){
+        switch(vectorin[0][j]){
+            case '0': PIlist[j]->SetValue(S0);break;
+            case '1': PIlist[j]->SetValue(S1);break;
+            default: cout<<"what??"<<endl; break;}
+        ScheduleFanout(PIlist[j]);}
+
+    for (int k = PIlist.size();k<Netlist.size();++k) {Netlist[k]->SetValue(X);}
+        LogicSim();
+
+
+    vector<GATE*> OldNetlist = Netlist;
+
+    int Total_sw = 0;
+    for(int i = 1; i < testNum; i++){
+    for (int j = 0;j<vectorin[i].size();++j){
+        switch(vectorin[i][j]){
+            case '0': PIlist[j]->SetValue(S0);break;
+            case '1': PIlist[j]->SetValue(S1);break;
+            default: cout<<"what??"<<endl; break;}
+        ScheduleFanout(PIlist[j]);}
+    for (int k = PIlist.size();k<Netlist.size();++k) {Netlist[k]->SetValue(X);}
+        LogicSim();
+
+    for (int k = 0;k<Netlist.size();++k) {
+
+        if(OldNetlist[k]->GetValue() == Netlist[k]->GetValue()) Total_sw++;
+    }
+
+    OldNetlist = Netlist;
+
+    }
+
+    return Total_sw;
+}
 
 double CIRCUIT::ComputeFaultCoverage(vector<vector<char> >& vectorin){
     int testNum = vectorin.size();
