@@ -383,7 +383,7 @@ vector<vector<char> > CIRCUIT::greedy(vector<vector<char> >& vectorin){
     int switchActivity;
     for(int i = 0; i < NumOfTest - 1; i++){
         switchActivity = NumOfTest;
-        cout<<"process test" << i << endl;
+        //cout<<"process test" << i << endl;
         int nextvector = 0;
         for(int j = i+1; j < NumOfTest; j++){
             int count = 0;
@@ -442,6 +442,7 @@ vector<vector<char> > CIRCUIT::reorder(vector<vector<char> >& vectorin){
         }
 
     }
+
 
     for(int m = 0; m < best.size(); m++){
         for(int n = 0; n < best[m].size(); n++){

@@ -1,0 +1,1127 @@
+run generation: 0 index = 4 smallest_sw = 2848, average sw =3296.45,gene_size = 571 fault_coverage =0.999223
+run generation: 1 index = 4 smallest_sw = 2848, average sw =3292.55,gene_size = 571 fault_coverage =0.999223
+run generation: 2 index = 4 smallest_sw = 2844, average sw =3286.05,gene_size = 569 fault_coverage =0.999223
+run generation: 3 index = 4 smallest_sw = 2844, average sw =3281.2,gene_size = 569 fault_coverage =0.999223
+run generation: 4 index = 4 smallest_sw = 2844, average sw =3276.85,gene_size = 569 fault_coverage =0.999223
+run generation: 5 index = 4 smallest_sw = 2844, average sw =3272.9,gene_size = 569 fault_coverage =0.999223
+run generation: 6 index = 4 smallest_sw = 2832, average sw =3265.25,gene_size = 566 fault_coverage =0.999223
+run generation: 7 index = 4 smallest_sw = 2832, average sw =3261,gene_size = 566 fault_coverage =0.999223
+run generation: 8 index = 4 smallest_sw = 2832, average sw =3257.35,gene_size = 566 fault_coverage =0.999223
+run generation: 9 index = 4 smallest_sw = 2825, average sw =3252.5,gene_size = 564 fault_coverage =0.999223
+run generation: 10 index = 4 smallest_sw = 2814, average sw =3248.55,gene_size = 562 fault_coverage =0.999223
+run generation: 11 index = 4 smallest_sw = 2814, average sw =3242.7,gene_size = 562 fault_coverage =0.999223
+run generation: 12 index = 4 smallest_sw = 2806, average sw =3238.45,gene_size = 561 fault_coverage =0.999223
+run generation: 13 index = 4 smallest_sw = 2806, average sw =3232.8,gene_size = 561 fault_coverage =0.999223
+run generation: 14 index = 4 smallest_sw = 2798, average sw =3227.15,gene_size = 560 fault_coverage =0.999223
+run generation: 15 index = 4 smallest_sw = 2797, average sw =3219.05,gene_size = 558 fault_coverage =0.999223
+run generation: 16 index = 4 smallest_sw = 2797, average sw =3211.95,gene_size = 558 fault_coverage =0.999223
+run generation: 17 index = 4 smallest_sw = 2794, average sw =3208.55,gene_size = 556 fault_coverage =0.999223
+run generation: 18 index = 4 smallest_sw = 2779, average sw =3202.8,gene_size = 553 fault_coverage =0.999223
+run generation: 19 index = 4 smallest_sw = 2779, average sw =3197.35,gene_size = 553 fault_coverage =0.999223
+run generation: 20 index = 4 smallest_sw = 2779, average sw =3191.25,gene_size = 553 fault_coverage =0.999223
+run generation: 21 index = 4 smallest_sw = 2779, average sw =3186.85,gene_size = 551 fault_coverage =0.999223
+run generation: 22 index = 4 smallest_sw = 2767, average sw =3182.1,gene_size = 548 fault_coverage =0.999223
+run generation: 23 index = 4 smallest_sw = 2767, average sw =3177.45,gene_size = 548 fault_coverage =0.999223
+run generation: 24 index = 4 smallest_sw = 2767, average sw =3172.35,gene_size = 548 fault_coverage =0.999223
+run generation: 25 index = 4 smallest_sw = 2767, average sw =3167.95,gene_size = 548 fault_coverage =0.999223
+run generation: 26 index = 4 smallest_sw = 2767, average sw =3160.4,gene_size = 548 fault_coverage =0.999223
+run generation: 27 index = 4 smallest_sw = 2767, average sw =3154.65,gene_size = 548 fault_coverage =0.999223
+run generation: 28 index = 4 smallest_sw = 2767, average sw =3148.7,gene_size = 548 fault_coverage =0.999223
+run generation: 29 index = 4 smallest_sw = 2758, average sw =3144.3,gene_size = 546 fault_coverage =0.999223
+run generation: 30 index = 4 smallest_sw = 2744, average sw =3138.6,gene_size = 543 fault_coverage =0.999223
+run generation: 31 index = 4 smallest_sw = 2744, average sw =3135.25,gene_size = 543 fault_coverage =0.999223
+run generation: 32 index = 4 smallest_sw = 2733, average sw =3131.15,gene_size = 541 fault_coverage =0.999223
+run generation: 33 index = 4 smallest_sw = 2719, average sw =3126.85,gene_size = 539 fault_coverage =0.999223
+run generation: 34 index = 4 smallest_sw = 2714, average sw =3121.8,gene_size = 538 fault_coverage =0.999223
+run generation: 35 index = 4 smallest_sw = 2714, average sw =3116.85,gene_size = 538 fault_coverage =0.999223
+run generation: 36 index = 4 smallest_sw = 2712, average sw =3112.65,gene_size = 535 fault_coverage =0.999223
+run generation: 37 index = 4 smallest_sw = 2712, average sw =3108.7,gene_size = 535 fault_coverage =0.999223
+run generation: 38 index = 4 smallest_sw = 2712, average sw =3106,gene_size = 535 fault_coverage =0.999223
+run generation: 39 index = 4 smallest_sw = 2712, average sw =3101.75,gene_size = 535 fault_coverage =0.999223
+run generation: 40 index = 4 smallest_sw = 2691, average sw =3094.9,gene_size = 532 fault_coverage =0.999223
+run generation: 41 index = 4 smallest_sw = 2691, average sw =3090.75,gene_size = 532 fault_coverage =0.999223
+run generation: 42 index = 4 smallest_sw = 2690, average sw =3085.4,gene_size = 531 fault_coverage =0.999223
+run generation: 43 index = 4 smallest_sw = 2690, average sw =3081.85,gene_size = 531 fault_coverage =0.999223
+run generation: 44 index = 4 smallest_sw = 2690, average sw =3077.8,gene_size = 531 fault_coverage =0.999223
+run generation: 45 index = 4 smallest_sw = 2686, average sw =3074.45,gene_size = 529 fault_coverage =0.999223
+run generation: 46 index = 4 smallest_sw = 2684, average sw =3071.55,gene_size = 527 fault_coverage =0.999223
+run generation: 47 index = 4 smallest_sw = 2684, average sw =3067.35,gene_size = 527 fault_coverage =0.999223
+run generation: 48 index = 4 smallest_sw = 2684, average sw =3064.25,gene_size = 527 fault_coverage =0.999223
+run generation: 49 index = 4 smallest_sw = 2681, average sw =3060.1,gene_size = 524 fault_coverage =0.999223
+run generation: 50 index = 4 smallest_sw = 2670, average sw =3056,gene_size = 523 fault_coverage =0.999223
+run generation: 51 index = 4 smallest_sw = 2670, average sw =3049.95,gene_size = 523 fault_coverage =0.999223
+run generation: 52 index = 4 smallest_sw = 2670, average sw =3043.6,gene_size = 523 fault_coverage =0.999223
+run generation: 53 index = 4 smallest_sw = 2669, average sw =3039.6,gene_size = 522 fault_coverage =0.999223
+run generation: 54 index = 4 smallest_sw = 2669, average sw =3034.4,gene_size = 522 fault_coverage =0.999223
+run generation: 55 index = 4 smallest_sw = 2669, average sw =3031.3,gene_size = 522 fault_coverage =0.999223
+run generation: 56 index = 4 smallest_sw = 2669, average sw =3027.55,gene_size = 522 fault_coverage =0.999223
+run generation: 57 index = 4 smallest_sw = 2661, average sw =3022.15,gene_size = 521 fault_coverage =0.999223
+run generation: 58 index = 4 smallest_sw = 2661, average sw =3017.7,gene_size = 521 fault_coverage =0.999223
+run generation: 59 index = 4 smallest_sw = 2652, average sw =3013.4,gene_size = 520 fault_coverage =0.999223
+run generation: 60 index = 4 smallest_sw = 2651, average sw =3009.2,gene_size = 518 fault_coverage =0.999223
+run generation: 61 index = 4 smallest_sw = 2650, average sw =3006.05,gene_size = 516 fault_coverage =0.999223
+run generation: 62 index = 4 smallest_sw = 2650, average sw =2999.85,gene_size = 516 fault_coverage =0.999223
+run generation: 63 index = 4 smallest_sw = 2645, average sw =2996.5,gene_size = 515 fault_coverage =0.999223
+run generation: 64 index = 4 smallest_sw = 2643, average sw =2993,gene_size = 514 fault_coverage =0.999223
+run generation: 65 index = 4 smallest_sw = 2636, average sw =2989.5,gene_size = 511 fault_coverage =0.999223
+run generation: 66 index = 4 smallest_sw = 2636, average sw =2984.25,gene_size = 511 fault_coverage =0.999223
+run generation: 67 index = 4 smallest_sw = 2623, average sw =2978.45,gene_size = 508 fault_coverage =0.999223
+run generation: 68 index = 4 smallest_sw = 2613, average sw =2974.8,gene_size = 506 fault_coverage =0.999223
+run generation: 69 index = 4 smallest_sw = 2613, average sw =2971.85,gene_size = 506 fault_coverage =0.999223
+run generation: 70 index = 4 smallest_sw = 2602, average sw =2964.25,gene_size = 504 fault_coverage =0.999223
+run generation: 71 index = 4 smallest_sw = 2602, average sw =2959.1,gene_size = 504 fault_coverage =0.999223
+run generation: 72 index = 4 smallest_sw = 2594, average sw =2955,gene_size = 502 fault_coverage =0.999223
+run generation: 73 index = 4 smallest_sw = 2586, average sw =2948.2,gene_size = 501 fault_coverage =0.999223
+run generation: 74 index = 4 smallest_sw = 2581, average sw =2945.45,gene_size = 500 fault_coverage =0.999223
+run generation: 75 index = 4 smallest_sw = 2579, average sw =2939.9,gene_size = 498 fault_coverage =0.999223
+run generation: 76 index = 4 smallest_sw = 2574, average sw =2933.1,gene_size = 497 fault_coverage =0.999223
+run generation: 77 index = 4 smallest_sw = 2574, average sw =2926.65,gene_size = 497 fault_coverage =0.999223
+run generation: 78 index = 4 smallest_sw = 2574, average sw =2921.3,gene_size = 497 fault_coverage =0.999223
+run generation: 79 index = 4 smallest_sw = 2574, average sw =2916.8,gene_size = 497 fault_coverage =0.999223
+run generation: 80 index = 4 smallest_sw = 2574, average sw =2912.75,gene_size = 497 fault_coverage =0.999223
+run generation: 81 index = 4 smallest_sw = 2568, average sw =2907.05,gene_size = 496 fault_coverage =0.999223
+run generation: 82 index = 4 smallest_sw = 2560, average sw =2901.85,gene_size = 494 fault_coverage =0.999223
+run generation: 83 index = 4 smallest_sw = 2557, average sw =2896.95,gene_size = 492 fault_coverage =0.999223
+run generation: 84 index = 4 smallest_sw = 2557, average sw =2893,gene_size = 491 fault_coverage =0.999223
+run generation: 85 index = 4 smallest_sw = 2552, average sw =2890.7,gene_size = 490 fault_coverage =0.999223
+run generation: 86 index = 4 smallest_sw = 2552, average sw =2887.1,gene_size = 490 fault_coverage =0.999223
+run generation: 87 index = 4 smallest_sw = 2552, average sw =2882.55,gene_size = 488 fault_coverage =0.999223
+run generation: 88 index = 4 smallest_sw = 2548, average sw =2877.75,gene_size = 486 fault_coverage =0.999223
+run generation: 89 index = 4 smallest_sw = 2548, average sw =2873,gene_size = 486 fault_coverage =0.999223
+run generation: 90 index = 4 smallest_sw = 2546, average sw =2867.4,gene_size = 485 fault_coverage =0.999223
+run generation: 91 index = 4 smallest_sw = 2544, average sw =2863.7,gene_size = 483 fault_coverage =0.999223
+run generation: 92 index = 4 smallest_sw = 2538, average sw =2860.45,gene_size = 482 fault_coverage =0.999223
+run generation: 93 index = 4 smallest_sw = 2538, average sw =2855.2,gene_size = 480 fault_coverage =0.999223
+run generation: 94 index = 4 smallest_sw = 2523, average sw =2848.85,gene_size = 477 fault_coverage =0.999223
+run generation: 95 index = 4 smallest_sw = 2518, average sw =2844.05,gene_size = 476 fault_coverage =0.999223
+run generation: 96 index = 4 smallest_sw = 2511, average sw =2838.25,gene_size = 474 fault_coverage =0.999223
+run generation: 97 index = 4 smallest_sw = 2493, average sw =2834.05,gene_size = 472 fault_coverage =0.999223
+run generation: 98 index = 4 smallest_sw = 2492, average sw =2828.95,gene_size = 470 fault_coverage =0.999223
+run generation: 99 index = 4 smallest_sw = 2481, average sw =2825.9,gene_size = 468 fault_coverage =0.999223
+run generation: 100 index = 4 smallest_sw = 2481, average sw =2821.4,gene_size = 468 fault_coverage =0.999223
+run generation: 101 index = 4 smallest_sw = 2481, average sw =2815.1,gene_size = 468 fault_coverage =0.999223
+run generation: 102 index = 4 smallest_sw = 2480, average sw =2811.55,gene_size = 467 fault_coverage =0.999223
+run generation: 103 index = 4 smallest_sw = 2471, average sw =2807.45,gene_size = 465 fault_coverage =0.999223
+run generation: 104 index = 4 smallest_sw = 2458, average sw =2804.45,gene_size = 463 fault_coverage =0.999223
+run generation: 105 index = 4 smallest_sw = 2454, average sw =2800.5,gene_size = 461 fault_coverage =0.999223
+run generation: 106 index = 4 smallest_sw = 2450, average sw =2796.85,gene_size = 459 fault_coverage =0.999223
+run generation: 107 index = 4 smallest_sw = 2446, average sw =2793.2,gene_size = 458 fault_coverage =0.999223
+run generation: 108 index = 4 smallest_sw = 2441, average sw =2789.2,gene_size = 457 fault_coverage =0.999223
+run generation: 109 index = 4 smallest_sw = 2433, average sw =2785.65,gene_size = 454 fault_coverage =0.999223
+run generation: 110 index = 4 smallest_sw = 2424, average sw =2781.2,gene_size = 452 fault_coverage =0.999223
+run generation: 111 index = 4 smallest_sw = 2424, average sw =2776.85,gene_size = 452 fault_coverage =0.999223
+run generation: 112 index = 4 smallest_sw = 2419, average sw =2770.35,gene_size = 451 fault_coverage =0.999223
+run generation: 113 index = 4 smallest_sw = 2402, average sw =2763.95,gene_size = 448 fault_coverage =0.999223
+run generation: 114 index = 4 smallest_sw = 2386, average sw =2756.4,gene_size = 446 fault_coverage =0.999223
+run generation: 115 index = 4 smallest_sw = 2386, average sw =2753.1,gene_size = 446 fault_coverage =0.999223
+run generation: 116 index = 4 smallest_sw = 2383, average sw =2746.25,gene_size = 444 fault_coverage =0.999223
+run generation: 117 index = 4 smallest_sw = 2373, average sw =2742.05,gene_size = 441 fault_coverage =0.999223
+run generation: 118 index = 4 smallest_sw = 2353, average sw =2736.7,gene_size = 439 fault_coverage =0.999223
+run generation: 119 index = 4 smallest_sw = 2352, average sw =2733.2,gene_size = 437 fault_coverage =0.999223
+run generation: 120 index = 4 smallest_sw = 2352, average sw =2730.5,gene_size = 437 fault_coverage =0.999223
+run generation: 121 index = 4 smallest_sw = 2352, average sw =2727.05,gene_size = 437 fault_coverage =0.999223
+run generation: 122 index = 4 smallest_sw = 2352, average sw =2723.15,gene_size = 437 fault_coverage =0.999223
+run generation: 123 index = 4 smallest_sw = 2345, average sw =2718.4,gene_size = 435 fault_coverage =0.999223
+run generation: 124 index = 4 smallest_sw = 2345, average sw =2713.2,gene_size = 435 fault_coverage =0.999223
+run generation: 125 index = 4 smallest_sw = 2332, average sw =2709.3,gene_size = 434 fault_coverage =0.999223
+run generation: 126 index = 4 smallest_sw = 2332, average sw =2705.85,gene_size = 434 fault_coverage =0.999223
+run generation: 127 index = 4 smallest_sw = 2325, average sw =2704.05,gene_size = 433 fault_coverage =0.999223
+run generation: 128 index = 4 smallest_sw = 2325, average sw =2697.55,gene_size = 433 fault_coverage =0.999223
+run generation: 129 index = 4 smallest_sw = 2313, average sw =2693.9,gene_size = 431 fault_coverage =0.999223
+run generation: 130 index = 4 smallest_sw = 2313, average sw =2689.5,gene_size = 431 fault_coverage =0.999223
+run generation: 131 index = 4 smallest_sw = 2313, average sw =2685.25,gene_size = 431 fault_coverage =0.999223
+run generation: 132 index = 4 smallest_sw = 2313, average sw =2681,gene_size = 431 fault_coverage =0.999223
+run generation: 133 index = 4 smallest_sw = 2307, average sw =2676.8,gene_size = 430 fault_coverage =0.999223
+run generation: 134 index = 4 smallest_sw = 2302, average sw =2671.9,gene_size = 428 fault_coverage =0.999223
+run generation: 135 index = 4 smallest_sw = 2302, average sw =2667.1,gene_size = 428 fault_coverage =0.999223
+run generation: 136 index = 4 smallest_sw = 2302, average sw =2663.15,gene_size = 428 fault_coverage =0.999223
+run generation: 137 index = 4 smallest_sw = 2297, average sw =2658.95,gene_size = 427 fault_coverage =0.999223
+run generation: 138 index = 4 smallest_sw = 2296, average sw =2656.15,gene_size = 426 fault_coverage =0.999223
+run generation: 139 index = 4 smallest_sw = 2289, average sw =2651.3,gene_size = 424 fault_coverage =0.999223
+run generation: 140 index = 4 smallest_sw = 2283, average sw =2647.65,gene_size = 422 fault_coverage =0.999223
+run generation: 141 index = 4 smallest_sw = 2276, average sw =2645.45,gene_size = 421 fault_coverage =0.999223
+run generation: 142 index = 4 smallest_sw = 2276, average sw =2641.05,gene_size = 421 fault_coverage =0.999223
+run generation: 143 index = 4 smallest_sw = 2265, average sw =2637.05,gene_size = 419 fault_coverage =0.999223
+run generation: 144 index = 4 smallest_sw = 2265, average sw =2631.8,gene_size = 419 fault_coverage =0.999223
+run generation: 145 index = 4 smallest_sw = 2265, average sw =2628.5,gene_size = 419 fault_coverage =0.999223
+run generation: 146 index = 4 smallest_sw = 2261, average sw =2623.05,gene_size = 418 fault_coverage =0.999223
+run generation: 147 index = 4 smallest_sw = 2250, average sw =2618.65,gene_size = 416 fault_coverage =0.999223
+run generation: 148 index = 4 smallest_sw = 2246, average sw =2613.75,gene_size = 413 fault_coverage =0.999223
+run generation: 149 index = 4 smallest_sw = 2239, average sw =2610.6,gene_size = 411 fault_coverage =0.999223
+run generation: 150 index = 4 smallest_sw = 2239, average sw =2606.8,gene_size = 411 fault_coverage =0.999223
+run generation: 151 index = 4 smallest_sw = 2239, average sw =2604.6,gene_size = 411 fault_coverage =0.999223
+run generation: 152 index = 4 smallest_sw = 2239, average sw =2599.3,gene_size = 411 fault_coverage =0.999223
+run generation: 153 index = 4 smallest_sw = 2233, average sw =2595,gene_size = 409 fault_coverage =0.999223
+run generation: 154 index = 4 smallest_sw = 2223, average sw =2589.55,gene_size = 407 fault_coverage =0.999223
+run generation: 155 index = 4 smallest_sw = 2223, average sw =2585.4,gene_size = 407 fault_coverage =0.999223
+run generation: 156 index = 4 smallest_sw = 2220, average sw =2581.85,gene_size = 406 fault_coverage =0.999223
+run generation: 157 index = 4 smallest_sw = 2220, average sw =2578.6,gene_size = 406 fault_coverage =0.999223
+run generation: 158 index = 4 smallest_sw = 2220, average sw =2574.15,gene_size = 406 fault_coverage =0.999223
+run generation: 159 index = 4 smallest_sw = 2203, average sw =2566.65,gene_size = 403 fault_coverage =0.999223
+run generation: 160 index = 4 smallest_sw = 2202, average sw =2564,gene_size = 402 fault_coverage =0.999223
+run generation: 161 index = 4 smallest_sw = 2202, average sw =2560.9,gene_size = 402 fault_coverage =0.999223
+run generation: 162 index = 4 smallest_sw = 2198, average sw =2556.1,gene_size = 400 fault_coverage =0.999223
+run generation: 163 index = 4 smallest_sw = 2198, average sw =2552.05,gene_size = 400 fault_coverage =0.999223
+run generation: 164 index = 4 smallest_sw = 2195, average sw =2547.75,gene_size = 399 fault_coverage =0.999223
+run generation: 165 index = 4 smallest_sw = 2195, average sw =2544.75,gene_size = 399 fault_coverage =0.999223
+run generation: 166 index = 4 smallest_sw = 2187, average sw =2541.15,gene_size = 398 fault_coverage =0.999223
+run generation: 167 index = 4 smallest_sw = 2186, average sw =2536.8,gene_size = 397 fault_coverage =0.999223
+run generation: 168 index = 4 smallest_sw = 2186, average sw =2532.85,gene_size = 397 fault_coverage =0.999223
+run generation: 169 index = 4 smallest_sw = 2183, average sw =2527.4,gene_size = 396 fault_coverage =0.999223
+run generation: 170 index = 4 smallest_sw = 2183, average sw =2522.95,gene_size = 396 fault_coverage =0.999223
+run generation: 171 index = 4 smallest_sw = 2174, average sw =2518.05,gene_size = 394 fault_coverage =0.999223
+run generation: 172 index = 4 smallest_sw = 2174, average sw =2514.3,gene_size = 394 fault_coverage =0.999223
+run generation: 173 index = 4 smallest_sw = 2165, average sw =2507.55,gene_size = 392 fault_coverage =0.999223
+run generation: 174 index = 4 smallest_sw = 2165, average sw =2502.65,gene_size = 392 fault_coverage =0.999223
+run generation: 175 index = 4 smallest_sw = 2165, average sw =2497.7,gene_size = 392 fault_coverage =0.999223
+run generation: 176 index = 4 smallest_sw = 2154, average sw =2494.1,gene_size = 389 fault_coverage =0.999223
+run generation: 177 index = 4 smallest_sw = 2154, average sw =2489.95,gene_size = 389 fault_coverage =0.999223
+run generation: 178 index = 4 smallest_sw = 2154, average sw =2485.05,gene_size = 388 fault_coverage =0.999223
+run generation: 179 index = 4 smallest_sw = 2146, average sw =2479.5,gene_size = 386 fault_coverage =0.999223
+run generation: 180 index = 4 smallest_sw = 2146, average sw =2477.15,gene_size = 386 fault_coverage =0.999223
+run generation: 181 index = 4 smallest_sw = 2146, average sw =2473.65,gene_size = 386 fault_coverage =0.999223
+run generation: 182 index = 4 smallest_sw = 2146, average sw =2466.8,gene_size = 386 fault_coverage =0.999223
+run generation: 183 index = 4 smallest_sw = 2146, average sw =2464.2,gene_size = 386 fault_coverage =0.999223
+run generation: 184 index = 4 smallest_sw = 2146, average sw =2459.9,gene_size = 386 fault_coverage =0.999223
+run generation: 185 index = 4 smallest_sw = 2146, average sw =2456.2,gene_size = 386 fault_coverage =0.999223
+run generation: 186 index = 4 smallest_sw = 2146, average sw =2451.25,gene_size = 386 fault_coverage =0.999223
+run generation: 187 index = 4 smallest_sw = 2143, average sw =2447.4,gene_size = 385 fault_coverage =0.999223
+run generation: 188 index = 4 smallest_sw = 2130, average sw =2443.1,gene_size = 384 fault_coverage =0.999223
+run generation: 189 index = 4 smallest_sw = 2128, average sw =2440.75,gene_size = 383 fault_coverage =0.999223
+run generation: 190 index = 4 smallest_sw = 2115, average sw =2433.2,gene_size = 381 fault_coverage =0.999223
+run generation: 191 index = 4 smallest_sw = 2115, average sw =2426.5,gene_size = 381 fault_coverage =0.999223
+run generation: 192 index = 4 smallest_sw = 2115, average sw =2420.15,gene_size = 381 fault_coverage =0.999223
+run generation: 193 index = 4 smallest_sw = 2110, average sw =2416.25,gene_size = 378 fault_coverage =0.999223
+run generation: 194 index = 4 smallest_sw = 2110, average sw =2411.35,gene_size = 378 fault_coverage =0.999223
+run generation: 195 index = 4 smallest_sw = 2110, average sw =2407.9,gene_size = 378 fault_coverage =0.999223
+run generation: 196 index = 4 smallest_sw = 2106, average sw =2404.65,gene_size = 375 fault_coverage =0.999223
+run generation: 197 index = 4 smallest_sw = 2090, average sw =2398.9,gene_size = 373 fault_coverage =0.999223
+run generation: 198 index = 4 smallest_sw = 2090, average sw =2393.8,gene_size = 373 fault_coverage =0.999223
+run generation: 199 index = 4 smallest_sw = 2082, average sw =2389.05,gene_size = 371 fault_coverage =0.999223
+run generation: 200 index = 4 smallest_sw = 2066, average sw =2383.2,gene_size = 369 fault_coverage =0.999223
+run generation: 201 index = 4 smallest_sw = 2057, average sw =2376.1,gene_size = 368 fault_coverage =0.999223
+run generation: 202 index = 4 smallest_sw = 2057, average sw =2371.3,gene_size = 368 fault_coverage =0.999223
+run generation: 203 index = 4 smallest_sw = 2047, average sw =2364.8,gene_size = 366 fault_coverage =0.999223
+run generation: 204 index = 4 smallest_sw = 2047, average sw =2358.25,gene_size = 366 fault_coverage =0.999223
+run generation: 205 index = 4 smallest_sw = 2038, average sw =2353.5,gene_size = 365 fault_coverage =0.999223
+run generation: 206 index = 4 smallest_sw = 2027, average sw =2348.85,gene_size = 364 fault_coverage =0.999223
+run generation: 207 index = 4 smallest_sw = 2027, average sw =2343.8,gene_size = 364 fault_coverage =0.999223
+run generation: 208 index = 4 smallest_sw = 2027, average sw =2339.7,gene_size = 364 fault_coverage =0.999223
+run generation: 209 index = 4 smallest_sw = 2027, average sw =2336.25,gene_size = 364 fault_coverage =0.999223
+run generation: 210 index = 4 smallest_sw = 2027, average sw =2329.9,gene_size = 364 fault_coverage =0.999223
+run generation: 211 index = 4 smallest_sw = 2020, average sw =2324,gene_size = 362 fault_coverage =0.999223
+run generation: 212 index = 4 smallest_sw = 2011, average sw =2320.1,gene_size = 359 fault_coverage =0.999223
+run generation: 213 index = 4 smallest_sw = 2011, average sw =2312.8,gene_size = 359 fault_coverage =0.999223
+run generation: 214 index = 4 smallest_sw = 2011, average sw =2308.8,gene_size = 359 fault_coverage =0.999223
+run generation: 215 index = 4 smallest_sw = 2011, average sw =2302.95,gene_size = 359 fault_coverage =0.999223
+run generation: 216 index = 4 smallest_sw = 2008, average sw =2298.45,gene_size = 358 fault_coverage =0.999223
+run generation: 217 index = 4 smallest_sw = 2008, average sw =2293.4,gene_size = 358 fault_coverage =0.999223
+run generation: 218 index = 4 smallest_sw = 2008, average sw =2286.65,gene_size = 357 fault_coverage =0.999223
+run generation: 219 index = 4 smallest_sw = 2008, average sw =2281.2,gene_size = 355 fault_coverage =0.999223
+run generation: 220 index = 4 smallest_sw = 2008, average sw =2275.85,gene_size = 355 fault_coverage =0.999223
+run generation: 221 index = 4 smallest_sw = 1997, average sw =2272.8,gene_size = 354 fault_coverage =0.999223
+run generation: 222 index = 4 smallest_sw = 1989, average sw =2270.3,gene_size = 353 fault_coverage =0.999223
+run generation: 223 index = 4 smallest_sw = 1974, average sw =2264.85,gene_size = 351 fault_coverage =0.999223
+run generation: 224 index = 4 smallest_sw = 1974, average sw =2258.35,gene_size = 351 fault_coverage =0.999223
+run generation: 225 index = 4 smallest_sw = 1974, average sw =2254.9,gene_size = 351 fault_coverage =0.999223
+run generation: 226 index = 4 smallest_sw = 1974, average sw =2250.15,gene_size = 351 fault_coverage =0.999223
+run generation: 227 index = 17 smallest_sw = 1970, average sw =2245.65,gene_size = 306 fault_coverage =0.999223
+run generation: 228 index = 4 smallest_sw = 1969, average sw =2243,gene_size = 350 fault_coverage =0.999223
+run generation: 229 index = 4 smallest_sw = 1946, average sw =2238.3,gene_size = 348 fault_coverage =0.999223
+run generation: 230 index = 4 smallest_sw = 1932, average sw =2232.85,gene_size = 346 fault_coverage =0.999223
+run generation: 231 index = 4 smallest_sw = 1929, average sw =2224.85,gene_size = 345 fault_coverage =0.999223
+run generation: 232 index = 4 smallest_sw = 1929, average sw =2218.15,gene_size = 345 fault_coverage =0.999223
+run generation: 233 index = 4 smallest_sw = 1927, average sw =2214.25,gene_size = 343 fault_coverage =0.999223
+run generation: 234 index = 4 smallest_sw = 1901, average sw =2207.4,gene_size = 340 fault_coverage =0.999223
+run generation: 235 index = 4 smallest_sw = 1901, average sw =2202.65,gene_size = 340 fault_coverage =0.999223
+run generation: 236 index = 4 smallest_sw = 1901, average sw =2196.5,gene_size = 340 fault_coverage =0.999223
+run generation: 237 index = 4 smallest_sw = 1901, average sw =2190.25,gene_size = 340 fault_coverage =0.999223
+run generation: 238 index = 4 smallest_sw = 1895, average sw =2184.75,gene_size = 338 fault_coverage =0.999223
+run generation: 239 index = 4 smallest_sw = 1895, average sw =2180.15,gene_size = 337 fault_coverage =0.999223
+run generation: 240 index = 4 smallest_sw = 1895, average sw =2174.8,gene_size = 337 fault_coverage =0.999223
+run generation: 241 index = 4 smallest_sw = 1895, average sw =2170.75,gene_size = 337 fault_coverage =0.999223
+run generation: 242 index = 4 smallest_sw = 1895, average sw =2167.1,gene_size = 337 fault_coverage =0.999223
+run generation: 243 index = 4 smallest_sw = 1895, average sw =2159.8,gene_size = 337 fault_coverage =0.999223
+run generation: 244 index = 4 smallest_sw = 1893, average sw =2156,gene_size = 336 fault_coverage =0.999223
+run generation: 245 index = 4 smallest_sw = 1893, average sw =2152.25,gene_size = 336 fault_coverage =0.999223
+run generation: 246 index = 4 smallest_sw = 1887, average sw =2149.2,gene_size = 334 fault_coverage =0.999223
+run generation: 247 index = 17 smallest_sw = 1880, average sw =2142.8,gene_size = 290 fault_coverage =0.999223
+run generation: 248 index = 17 smallest_sw = 1880, average sw =2138.7,gene_size = 290 fault_coverage =0.999223
+run generation: 249 index = 17 smallest_sw = 1880, average sw =2134.6,gene_size = 290 fault_coverage =0.999223
+run generation: 250 index = 17 smallest_sw = 1880, average sw =2132.45,gene_size = 290 fault_coverage =0.999223
+run generation: 251 index = 17 smallest_sw = 1867, average sw =2129.35,gene_size = 289 fault_coverage =0.999223
+run generation: 252 index = 17 smallest_sw = 1867, average sw =2125.35,gene_size = 289 fault_coverage =0.999223
+run generation: 253 index = 17 smallest_sw = 1845, average sw =2119.65,gene_size = 286 fault_coverage =0.999223
+run generation: 254 index = 17 smallest_sw = 1845, average sw =2116.2,gene_size = 286 fault_coverage =0.999223
+run generation: 255 index = 17 smallest_sw = 1845, average sw =2110.85,gene_size = 286 fault_coverage =0.999223
+run generation: 256 index = 17 smallest_sw = 1840, average sw =2104.4,gene_size = 285 fault_coverage =0.999223
+run generation: 257 index = 17 smallest_sw = 1833, average sw =2100.95,gene_size = 284 fault_coverage =0.999223
+run generation: 258 index = 17 smallest_sw = 1833, average sw =2097.6,gene_size = 284 fault_coverage =0.999223
+run generation: 259 index = 17 smallest_sw = 1826, average sw =2092.35,gene_size = 281 fault_coverage =0.999223
+run generation: 260 index = 17 smallest_sw = 1826, average sw =2086.35,gene_size = 281 fault_coverage =0.999223
+run generation: 261 index = 17 smallest_sw = 1817, average sw =2083.1,gene_size = 280 fault_coverage =0.999223
+run generation: 262 index = 17 smallest_sw = 1809, average sw =2078,gene_size = 279 fault_coverage =0.999223
+run generation: 263 index = 17 smallest_sw = 1805, average sw =2073.55,gene_size = 278 fault_coverage =0.999223
+run generation: 264 index = 17 smallest_sw = 1800, average sw =2070.65,gene_size = 277 fault_coverage =0.999223
+run generation: 265 index = 17 smallest_sw = 1800, average sw =2069.25,gene_size = 277 fault_coverage =0.999223
+run generation: 266 index = 17 smallest_sw = 1779, average sw =2062.3,gene_size = 275 fault_coverage =0.999223
+run generation: 267 index = 17 smallest_sw = 1769, average sw =2057.6,gene_size = 273 fault_coverage =0.999223
+run generation: 268 index = 17 smallest_sw = 1769, average sw =2054.25,gene_size = 273 fault_coverage =0.999223
+run generation: 269 index = 17 smallest_sw = 1769, average sw =2050.8,gene_size = 273 fault_coverage =0.999223
+run generation: 270 index = 17 smallest_sw = 1769, average sw =2044.65,gene_size = 273 fault_coverage =0.999223
+run generation: 271 index = 17 smallest_sw = 1768, average sw =2040.7,gene_size = 272 fault_coverage =0.999223
+run generation: 272 index = 17 smallest_sw = 1745, average sw =2034.35,gene_size = 269 fault_coverage =0.999223
+run generation: 273 index = 17 smallest_sw = 1732, average sw =2029.95,gene_size = 268 fault_coverage =0.999223
+run generation: 274 index = 17 smallest_sw = 1724, average sw =2026.75,gene_size = 267 fault_coverage =0.999223
+run generation: 275 index = 17 smallest_sw = 1724, average sw =2022.6,gene_size = 267 fault_coverage =0.999223
+run generation: 276 index = 17 smallest_sw = 1721, average sw =2016.25,gene_size = 266 fault_coverage =0.999223
+run generation: 277 index = 17 smallest_sw = 1721, average sw =2013.05,gene_size = 266 fault_coverage =0.999223
+run generation: 278 index = 17 smallest_sw = 1721, average sw =2009.4,gene_size = 266 fault_coverage =0.999223
+run generation: 279 index = 17 smallest_sw = 1711, average sw =2004.9,gene_size = 264 fault_coverage =0.999223
+run generation: 280 index = 17 smallest_sw = 1705, average sw =1999.05,gene_size = 263 fault_coverage =0.999223
+run generation: 281 index = 17 smallest_sw = 1681, average sw =1995.6,gene_size = 260 fault_coverage =0.999223
+run generation: 282 index = 17 smallest_sw = 1677, average sw =1992.2,gene_size = 259 fault_coverage =0.999223
+run generation: 283 index = 17 smallest_sw = 1670, average sw =1987.3,gene_size = 257 fault_coverage =0.999223
+run generation: 284 index = 17 smallest_sw = 1654, average sw =1980.4,gene_size = 255 fault_coverage =0.999223
+run generation: 285 index = 17 smallest_sw = 1654, average sw =1972.65,gene_size = 255 fault_coverage =0.999223
+run generation: 286 index = 17 smallest_sw = 1654, average sw =1970.95,gene_size = 255 fault_coverage =0.999223
+run generation: 287 index = 17 smallest_sw = 1645, average sw =1966.8,gene_size = 254 fault_coverage =0.999223
+run generation: 288 index = 17 smallest_sw = 1635, average sw =1963.9,gene_size = 252 fault_coverage =0.999223
+run generation: 289 index = 17 smallest_sw = 1628, average sw =1957.75,gene_size = 251 fault_coverage =0.999223
+run generation: 290 index = 17 smallest_sw = 1608, average sw =1954.45,gene_size = 248 fault_coverage =0.999223
+run generation: 291 index = 17 smallest_sw = 1608, average sw =1948.25,gene_size = 248 fault_coverage =0.999223
+run generation: 292 index = 17 smallest_sw = 1591, average sw =1944.95,gene_size = 247 fault_coverage =0.999223
+run generation: 293 index = 17 smallest_sw = 1591, average sw =1942.3,gene_size = 247 fault_coverage =0.999223
+run generation: 294 index = 17 smallest_sw = 1591, average sw =1937.4,gene_size = 247 fault_coverage =0.999223
+run generation: 295 index = 17 smallest_sw = 1591, average sw =1933.85,gene_size = 247 fault_coverage =0.999223
+run generation: 296 index = 17 smallest_sw = 1591, average sw =1931.5,gene_size = 247 fault_coverage =0.999223
+run generation: 297 index = 17 smallest_sw = 1573, average sw =1928.65,gene_size = 245 fault_coverage =0.999223
+run generation: 298 index = 17 smallest_sw = 1566, average sw =1922,gene_size = 244 fault_coverage =0.999223
+run generation: 299 index = 17 smallest_sw = 1566, average sw =1916.5,gene_size = 244 fault_coverage =0.999223
+run generation: 300 index = 17 smallest_sw = 1560, average sw =1909.95,gene_size = 243 fault_coverage =0.999223
+run generation: 301 index = 17 smallest_sw = 1551, average sw =1905.55,gene_size = 242 fault_coverage =0.999223
+run generation: 302 index = 17 smallest_sw = 1551, average sw =1902.95,gene_size = 242 fault_coverage =0.999223
+run generation: 303 index = 17 smallest_sw = 1551, average sw =1897.95,gene_size = 242 fault_coverage =0.999223
+run generation: 304 index = 17 smallest_sw = 1551, average sw =1891.4,gene_size = 242 fault_coverage =0.999223
+run generation: 305 index = 17 smallest_sw = 1544, average sw =1886.9,gene_size = 240 fault_coverage =0.999223
+run generation: 306 index = 17 smallest_sw = 1529, average sw =1882.55,gene_size = 238 fault_coverage =0.999223
+run generation: 307 index = 17 smallest_sw = 1529, average sw =1879.85,gene_size = 238 fault_coverage =0.999223
+run generation: 308 index = 17 smallest_sw = 1505, average sw =1873.95,gene_size = 236 fault_coverage =0.999223
+run generation: 309 index = 17 smallest_sw = 1488, average sw =1870.45,gene_size = 234 fault_coverage =0.999223
+run generation: 310 index = 17 smallest_sw = 1488, average sw =1867.4,gene_size = 234 fault_coverage =0.999223
+run generation: 311 index = 17 smallest_sw = 1479, average sw =1863.95,gene_size = 233 fault_coverage =0.999223
+run generation: 312 index = 17 smallest_sw = 1479, average sw =1858.25,gene_size = 233 fault_coverage =0.999223
+run generation: 313 index = 17 smallest_sw = 1479, average sw =1856.85,gene_size = 233 fault_coverage =0.999223
+run generation: 314 index = 17 smallest_sw = 1479, average sw =1853.1,gene_size = 233 fault_coverage =0.999223
+run generation: 315 index = 17 smallest_sw = 1474, average sw =1846.2,gene_size = 232 fault_coverage =0.999223
+run generation: 316 index = 17 smallest_sw = 1453, average sw =1840.35,gene_size = 230 fault_coverage =0.999223
+run generation: 317 index = 17 smallest_sw = 1445, average sw =1834.7,gene_size = 228 fault_coverage =0.999223
+run generation: 318 index = 17 smallest_sw = 1427, average sw =1830.9,gene_size = 226 fault_coverage =0.999223
+run generation: 319 index = 17 smallest_sw = 1427, average sw =1827.8,gene_size = 226 fault_coverage =0.999223
+run generation: 320 index = 17 smallest_sw = 1420, average sw =1824.95,gene_size = 224 fault_coverage =0.999223
+run generation: 321 index = 17 smallest_sw = 1410, average sw =1821.7,gene_size = 222 fault_coverage =0.999223
+run generation: 322 index = 17 smallest_sw = 1410, average sw =1818.45,gene_size = 222 fault_coverage =0.999223
+run generation: 323 index = 17 smallest_sw = 1390, average sw =1813.75,gene_size = 220 fault_coverage =0.999223
+run generation: 324 index = 17 smallest_sw = 1390, average sw =1809.4,gene_size = 220 fault_coverage =0.999223
+run generation: 325 index = 17 smallest_sw = 1390, average sw =1806.1,gene_size = 220 fault_coverage =0.999223
+run generation: 326 index = 17 smallest_sw = 1390, average sw =1804.15,gene_size = 220 fault_coverage =0.999223
+run generation: 327 index = 17 smallest_sw = 1389, average sw =1797.25,gene_size = 219 fault_coverage =0.999223
+run generation: 328 index = 17 smallest_sw = 1379, average sw =1794.85,gene_size = 218 fault_coverage =0.999223
+run generation: 329 index = 17 smallest_sw = 1379, average sw =1790.15,gene_size = 218 fault_coverage =0.999223
+run generation: 330 index = 17 smallest_sw = 1379, average sw =1787.6,gene_size = 218 fault_coverage =0.999223
+run generation: 331 index = 17 smallest_sw = 1379, average sw =1785.1,gene_size = 218 fault_coverage =0.999223
+run generation: 332 index = 17 smallest_sw = 1379, average sw =1780.75,gene_size = 218 fault_coverage =0.999223
+run generation: 333 index = 17 smallest_sw = 1375, average sw =1775.95,gene_size = 218 fault_coverage =0.999223
+run generation: 334 index = 17 smallest_sw = 1375, average sw =1772.6,gene_size = 218 fault_coverage =0.999223
+run generation: 335 index = 17 smallest_sw = 1357, average sw =1767.5,gene_size = 216 fault_coverage =0.999223
+run generation: 336 index = 17 smallest_sw = 1341, average sw =1761.95,gene_size = 215 fault_coverage =0.999223
+run generation: 337 index = 17 smallest_sw = 1341, average sw =1757.85,gene_size = 215 fault_coverage =0.999223
+run generation: 338 index = 17 smallest_sw = 1341, average sw =1756.65,gene_size = 215 fault_coverage =0.999223
+run generation: 339 index = 17 smallest_sw = 1341, average sw =1751.35,gene_size = 215 fault_coverage =0.999223
+run generation: 340 index = 17 smallest_sw = 1336, average sw =1745.4,gene_size = 214 fault_coverage =0.999223
+run generation: 341 index = 17 smallest_sw = 1332, average sw =1742.9,gene_size = 213 fault_coverage =0.999223
+run generation: 342 index = 17 smallest_sw = 1332, average sw =1741.05,gene_size = 213 fault_coverage =0.999223
+run generation: 343 index = 17 smallest_sw = 1305, average sw =1736,gene_size = 211 fault_coverage =0.999223
+run generation: 344 index = 17 smallest_sw = 1296, average sw =1728.7,gene_size = 210 fault_coverage =0.999223
+run generation: 345 index = 17 smallest_sw = 1288, average sw =1724.25,gene_size = 209 fault_coverage =0.999223
+run generation: 346 index = 17 smallest_sw = 1278, average sw =1718.3,gene_size = 207 fault_coverage =0.999223
+run generation: 347 index = 17 smallest_sw = 1278, average sw =1713.3,gene_size = 207 fault_coverage =0.999223
+run generation: 348 index = 17 smallest_sw = 1275, average sw =1708.7,gene_size = 206 fault_coverage =0.999223
+run generation: 349 index = 17 smallest_sw = 1265, average sw =1706,gene_size = 204 fault_coverage =0.999223
+run generation: 350 index = 17 smallest_sw = 1256, average sw =1704.15,gene_size = 203 fault_coverage =0.999223
+run generation: 351 index = 17 smallest_sw = 1244, average sw =1699.2,gene_size = 201 fault_coverage =0.999223
+run generation: 352 index = 17 smallest_sw = 1235, average sw =1693.4,gene_size = 200 fault_coverage =0.999223
+run generation: 353 index = 17 smallest_sw = 1235, average sw =1689,gene_size = 200 fault_coverage =0.999223
+run generation: 354 index = 17 smallest_sw = 1235, average sw =1683.8,gene_size = 200 fault_coverage =0.999223
+run generation: 355 index = 17 smallest_sw = 1235, average sw =1679.45,gene_size = 200 fault_coverage =0.999223
+run generation: 356 index = 17 smallest_sw = 1235, average sw =1674.45,gene_size = 200 fault_coverage =0.999223
+run generation: 357 index = 17 smallest_sw = 1219, average sw =1668.85,gene_size = 198 fault_coverage =0.999223
+run generation: 358 index = 17 smallest_sw = 1219, average sw =1666.9,gene_size = 198 fault_coverage =0.999223
+run generation: 359 index = 17 smallest_sw = 1208, average sw =1664.1,gene_size = 197 fault_coverage =0.999223
+run generation: 360 index = 17 smallest_sw = 1208, average sw =1659.2,gene_size = 197 fault_coverage =0.999223
+run generation: 361 index = 17 smallest_sw = 1208, average sw =1654.35,gene_size = 197 fault_coverage =0.999223
+run generation: 362 index = 17 smallest_sw = 1208, average sw =1649.65,gene_size = 197 fault_coverage =0.999223
+run generation: 363 index = 17 smallest_sw = 1208, average sw =1648.4,gene_size = 197 fault_coverage =0.999223
+run generation: 364 index = 17 smallest_sw = 1208, average sw =1645.65,gene_size = 197 fault_coverage =0.999223
+run generation: 365 index = 17 smallest_sw = 1195, average sw =1642.65,gene_size = 194 fault_coverage =0.999223
+run generation: 366 index = 17 smallest_sw = 1195, average sw =1640.1,gene_size = 194 fault_coverage =0.999223
+run generation: 367 index = 17 smallest_sw = 1195, average sw =1638,gene_size = 194 fault_coverage =0.999223
+run generation: 368 index = 17 smallest_sw = 1186, average sw =1634.85,gene_size = 193 fault_coverage =0.999223
+run generation: 369 index = 17 smallest_sw = 1179, average sw =1631.8,gene_size = 192 fault_coverage =0.999223
+run generation: 370 index = 17 smallest_sw = 1179, average sw =1627.1,gene_size = 192 fault_coverage =0.999223
+run generation: 371 index = 17 smallest_sw = 1175, average sw =1625.55,gene_size = 191 fault_coverage =0.999223
+run generation: 372 index = 17 smallest_sw = 1175, average sw =1623.25,gene_size = 191 fault_coverage =0.999223
+run generation: 373 index = 17 smallest_sw = 1175, average sw =1620.45,gene_size = 191 fault_coverage =0.999223
+run generation: 374 index = 17 smallest_sw = 1175, average sw =1616.5,gene_size = 191 fault_coverage =0.999223
+run generation: 375 index = 17 smallest_sw = 1175, average sw =1612.2,gene_size = 191 fault_coverage =0.999223
+run generation: 376 index = 17 smallest_sw = 1157, average sw =1608.85,gene_size = 189 fault_coverage =0.999223
+run generation: 377 index = 17 smallest_sw = 1157, average sw =1606.55,gene_size = 189 fault_coverage =0.999223
+run generation: 378 index = 17 smallest_sw = 1157, average sw =1602.8,gene_size = 189 fault_coverage =0.999223
+run generation: 379 index = 17 smallest_sw = 1157, average sw =1599.2,gene_size = 189 fault_coverage =0.999223
+run generation: 380 index = 17 smallest_sw = 1157, average sw =1597.15,gene_size = 189 fault_coverage =0.999223
+run generation: 381 index = 17 smallest_sw = 1157, average sw =1591.9,gene_size = 189 fault_coverage =0.999223
+run generation: 382 index = 17 smallest_sw = 1157, average sw =1586.65,gene_size = 189 fault_coverage =0.999223
+run generation: 383 index = 17 smallest_sw = 1157, average sw =1582.1,gene_size = 189 fault_coverage =0.999223
+run generation: 384 index = 17 smallest_sw = 1151, average sw =1578.45,gene_size = 188 fault_coverage =0.999223
+run generation: 385 index = 17 smallest_sw = 1151, average sw =1576.35,gene_size = 188 fault_coverage =0.999223
+run generation: 386 index = 17 smallest_sw = 1145, average sw =1570.9,gene_size = 187 fault_coverage =0.999223
+run generation: 387 index = 17 smallest_sw = 1145, average sw =1568.5,gene_size = 187 fault_coverage =0.999223
+run generation: 388 index = 17 smallest_sw = 1145, average sw =1567,gene_size = 187 fault_coverage =0.999223
+run generation: 389 index = 17 smallest_sw = 1137, average sw =1564.85,gene_size = 186 fault_coverage =0.999223
+run generation: 390 index = 17 smallest_sw = 1137, average sw =1561.45,gene_size = 186 fault_coverage =0.999223
+run generation: 391 index = 17 smallest_sw = 1112, average sw =1554.7,gene_size = 184 fault_coverage =0.999223
+run generation: 392 index = 17 smallest_sw = 1112, average sw =1551.55,gene_size = 184 fault_coverage =0.999223
+run generation: 393 index = 17 smallest_sw = 1105, average sw =1548.8,gene_size = 183 fault_coverage =0.999223
+run generation: 394 index = 17 smallest_sw = 1105, average sw =1545.05,gene_size = 183 fault_coverage =0.999223
+run generation: 395 index = 17 smallest_sw = 1103, average sw =1540.6,gene_size = 181 fault_coverage =0.999223
+run generation: 396 index = 17 smallest_sw = 1103, average sw =1538.45,gene_size = 181 fault_coverage =0.999223
+run generation: 397 index = 17 smallest_sw = 1091, average sw =1536.1,gene_size = 180 fault_coverage =0.999223
+run generation: 398 index = 17 smallest_sw = 1089, average sw =1534.05,gene_size = 179 fault_coverage =0.999223
+run generation: 399 index = 17 smallest_sw = 1089, average sw =1529.25,gene_size = 179 fault_coverage =0.999223
+run generation: 400 index = 17 smallest_sw = 1089, average sw =1527.3,gene_size = 179 fault_coverage =0.999223
+run generation: 401 index = 17 smallest_sw = 1089, average sw =1522.6,gene_size = 179 fault_coverage =0.999223
+run generation: 402 index = 17 smallest_sw = 1089, average sw =1519.95,gene_size = 179 fault_coverage =0.999223
+run generation: 403 index = 17 smallest_sw = 1089, average sw =1517.05,gene_size = 179 fault_coverage =0.999223
+run generation: 404 index = 17 smallest_sw = 1089, average sw =1513.85,gene_size = 179 fault_coverage =0.999223
+run generation: 405 index = 17 smallest_sw = 1089, average sw =1511.05,gene_size = 179 fault_coverage =0.999223
+run generation: 406 index = 17 smallest_sw = 1089, average sw =1508.35,gene_size = 179 fault_coverage =0.999223
+run generation: 407 index = 17 smallest_sw = 1089, average sw =1504.95,gene_size = 179 fault_coverage =0.999223
+run generation: 408 index = 17 smallest_sw = 1089, average sw =1500.2,gene_size = 179 fault_coverage =0.999223
+run generation: 409 index = 17 smallest_sw = 1089, average sw =1496.9,gene_size = 179 fault_coverage =0.999223
+run generation: 410 index = 17 smallest_sw = 1089, average sw =1490.6,gene_size = 179 fault_coverage =0.999223
+run generation: 411 index = 17 smallest_sw = 1089, average sw =1487.45,gene_size = 179 fault_coverage =0.999223
+run generation: 412 index = 17 smallest_sw = 1088, average sw =1486.25,gene_size = 178 fault_coverage =0.999223
+run generation: 413 index = 17 smallest_sw = 1088, average sw =1484.8,gene_size = 178 fault_coverage =0.999223
+run generation: 414 index = 17 smallest_sw = 1085, average sw =1481.85,gene_size = 177 fault_coverage =0.999223
+run generation: 415 index = 17 smallest_sw = 1073, average sw =1480.4,gene_size = 174 fault_coverage =0.999223
+run generation: 416 index = 17 smallest_sw = 1073, average sw =1475.3,gene_size = 174 fault_coverage =0.999223
+run generation: 417 index = 17 smallest_sw = 1073, average sw =1471.65,gene_size = 174 fault_coverage =0.999223
+run generation: 418 index = 17 smallest_sw = 1073, average sw =1469.7,gene_size = 174 fault_coverage =0.999223
+run generation: 419 index = 17 smallest_sw = 1073, average sw =1465.1,gene_size = 174 fault_coverage =0.999223
+run generation: 420 index = 17 smallest_sw = 1073, average sw =1462.3,gene_size = 174 fault_coverage =0.999223
+run generation: 421 index = 17 smallest_sw = 1073, average sw =1460.25,gene_size = 174 fault_coverage =0.999223
+run generation: 422 index = 17 smallest_sw = 1073, average sw =1456.25,gene_size = 174 fault_coverage =0.999223
+run generation: 423 index = 17 smallest_sw = 1073, average sw =1454.1,gene_size = 174 fault_coverage =0.999223
+run generation: 424 index = 17 smallest_sw = 1062, average sw =1450.45,gene_size = 173 fault_coverage =0.999223
+run generation: 425 index = 17 smallest_sw = 1062, average sw =1448.75,gene_size = 173 fault_coverage =0.999223
+run generation: 426 index = 17 smallest_sw = 1046, average sw =1444.85,gene_size = 172 fault_coverage =0.999223
+run generation: 427 index = 17 smallest_sw = 1046, average sw =1440.55,gene_size = 172 fault_coverage =0.999223
+run generation: 428 index = 17 smallest_sw = 1046, average sw =1437.4,gene_size = 172 fault_coverage =0.999223
+run generation: 429 index = 17 smallest_sw = 1046, average sw =1434.3,gene_size = 172 fault_coverage =0.999223
+run generation: 430 index = 17 smallest_sw = 1046, average sw =1432.5,gene_size = 172 fault_coverage =0.999223
+run generation: 431 index = 17 smallest_sw = 1045, average sw =1431.05,gene_size = 171 fault_coverage =0.999223
+run generation: 432 index = 17 smallest_sw = 1035, average sw =1428.7,gene_size = 170 fault_coverage =0.999223
+run generation: 433 index = 17 smallest_sw = 1035, average sw =1427.05,gene_size = 170 fault_coverage =0.999223
+run generation: 434 index = 17 smallest_sw = 1035, average sw =1425.35,gene_size = 170 fault_coverage =0.999223
+run generation: 435 index = 17 smallest_sw = 1035, average sw =1421.95,gene_size = 170 fault_coverage =0.999223
+run generation: 436 index = 17 smallest_sw = 1013, average sw =1417.7,gene_size = 167 fault_coverage =0.999223
+run generation: 437 index = 17 smallest_sw = 1013, average sw =1414.25,gene_size = 167 fault_coverage =0.999223
+run generation: 438 index = 17 smallest_sw = 1013, average sw =1412.25,gene_size = 167 fault_coverage =0.999223
+run generation: 439 index = 17 smallest_sw = 1011, average sw =1410.15,gene_size = 167 fault_coverage =0.999223
+run generation: 440 index = 17 smallest_sw = 1011, average sw =1404.9,gene_size = 167 fault_coverage =0.999223
+run generation: 441 index = 17 smallest_sw = 1011, average sw =1401.25,gene_size = 167 fault_coverage =0.999223
+run generation: 442 index = 17 smallest_sw = 1011, average sw =1396.45,gene_size = 167 fault_coverage =0.999223
+run generation: 443 index = 17 smallest_sw = 1011, average sw =1391.1,gene_size = 167 fault_coverage =0.999223
+run generation: 444 index = 17 smallest_sw = 1011, average sw =1389,gene_size = 167 fault_coverage =0.999223
+run generation: 445 index = 17 smallest_sw = 1011, average sw =1385.75,gene_size = 167 fault_coverage =0.999223
+run generation: 446 index = 17 smallest_sw = 1011, average sw =1383.15,gene_size = 167 fault_coverage =0.999223
+run generation: 447 index = 17 smallest_sw = 1004, average sw =1379.55,gene_size = 165 fault_coverage =0.999223
+run generation: 448 index = 17 smallest_sw = 1004, average sw =1376.45,gene_size = 165 fault_coverage =0.999223
+run generation: 449 index = 17 smallest_sw = 1004, average sw =1372.7,gene_size = 165 fault_coverage =0.999223
+run generation: 450 index = 17 smallest_sw = 1004, average sw =1370.75,gene_size = 165 fault_coverage =0.999223
+run generation: 451 index = 17 smallest_sw = 1004, average sw =1367.95,gene_size = 165 fault_coverage =0.999223
+run generation: 452 index = 17 smallest_sw = 1004, average sw =1363.5,gene_size = 165 fault_coverage =0.999223
+run generation: 453 index = 17 smallest_sw = 1004, average sw =1360.15,gene_size = 165 fault_coverage =0.999223
+run generation: 454 index = 17 smallest_sw = 1004, average sw =1355.6,gene_size = 165 fault_coverage =0.999223
+run generation: 455 index = 17 smallest_sw = 1004, average sw =1352.75,gene_size = 165 fault_coverage =0.999223
+run generation: 456 index = 17 smallest_sw = 1004, average sw =1349.2,gene_size = 165 fault_coverage =0.999223
+run generation: 457 index = 17 smallest_sw = 998, average sw =1346.75,gene_size = 164 fault_coverage =0.999223
+run generation: 458 index = 17 smallest_sw = 998, average sw =1345.05,gene_size = 164 fault_coverage =0.999223
+run generation: 459 index = 17 smallest_sw = 998, average sw =1342.1,gene_size = 164 fault_coverage =0.999223
+run generation: 460 index = 17 smallest_sw = 989, average sw =1339.1,gene_size = 163 fault_coverage =0.999223
+run generation: 461 index = 17 smallest_sw = 989, average sw =1338.45,gene_size = 163 fault_coverage =0.999223
+run generation: 462 index = 17 smallest_sw = 989, average sw =1335.1,gene_size = 163 fault_coverage =0.999223
+run generation: 463 index = 17 smallest_sw = 981, average sw =1333.5,gene_size = 162 fault_coverage =0.999223
+run generation: 464 index = 17 smallest_sw = 981, average sw =1330.9,gene_size = 162 fault_coverage =0.999223
+run generation: 465 index = 17 smallest_sw = 981, average sw =1327.15,gene_size = 162 fault_coverage =0.999223
+run generation: 466 index = 17 smallest_sw = 981, average sw =1323.05,gene_size = 162 fault_coverage =0.999223
+run generation: 467 index = 17 smallest_sw = 981, average sw =1318.05,gene_size = 161 fault_coverage =0.999223
+run generation: 468 index = 17 smallest_sw = 981, average sw =1316.45,gene_size = 161 fault_coverage =0.999223
+run generation: 469 index = 17 smallest_sw = 981, average sw =1314.3,gene_size = 161 fault_coverage =0.999223
+run generation: 470 index = 17 smallest_sw = 981, average sw =1312.1,gene_size = 161 fault_coverage =0.999223
+run generation: 471 index = 17 smallest_sw = 981, average sw =1311.65,gene_size = 161 fault_coverage =0.999223
+run generation: 472 index = 17 smallest_sw = 981, average sw =1309,gene_size = 161 fault_coverage =0.999223
+run generation: 473 index = 17 smallest_sw = 981, average sw =1306.5,gene_size = 161 fault_coverage =0.999223
+run generation: 474 index = 17 smallest_sw = 980, average sw =1304.1,gene_size = 160 fault_coverage =0.999223
+run generation: 475 index = 17 smallest_sw = 980, average sw =1304,gene_size = 160 fault_coverage =0.999223
+run generation: 476 index = 17 smallest_sw = 980, average sw =1300.75,gene_size = 160 fault_coverage =0.999223
+run generation: 477 index = 17 smallest_sw = 980, average sw =1296.65,gene_size = 160 fault_coverage =0.999223
+run generation: 478 index = 17 smallest_sw = 967, average sw =1293.65,gene_size = 159 fault_coverage =0.999223
+run generation: 479 index = 17 smallest_sw = 967, average sw =1291.35,gene_size = 159 fault_coverage =0.999223
+run generation: 480 index = 17 smallest_sw = 967, average sw =1289.45,gene_size = 159 fault_coverage =0.999223
+run generation: 481 index = 17 smallest_sw = 967, average sw =1287.55,gene_size = 159 fault_coverage =0.999223
+run generation: 482 index = 17 smallest_sw = 967, average sw =1284.55,gene_size = 159 fault_coverage =0.999223
+run generation: 483 index = 17 smallest_sw = 967, average sw =1283.2,gene_size = 159 fault_coverage =0.999223
+run generation: 484 index = 17 smallest_sw = 967, average sw =1279.8,gene_size = 159 fault_coverage =0.999223
+run generation: 485 index = 17 smallest_sw = 960, average sw =1275.35,gene_size = 158 fault_coverage =0.999223
+run generation: 486 index = 17 smallest_sw = 960, average sw =1272.55,gene_size = 158 fault_coverage =0.999223
+run generation: 487 index = 17 smallest_sw = 960, average sw =1270.75,gene_size = 158 fault_coverage =0.999223
+run generation: 488 index = 17 smallest_sw = 960, average sw =1267.85,gene_size = 158 fault_coverage =0.999223
+run generation: 489 index = 17 smallest_sw = 960, average sw =1266.8,gene_size = 158 fault_coverage =0.999223
+run generation: 490 index = 17 smallest_sw = 960, average sw =1262.75,gene_size = 158 fault_coverage =0.999223
+run generation: 491 index = 17 smallest_sw = 960, average sw =1261.2,gene_size = 158 fault_coverage =0.999223
+run generation: 492 index = 17 smallest_sw = 960, average sw =1258.8,gene_size = 158 fault_coverage =0.999223
+run generation: 493 index = 17 smallest_sw = 960, average sw =1257.15,gene_size = 158 fault_coverage =0.999223
+run generation: 494 index = 17 smallest_sw = 960, average sw =1256.9,gene_size = 158 fault_coverage =0.999223
+run generation: 495 index = 17 smallest_sw = 960, average sw =1254.75,gene_size = 158 fault_coverage =0.999223
+run generation: 496 index = 17 smallest_sw = 960, average sw =1253.3,gene_size = 158 fault_coverage =0.999223
+run generation: 497 index = 17 smallest_sw = 960, average sw =1251.95,gene_size = 158 fault_coverage =0.999223
+run generation: 498 index = 17 smallest_sw = 960, average sw =1248.2,gene_size = 158 fault_coverage =0.999223
+run generation: 499 index = 17 smallest_sw = 960, average sw =1243.5,gene_size = 158 fault_coverage =0.999223
+run generation: 500 index = 17 smallest_sw = 954, average sw =1241.4,gene_size = 157 fault_coverage =0.999223
+run generation: 501 index = 17 smallest_sw = 954, average sw =1238.85,gene_size = 157 fault_coverage =0.999223
+run generation: 502 index = 17 smallest_sw = 954, average sw =1235.25,gene_size = 157 fault_coverage =0.999223
+run generation: 503 index = 17 smallest_sw = 954, average sw =1232.4,gene_size = 157 fault_coverage =0.999223
+run generation: 504 index = 17 smallest_sw = 954, average sw =1230.65,gene_size = 157 fault_coverage =0.999223
+run generation: 505 index = 17 smallest_sw = 954, average sw =1230,gene_size = 157 fault_coverage =0.999223
+run generation: 506 index = 17 smallest_sw = 954, average sw =1227.85,gene_size = 157 fault_coverage =0.999223
+run generation: 507 index = 17 smallest_sw = 954, average sw =1226.85,gene_size = 157 fault_coverage =0.999223
+run generation: 508 index = 17 smallest_sw = 954, average sw =1225.55,gene_size = 157 fault_coverage =0.999223
+run generation: 509 index = 17 smallest_sw = 954, average sw =1224.7,gene_size = 157 fault_coverage =0.999223
+run generation: 510 index = 17 smallest_sw = 950, average sw =1223,gene_size = 156 fault_coverage =0.999223
+run generation: 511 index = 17 smallest_sw = 941, average sw =1221.2,gene_size = 155 fault_coverage =0.999223
+run generation: 512 index = 17 smallest_sw = 941, average sw =1220.05,gene_size = 155 fault_coverage =0.999223
+run generation: 513 index = 17 smallest_sw = 941, average sw =1215.1,gene_size = 155 fault_coverage =0.999223
+run generation: 514 index = 17 smallest_sw = 941, average sw =1213.45,gene_size = 155 fault_coverage =0.999223
+run generation: 515 index = 17 smallest_sw = 941, average sw =1212.35,gene_size = 155 fault_coverage =0.999223
+run generation: 516 index = 17 smallest_sw = 941, average sw =1210.4,gene_size = 155 fault_coverage =0.999223
+run generation: 517 index = 17 smallest_sw = 941, average sw =1208.3,gene_size = 155 fault_coverage =0.999223
+run generation: 518 index = 17 smallest_sw = 941, average sw =1206.4,gene_size = 155 fault_coverage =0.999223
+run generation: 519 index = 17 smallest_sw = 938, average sw =1205.1,gene_size = 154 fault_coverage =0.999223
+run generation: 520 index = 17 smallest_sw = 938, average sw =1203.25,gene_size = 154 fault_coverage =0.999223
+run generation: 521 index = 17 smallest_sw = 938, average sw =1202.3,gene_size = 154 fault_coverage =0.999223
+run generation: 522 index = 17 smallest_sw = 938, average sw =1202.25,gene_size = 154 fault_coverage =0.999223
+run generation: 523 index = 17 smallest_sw = 938, average sw =1200.5,gene_size = 154 fault_coverage =0.999223
+run generation: 524 index = 17 smallest_sw = 938, average sw =1198.05,gene_size = 154 fault_coverage =0.999223
+run generation: 525 index = 17 smallest_sw = 938, average sw =1196.15,gene_size = 154 fault_coverage =0.999223
+run generation: 526 index = 17 smallest_sw = 938, average sw =1194.95,gene_size = 154 fault_coverage =0.999223
+run generation: 527 index = 17 smallest_sw = 938, average sw =1193,gene_size = 154 fault_coverage =0.999223
+run generation: 528 index = 17 smallest_sw = 938, average sw =1190.7,gene_size = 154 fault_coverage =0.999223
+run generation: 529 index = 17 smallest_sw = 930, average sw =1188.6,gene_size = 153 fault_coverage =0.999223
+run generation: 530 index = 17 smallest_sw = 930, average sw =1187.1,gene_size = 153 fault_coverage =0.999223
+run generation: 531 index = 17 smallest_sw = 930, average sw =1184.1,gene_size = 153 fault_coverage =0.999223
+run generation: 532 index = 17 smallest_sw = 930, average sw =1182.4,gene_size = 153 fault_coverage =0.999223
+run generation: 533 index = 17 smallest_sw = 930, average sw =1181.5,gene_size = 153 fault_coverage =0.999223
+run generation: 534 index = 17 smallest_sw = 930, average sw =1178.3,gene_size = 153 fault_coverage =0.999223
+run generation: 535 index = 17 smallest_sw = 930, average sw =1177.55,gene_size = 153 fault_coverage =0.999223
+run generation: 536 index = 17 smallest_sw = 930, average sw =1175.35,gene_size = 153 fault_coverage =0.999223
+run generation: 537 index = 17 smallest_sw = 930, average sw =1172.2,gene_size = 153 fault_coverage =0.999223
+run generation: 538 index = 17 smallest_sw = 927, average sw =1169.35,gene_size = 152 fault_coverage =0.999223
+run generation: 539 index = 17 smallest_sw = 927, average sw =1167.55,gene_size = 152 fault_coverage =0.999223
+run generation: 540 index = 17 smallest_sw = 927, average sw =1166.3,gene_size = 152 fault_coverage =0.999223
+run generation: 541 index = 17 smallest_sw = 927, average sw =1162.25,gene_size = 152 fault_coverage =0.999223
+run generation: 542 index = 17 smallest_sw = 927, average sw =1158.85,gene_size = 152 fault_coverage =0.999223
+run generation: 543 index = 17 smallest_sw = 927, average sw =1156.95,gene_size = 152 fault_coverage =0.999223
+run generation: 544 index = 17 smallest_sw = 927, average sw =1154.55,gene_size = 152 fault_coverage =0.999223
+run generation: 545 index = 17 smallest_sw = 927, average sw =1152.5,gene_size = 152 fault_coverage =0.999223
+run generation: 546 index = 17 smallest_sw = 927, average sw =1151.35,gene_size = 152 fault_coverage =0.999223
+run generation: 547 index = 17 smallest_sw = 927, average sw =1149.55,gene_size = 152 fault_coverage =0.999223
+run generation: 548 index = 17 smallest_sw = 927, average sw =1148.45,gene_size = 152 fault_coverage =0.999223
+run generation: 549 index = 17 smallest_sw = 927, average sw =1147.8,gene_size = 152 fault_coverage =0.999223
+run generation: 550 index = 17 smallest_sw = 927, average sw =1146.75,gene_size = 152 fault_coverage =0.999223
+run generation: 551 index = 17 smallest_sw = 927, average sw =1143.35,gene_size = 152 fault_coverage =0.999223
+run generation: 552 index = 17 smallest_sw = 925, average sw =1141.2,gene_size = 151 fault_coverage =0.999223
+run generation: 553 index = 17 smallest_sw = 925, average sw =1139.15,gene_size = 151 fault_coverage =0.999223
+run generation: 554 index = 17 smallest_sw = 925, average sw =1138.95,gene_size = 151 fault_coverage =0.999223
+run generation: 555 index = 17 smallest_sw = 925, average sw =1136.85,gene_size = 151 fault_coverage =0.999223
+run generation: 556 index = 17 smallest_sw = 925, average sw =1136.5,gene_size = 151 fault_coverage =0.999223
+run generation: 557 index = 17 smallest_sw = 918, average sw =1136.15,gene_size = 150 fault_coverage =0.999223
+run generation: 558 index = 17 smallest_sw = 918, average sw =1134.8,gene_size = 150 fault_coverage =0.999223
+run generation: 559 index = 17 smallest_sw = 918, average sw =1134.3,gene_size = 150 fault_coverage =0.999223
+run generation: 560 index = 17 smallest_sw = 918, average sw =1133.65,gene_size = 150 fault_coverage =0.999223
+run generation: 561 index = 17 smallest_sw = 918, average sw =1131.15,gene_size = 150 fault_coverage =0.999223
+run generation: 562 index = 17 smallest_sw = 918, average sw =1126.15,gene_size = 150 fault_coverage =0.999223
+run generation: 563 index = 17 smallest_sw = 918, average sw =1124.45,gene_size = 150 fault_coverage =0.999223
+run generation: 564 index = 17 smallest_sw = 918, average sw =1122.8,gene_size = 150 fault_coverage =0.999223
+run generation: 565 index = 17 smallest_sw = 918, average sw =1122.65,gene_size = 150 fault_coverage =0.999223
+run generation: 566 index = 17 smallest_sw = 918, average sw =1121.6,gene_size = 150 fault_coverage =0.999223
+run generation: 567 index = 17 smallest_sw = 918, average sw =1120.85,gene_size = 150 fault_coverage =0.999223
+run generation: 568 index = 17 smallest_sw = 918, average sw =1118.9,gene_size = 150 fault_coverage =0.999223
+run generation: 569 index = 17 smallest_sw = 918, average sw =1117.55,gene_size = 150 fault_coverage =0.999223
+run generation: 570 index = 17 smallest_sw = 918, average sw =1114.1,gene_size = 150 fault_coverage =0.999223
+run generation: 571 index = 17 smallest_sw = 918, average sw =1112.2,gene_size = 150 fault_coverage =0.999223
+run generation: 572 index = 17 smallest_sw = 909, average sw =1109.65,gene_size = 148 fault_coverage =0.999223
+run generation: 573 index = 17 smallest_sw = 909, average sw =1108.4,gene_size = 148 fault_coverage =0.999223
+run generation: 574 index = 17 smallest_sw = 909, average sw =1107.45,gene_size = 148 fault_coverage =0.999223
+run generation: 575 index = 17 smallest_sw = 909, average sw =1106,gene_size = 148 fault_coverage =0.999223
+run generation: 576 index = 17 smallest_sw = 909, average sw =1104.7,gene_size = 148 fault_coverage =0.999223
+run generation: 577 index = 17 smallest_sw = 909, average sw =1103.5,gene_size = 148 fault_coverage =0.999223
+run generation: 578 index = 17 smallest_sw = 909, average sw =1102.15,gene_size = 148 fault_coverage =0.999223
+run generation: 579 index = 17 smallest_sw = 909, average sw =1101.25,gene_size = 148 fault_coverage =0.999223
+run generation: 580 index = 17 smallest_sw = 909, average sw =1100,gene_size = 148 fault_coverage =0.999223
+run generation: 581 index = 17 smallest_sw = 909, average sw =1098.8,gene_size = 148 fault_coverage =0.999223
+run generation: 582 index = 17 smallest_sw = 909, average sw =1096.4,gene_size = 148 fault_coverage =0.999223
+run generation: 583 index = 17 smallest_sw = 909, average sw =1094,gene_size = 148 fault_coverage =0.999223
+run generation: 584 index = 17 smallest_sw = 909, average sw =1092.5,gene_size = 148 fault_coverage =0.999223
+run generation: 585 index = 17 smallest_sw = 909, average sw =1091.65,gene_size = 148 fault_coverage =0.999223
+run generation: 586 index = 17 smallest_sw = 909, average sw =1091.35,gene_size = 148 fault_coverage =0.999223
+run generation: 587 index = 17 smallest_sw = 909, average sw =1090.3,gene_size = 148 fault_coverage =0.999223
+run generation: 588 index = 17 smallest_sw = 909, average sw =1087.8,gene_size = 148 fault_coverage =0.999223
+run generation: 589 index = 17 smallest_sw = 909, average sw =1085.65,gene_size = 148 fault_coverage =0.999223
+run generation: 590 index = 17 smallest_sw = 909, average sw =1084.6,gene_size = 148 fault_coverage =0.999223
+run generation: 591 index = 17 smallest_sw = 909, average sw =1082.7,gene_size = 148 fault_coverage =0.999223
+run generation: 592 index = 17 smallest_sw = 909, average sw =1081,gene_size = 148 fault_coverage =0.999223
+run generation: 593 index = 17 smallest_sw = 909, average sw =1079.25,gene_size = 148 fault_coverage =0.999223
+run generation: 594 index = 17 smallest_sw = 909, average sw =1077.45,gene_size = 148 fault_coverage =0.999223
+run generation: 595 index = 17 smallest_sw = 909, average sw =1075.95,gene_size = 148 fault_coverage =0.999223
+run generation: 596 index = 17 smallest_sw = 909, average sw =1074.75,gene_size = 148 fault_coverage =0.999223
+run generation: 597 index = 17 smallest_sw = 909, average sw =1073.15,gene_size = 148 fault_coverage =0.999223
+run generation: 598 index = 17 smallest_sw = 909, average sw =1071.5,gene_size = 148 fault_coverage =0.999223
+run generation: 599 index = 17 smallest_sw = 909, average sw =1070.75,gene_size = 148 fault_coverage =0.999223
+run generation: 600 index = 17 smallest_sw = 909, average sw =1069.55,gene_size = 148 fault_coverage =0.999223
+run generation: 601 index = 17 smallest_sw = 909, average sw =1067.4,gene_size = 148 fault_coverage =0.999223
+run generation: 602 index = 17 smallest_sw = 905, average sw =1065.45,gene_size = 147 fault_coverage =0.999223
+run generation: 603 index = 17 smallest_sw = 905, average sw =1062.65,gene_size = 147 fault_coverage =0.999223
+run generation: 604 index = 17 smallest_sw = 905, average sw =1061.7,gene_size = 147 fault_coverage =0.999223
+run generation: 605 index = 17 smallest_sw = 905, average sw =1059.9,gene_size = 147 fault_coverage =0.999223
+run generation: 606 index = 17 smallest_sw = 905, average sw =1058.85,gene_size = 147 fault_coverage =0.999223
+run generation: 607 index = 17 smallest_sw = 905, average sw =1057.35,gene_size = 147 fault_coverage =0.999223
+run generation: 608 index = 17 smallest_sw = 905, average sw =1057.35,gene_size = 147 fault_coverage =0.999223
+run generation: 609 index = 17 smallest_sw = 905, average sw =1056.1,gene_size = 147 fault_coverage =0.999223
+run generation: 610 index = 17 smallest_sw = 905, average sw =1055.5,gene_size = 147 fault_coverage =0.999223
+run generation: 611 index = 17 smallest_sw = 905, average sw =1055.45,gene_size = 147 fault_coverage =0.999223
+run generation: 612 index = 17 smallest_sw = 905, average sw =1055.05,gene_size = 147 fault_coverage =0.999223
+run generation: 613 index = 17 smallest_sw = 905, average sw =1053.85,gene_size = 147 fault_coverage =0.999223
+run generation: 614 index = 17 smallest_sw = 901, average sw =1052.5,gene_size = 146 fault_coverage =0.999223
+run generation: 615 index = 17 smallest_sw = 901, average sw =1051.2,gene_size = 146 fault_coverage =0.999223
+run generation: 616 index = 17 smallest_sw = 901, average sw =1050.15,gene_size = 146 fault_coverage =0.999223
+run generation: 617 index = 17 smallest_sw = 901, average sw =1047.8,gene_size = 146 fault_coverage =0.999223
+run generation: 618 index = 17 smallest_sw = 901, average sw =1046.75,gene_size = 146 fault_coverage =0.999223
+run generation: 619 index = 17 smallest_sw = 901, average sw =1045.9,gene_size = 146 fault_coverage =0.999223
+run generation: 620 index = 17 smallest_sw = 901, average sw =1043.65,gene_size = 146 fault_coverage =0.999223
+run generation: 621 index = 17 smallest_sw = 901, average sw =1042,gene_size = 146 fault_coverage =0.999223
+run generation: 622 index = 17 smallest_sw = 901, average sw =1041.15,gene_size = 146 fault_coverage =0.999223
+run generation: 623 index = 17 smallest_sw = 899, average sw =1039.9,gene_size = 145 fault_coverage =0.999223
+run generation: 624 index = 17 smallest_sw = 899, average sw =1039.35,gene_size = 145 fault_coverage =0.999223
+run generation: 625 index = 17 smallest_sw = 899, average sw =1038.5,gene_size = 145 fault_coverage =0.999223
+run generation: 626 index = 17 smallest_sw = 899, average sw =1038.25,gene_size = 145 fault_coverage =0.999223
+run generation: 627 index = 17 smallest_sw = 899, average sw =1037.55,gene_size = 145 fault_coverage =0.999223
+run generation: 628 index = 17 smallest_sw = 899, average sw =1036.35,gene_size = 145 fault_coverage =0.999223
+run generation: 629 index = 17 smallest_sw = 899, average sw =1034.25,gene_size = 145 fault_coverage =0.999223
+run generation: 630 index = 17 smallest_sw = 899, average sw =1031.9,gene_size = 145 fault_coverage =0.999223
+run generation: 631 index = 17 smallest_sw = 899, average sw =1031.05,gene_size = 145 fault_coverage =0.999223
+run generation: 632 index = 17 smallest_sw = 899, average sw =1030.05,gene_size = 145 fault_coverage =0.999223
+run generation: 633 index = 17 smallest_sw = 899, average sw =1029.5,gene_size = 145 fault_coverage =0.999223
+run generation: 634 index = 17 smallest_sw = 899, average sw =1027.6,gene_size = 145 fault_coverage =0.999223
+run generation: 635 index = 17 smallest_sw = 899, average sw =1024.7,gene_size = 145 fault_coverage =0.999223
+run generation: 636 index = 17 smallest_sw = 893, average sw =1023.55,gene_size = 144 fault_coverage =0.999223
+run generation: 637 index = 17 smallest_sw = 893, average sw =1021.5,gene_size = 144 fault_coverage =0.999223
+run generation: 638 index = 17 smallest_sw = 893, average sw =1020.9,gene_size = 144 fault_coverage =0.999223
+run generation: 639 index = 17 smallest_sw = 891, average sw =1019.9,gene_size = 143 fault_coverage =0.999223
+run generation: 640 index = 17 smallest_sw = 891, average sw =1018.85,gene_size = 143 fault_coverage =0.999223
+run generation: 641 index = 17 smallest_sw = 891, average sw =1018.3,gene_size = 143 fault_coverage =0.999223
+run generation: 642 index = 17 smallest_sw = 891, average sw =1016.65,gene_size = 143 fault_coverage =0.999223
+run generation: 643 index = 17 smallest_sw = 891, average sw =1016.05,gene_size = 143 fault_coverage =0.999223
+run generation: 644 index = 17 smallest_sw = 891, average sw =1015.35,gene_size = 143 fault_coverage =0.999223
+run generation: 645 index = 17 smallest_sw = 891, average sw =1013.4,gene_size = 143 fault_coverage =0.999223
+run generation: 646 index = 17 smallest_sw = 891, average sw =1013.15,gene_size = 143 fault_coverage =0.999223
+run generation: 647 index = 17 smallest_sw = 891, average sw =1012.4,gene_size = 143 fault_coverage =0.999223
+run generation: 648 index = 17 smallest_sw = 891, average sw =1010,gene_size = 143 fault_coverage =0.999223
+run generation: 649 index = 17 smallest_sw = 891, average sw =1009.25,gene_size = 143 fault_coverage =0.999223
+run generation: 650 index = 17 smallest_sw = 891, average sw =1008.55,gene_size = 143 fault_coverage =0.999223
+run generation: 651 index = 17 smallest_sw = 891, average sw =1005.8,gene_size = 143 fault_coverage =0.999223
+run generation: 652 index = 17 smallest_sw = 891, average sw =1005.75,gene_size = 143 fault_coverage =0.999223
+run generation: 653 index = 17 smallest_sw = 891, average sw =1005.05,gene_size = 143 fault_coverage =0.999223
+run generation: 654 index = 17 smallest_sw = 891, average sw =1002.45,gene_size = 143 fault_coverage =0.999223
+run generation: 655 index = 17 smallest_sw = 891, average sw =1002.45,gene_size = 143 fault_coverage =0.999223
+run generation: 656 index = 17 smallest_sw = 891, average sw =1000.35,gene_size = 143 fault_coverage =0.999223
+run generation: 657 index = 17 smallest_sw = 891, average sw =999.9,gene_size = 143 fault_coverage =0.999223
+run generation: 658 index = 17 smallest_sw = 891, average sw =998.75,gene_size = 143 fault_coverage =0.999223
+run generation: 659 index = 17 smallest_sw = 891, average sw =997.25,gene_size = 143 fault_coverage =0.999223
+run generation: 660 index = 17 smallest_sw = 891, average sw =994.7,gene_size = 143 fault_coverage =0.999223
+run generation: 661 index = 17 smallest_sw = 891, average sw =993.9,gene_size = 143 fault_coverage =0.999223
+run generation: 662 index = 17 smallest_sw = 891, average sw =993.7,gene_size = 143 fault_coverage =0.999223
+run generation: 663 index = 17 smallest_sw = 891, average sw =993.3,gene_size = 143 fault_coverage =0.999223
+run generation: 664 index = 17 smallest_sw = 891, average sw =992.65,gene_size = 143 fault_coverage =0.999223
+run generation: 665 index = 17 smallest_sw = 891, average sw =992.55,gene_size = 143 fault_coverage =0.999223
+run generation: 666 index = 17 smallest_sw = 891, average sw =991.8,gene_size = 143 fault_coverage =0.999223
+run generation: 667 index = 17 smallest_sw = 891, average sw =990.2,gene_size = 143 fault_coverage =0.999223
+run generation: 668 index = 17 smallest_sw = 891, average sw =989.05,gene_size = 143 fault_coverage =0.999223
+run generation: 669 index = 17 smallest_sw = 891, average sw =988.15,gene_size = 143 fault_coverage =0.999223
+run generation: 670 index = 17 smallest_sw = 891, average sw =987.65,gene_size = 143 fault_coverage =0.999223
+run generation: 671 index = 17 smallest_sw = 891, average sw =985.9,gene_size = 143 fault_coverage =0.999223
+run generation: 672 index = 17 smallest_sw = 891, average sw =984.8,gene_size = 143 fault_coverage =0.999223
+run generation: 673 index = 17 smallest_sw = 887, average sw =982.75,gene_size = 142 fault_coverage =0.999223
+run generation: 674 index = 17 smallest_sw = 882, average sw =980.45,gene_size = 141 fault_coverage =0.999223
+run generation: 675 index = 17 smallest_sw = 882, average sw =980,gene_size = 141 fault_coverage =0.999223
+run generation: 676 index = 17 smallest_sw = 882, average sw =979.15,gene_size = 141 fault_coverage =0.999223
+run generation: 677 index = 17 smallest_sw = 882, average sw =977.55,gene_size = 141 fault_coverage =0.999223
+run generation: 678 index = 17 smallest_sw = 882, average sw =976.25,gene_size = 141 fault_coverage =0.999223
+run generation: 679 index = 17 smallest_sw = 882, average sw =973.85,gene_size = 141 fault_coverage =0.999223
+run generation: 680 index = 17 smallest_sw = 882, average sw =971.85,gene_size = 141 fault_coverage =0.999223
+run generation: 681 index = 17 smallest_sw = 882, average sw =969.9,gene_size = 141 fault_coverage =0.999223
+run generation: 682 index = 17 smallest_sw = 882, average sw =969.8,gene_size = 141 fault_coverage =0.999223
+run generation: 683 index = 17 smallest_sw = 882, average sw =969.1,gene_size = 141 fault_coverage =0.999223
+run generation: 684 index = 17 smallest_sw = 882, average sw =968.55,gene_size = 141 fault_coverage =0.999223
+run generation: 685 index = 17 smallest_sw = 882, average sw =967.95,gene_size = 141 fault_coverage =0.999223
+run generation: 686 index = 17 smallest_sw = 882, average sw =966.2,gene_size = 141 fault_coverage =0.999223
+run generation: 687 index = 17 smallest_sw = 882, average sw =964.85,gene_size = 141 fault_coverage =0.999223
+run generation: 688 index = 17 smallest_sw = 882, average sw =963.7,gene_size = 141 fault_coverage =0.999223
+run generation: 689 index = 17 smallest_sw = 882, average sw =961.35,gene_size = 141 fault_coverage =0.999223
+run generation: 690 index = 17 smallest_sw = 881, average sw =960.7,gene_size = 140 fault_coverage =0.999223
+run generation: 691 index = 17 smallest_sw = 881, average sw =960.35,gene_size = 140 fault_coverage =0.999223
+run generation: 692 index = 17 smallest_sw = 879, average sw =958.6,gene_size = 139 fault_coverage =0.999223
+run generation: 693 index = 17 smallest_sw = 879, average sw =958.4,gene_size = 139 fault_coverage =0.999223
+run generation: 694 index = 17 smallest_sw = 871, average sw =956.7,gene_size = 138 fault_coverage =0.999223
+run generation: 695 index = 17 smallest_sw = 871, average sw =954.85,gene_size = 138 fault_coverage =0.999223
+run generation: 696 index = 17 smallest_sw = 871, average sw =954.6,gene_size = 138 fault_coverage =0.999223
+run generation: 697 index = 17 smallest_sw = 871, average sw =954.15,gene_size = 138 fault_coverage =0.999223
+run generation: 698 index = 17 smallest_sw = 871, average sw =953.85,gene_size = 138 fault_coverage =0.999223
+run generation: 699 index = 17 smallest_sw = 871, average sw =953.2,gene_size = 138 fault_coverage =0.999223
+run generation: 700 index = 17 smallest_sw = 871, average sw =952.25,gene_size = 138 fault_coverage =0.999223
+run generation: 701 index = 17 smallest_sw = 871, average sw =951.75,gene_size = 138 fault_coverage =0.999223
+run generation: 702 index = 17 smallest_sw = 871, average sw =951.75,gene_size = 138 fault_coverage =0.999223
+run generation: 703 index = 17 smallest_sw = 871, average sw =951.5,gene_size = 138 fault_coverage =0.999223
+run generation: 704 index = 17 smallest_sw = 871, average sw =951.15,gene_size = 138 fault_coverage =0.999223
+run generation: 705 index = 17 smallest_sw = 871, average sw =950.05,gene_size = 138 fault_coverage =0.999223
+run generation: 706 index = 18 smallest_sw = 861, average sw =948.65,gene_size = 131 fault_coverage =0.999223
+run generation: 707 index = 18 smallest_sw = 861, average sw =947.7,gene_size = 131 fault_coverage =0.999223
+run generation: 708 index = 18 smallest_sw = 861, average sw =947.7,gene_size = 131 fault_coverage =0.999223
+run generation: 709 index = 18 smallest_sw = 861, average sw =946.35,gene_size = 131 fault_coverage =0.999223
+run generation: 710 index = 18 smallest_sw = 861, average sw =945.6,gene_size = 131 fault_coverage =0.999223
+run generation: 711 index = 18 smallest_sw = 861, average sw =944.65,gene_size = 131 fault_coverage =0.999223
+run generation: 712 index = 18 smallest_sw = 861, average sw =944.15,gene_size = 131 fault_coverage =0.999223
+run generation: 713 index = 18 smallest_sw = 861, average sw =944.05,gene_size = 131 fault_coverage =0.999223
+run generation: 714 index = 18 smallest_sw = 861, average sw =943.1,gene_size = 131 fault_coverage =0.999223
+run generation: 715 index = 18 smallest_sw = 861, average sw =942.1,gene_size = 131 fault_coverage =0.999223
+run generation: 716 index = 18 smallest_sw = 861, average sw =941.8,gene_size = 131 fault_coverage =0.999223
+run generation: 717 index = 18 smallest_sw = 861, average sw =940.05,gene_size = 131 fault_coverage =0.999223
+run generation: 718 index = 18 smallest_sw = 861, average sw =939.15,gene_size = 131 fault_coverage =0.999223
+run generation: 719 index = 18 smallest_sw = 861, average sw =938.4,gene_size = 131 fault_coverage =0.999223
+run generation: 720 index = 18 smallest_sw = 861, average sw =937.8,gene_size = 131 fault_coverage =0.999223
+run generation: 721 index = 18 smallest_sw = 861, average sw =936.45,gene_size = 131 fault_coverage =0.999223
+run generation: 722 index = 18 smallest_sw = 861, average sw =935.65,gene_size = 131 fault_coverage =0.999223
+run generation: 723 index = 18 smallest_sw = 861, average sw =933.8,gene_size = 131 fault_coverage =0.999223
+run generation: 724 index = 18 smallest_sw = 861, average sw =933.2,gene_size = 131 fault_coverage =0.999223
+run generation: 725 index = 18 smallest_sw = 861, average sw =932.3,gene_size = 131 fault_coverage =0.999223
+run generation: 726 index = 18 smallest_sw = 861, average sw =931.45,gene_size = 131 fault_coverage =0.999223
+run generation: 727 index = 18 smallest_sw = 861, average sw =930.85,gene_size = 131 fault_coverage =0.999223
+run generation: 728 index = 18 smallest_sw = 861, average sw =926.65,gene_size = 131 fault_coverage =0.999223
+run generation: 729 index = 18 smallest_sw = 861, average sw =926.45,gene_size = 131 fault_coverage =0.999223
+run generation: 730 index = 18 smallest_sw = 861, average sw =925.05,gene_size = 131 fault_coverage =0.999223
+run generation: 731 index = 18 smallest_sw = 861, average sw =923.95,gene_size = 131 fault_coverage =0.999223
+run generation: 732 index = 18 smallest_sw = 861, average sw =922.6,gene_size = 131 fault_coverage =0.999223
+run generation: 733 index = 18 smallest_sw = 861, average sw =922.3,gene_size = 131 fault_coverage =0.999223
+run generation: 734 index = 18 smallest_sw = 861, average sw =921.5,gene_size = 131 fault_coverage =0.999223
+run generation: 735 index = 18 smallest_sw = 861, average sw =921.35,gene_size = 131 fault_coverage =0.999223
+run generation: 736 index = 18 smallest_sw = 861, average sw =920.45,gene_size = 131 fault_coverage =0.999223
+run generation: 737 index = 18 smallest_sw = 861, average sw =918.85,gene_size = 131 fault_coverage =0.999223
+run generation: 738 index = 18 smallest_sw = 861, average sw =917.9,gene_size = 131 fault_coverage =0.999223
+run generation: 739 index = 18 smallest_sw = 861, average sw =917.55,gene_size = 131 fault_coverage =0.999223
+run generation: 740 index = 18 smallest_sw = 861, average sw =916.8,gene_size = 131 fault_coverage =0.999223
+run generation: 741 index = 18 smallest_sw = 861, average sw =915.65,gene_size = 131 fault_coverage =0.999223
+run generation: 742 index = 19 smallest_sw = 858, average sw =914.55,gene_size = 135 fault_coverage =0.999223
+run generation: 743 index = 19 smallest_sw = 858, average sw =913.45,gene_size = 135 fault_coverage =0.999223
+run generation: 744 index = 19 smallest_sw = 857, average sw =913.1,gene_size = 134 fault_coverage =0.999223
+run generation: 745 index = 19 smallest_sw = 850, average sw =912.15,gene_size = 133 fault_coverage =0.999223
+run generation: 746 index = 19 smallest_sw = 850, average sw =912.15,gene_size = 133 fault_coverage =0.999223
+run generation: 747 index = 19 smallest_sw = 850, average sw =912.15,gene_size = 133 fault_coverage =0.999223
+run generation: 748 index = 19 smallest_sw = 850, average sw =912.05,gene_size = 133 fault_coverage =0.999223
+run generation: 749 index = 19 smallest_sw = 850, average sw =910.55,gene_size = 133 fault_coverage =0.999223
+run generation: 750 index = 19 smallest_sw = 850, average sw =909.35,gene_size = 133 fault_coverage =0.999223
+run generation: 751 index = 19 smallest_sw = 850, average sw =908,gene_size = 133 fault_coverage =0.999223
+run generation: 752 index = 19 smallest_sw = 850, average sw =908,gene_size = 133 fault_coverage =0.999223
+run generation: 753 index = 19 smallest_sw = 850, average sw =907.15,gene_size = 133 fault_coverage =0.999223
+run generation: 754 index = 18 smallest_sw = 835, average sw =905.55,gene_size = 128 fault_coverage =0.999223
+run generation: 755 index = 18 smallest_sw = 835, average sw =902.55,gene_size = 128 fault_coverage =0.999223
+run generation: 756 index = 18 smallest_sw = 835, average sw =901.6,gene_size = 128 fault_coverage =0.999223
+run generation: 757 index = 18 smallest_sw = 835, average sw =900.05,gene_size = 128 fault_coverage =0.999223
+run generation: 758 index = 18 smallest_sw = 835, average sw =899.2,gene_size = 128 fault_coverage =0.999223
+run generation: 759 index = 18 smallest_sw = 835, average sw =898.15,gene_size = 128 fault_coverage =0.999223
+run generation: 760 index = 18 smallest_sw = 835, average sw =897.75,gene_size = 128 fault_coverage =0.999223
+run generation: 761 index = 18 smallest_sw = 835, average sw =896.4,gene_size = 128 fault_coverage =0.999223
+run generation: 762 index = 18 smallest_sw = 835, average sw =895.65,gene_size = 128 fault_coverage =0.999223
+run generation: 763 index = 18 smallest_sw = 835, average sw =894.1,gene_size = 128 fault_coverage =0.999223
+run generation: 764 index = 18 smallest_sw = 835, average sw =894.1,gene_size = 128 fault_coverage =0.999223
+run generation: 765 index = 18 smallest_sw = 835, average sw =893.8,gene_size = 128 fault_coverage =0.999223
+run generation: 766 index = 18 smallest_sw = 835, average sw =893.8,gene_size = 128 fault_coverage =0.999223
+run generation: 767 index = 18 smallest_sw = 835, average sw =893.35,gene_size = 128 fault_coverage =0.999223
+run generation: 768 index = 18 smallest_sw = 835, average sw =893.3,gene_size = 128 fault_coverage =0.999223
+run generation: 769 index = 18 smallest_sw = 835, average sw =893.3,gene_size = 128 fault_coverage =0.999223
+run generation: 770 index = 17 smallest_sw = 832, average sw =892.55,gene_size = 133 fault_coverage =0.999223
+run generation: 771 index = 17 smallest_sw = 832, average sw =892.5,gene_size = 133 fault_coverage =0.999223
+run generation: 772 index = 17 smallest_sw = 832, average sw =891.6,gene_size = 133 fault_coverage =0.999223
+run generation: 773 index = 19 smallest_sw = 826, average sw =890.55,gene_size = 130 fault_coverage =0.999223
+run generation: 774 index = 19 smallest_sw = 826, average sw =889.05,gene_size = 130 fault_coverage =0.999223
+run generation: 775 index = 19 smallest_sw = 826, average sw =888.85,gene_size = 130 fault_coverage =0.999223
+run generation: 776 index = 19 smallest_sw = 826, average sw =888.35,gene_size = 130 fault_coverage =0.999223
+run generation: 777 index = 17 smallest_sw = 820, average sw =887.45,gene_size = 132 fault_coverage =0.999223
+run generation: 778 index = 17 smallest_sw = 820, average sw =886.7,gene_size = 132 fault_coverage =0.999223
+run generation: 779 index = 17 smallest_sw = 820, average sw =885.7,gene_size = 132 fault_coverage =0.999223
+run generation: 780 index = 17 smallest_sw = 820, average sw =884.4,gene_size = 132 fault_coverage =0.999223
+run generation: 781 index = 17 smallest_sw = 820, average sw =883.2,gene_size = 132 fault_coverage =0.999223
+run generation: 782 index = 17 smallest_sw = 820, average sw =882.4,gene_size = 132 fault_coverage =0.999223
+run generation: 783 index = 17 smallest_sw = 820, average sw =881.8,gene_size = 132 fault_coverage =0.999223
+run generation: 784 index = 17 smallest_sw = 820, average sw =880.9,gene_size = 132 fault_coverage =0.999223
+run generation: 785 index = 17 smallest_sw = 820, average sw =880.7,gene_size = 132 fault_coverage =0.999223
+run generation: 786 index = 17 smallest_sw = 820, average sw =880.7,gene_size = 132 fault_coverage =0.999223
+run generation: 787 index = 17 smallest_sw = 820, average sw =880.45,gene_size = 132 fault_coverage =0.999223
+run generation: 788 index = 17 smallest_sw = 820, average sw =880.45,gene_size = 132 fault_coverage =0.999223
+run generation: 789 index = 17 smallest_sw = 820, average sw =879.45,gene_size = 132 fault_coverage =0.999223
+run generation: 790 index = 17 smallest_sw = 820, average sw =878.6,gene_size = 132 fault_coverage =0.999223
+run generation: 791 index = 17 smallest_sw = 820, average sw =877.65,gene_size = 132 fault_coverage =0.999223
+run generation: 792 index = 17 smallest_sw = 820, average sw =877.1,gene_size = 132 fault_coverage =0.999223
+run generation: 793 index = 17 smallest_sw = 820, average sw =876.6,gene_size = 132 fault_coverage =0.999223
+run generation: 794 index = 19 smallest_sw = 819, average sw =875.6,gene_size = 129 fault_coverage =0.999223
+run generation: 795 index = 19 smallest_sw = 819, average sw =874.95,gene_size = 129 fault_coverage =0.999223
+run generation: 796 index = 18 smallest_sw = 816, average sw =874.15,gene_size = 125 fault_coverage =0.999223
+run generation: 797 index = 18 smallest_sw = 816, average sw =874.15,gene_size = 125 fault_coverage =0.999223
+run generation: 798 index = 18 smallest_sw = 810, average sw =873.7,gene_size = 125 fault_coverage =0.999223
+run generation: 799 index = 18 smallest_sw = 810, average sw =873.7,gene_size = 125 fault_coverage =0.999223
+run generation: 800 index = 18 smallest_sw = 810, average sw =873.4,gene_size = 125 fault_coverage =0.999223
+run generation: 801 index = 18 smallest_sw = 796, average sw =871.6,gene_size = 124 fault_coverage =0.999223
+run generation: 802 index = 18 smallest_sw = 796, average sw =871.2,gene_size = 124 fault_coverage =0.999223
+run generation: 803 index = 18 smallest_sw = 796, average sw =870.6,gene_size = 124 fault_coverage =0.999223
+run generation: 804 index = 18 smallest_sw = 796, average sw =870,gene_size = 124 fault_coverage =0.999223
+run generation: 805 index = 18 smallest_sw = 796, average sw =870,gene_size = 124 fault_coverage =0.999223
+run generation: 806 index = 18 smallest_sw = 796, average sw =869.55,gene_size = 124 fault_coverage =0.999223
+run generation: 807 index = 18 smallest_sw = 796, average sw =867.55,gene_size = 124 fault_coverage =0.999223
+run generation: 808 index = 18 smallest_sw = 796, average sw =867.25,gene_size = 124 fault_coverage =0.999223
+run generation: 809 index = 18 smallest_sw = 796, average sw =865.3,gene_size = 124 fault_coverage =0.999223
+run generation: 810 index = 18 smallest_sw = 796, average sw =865,gene_size = 124 fault_coverage =0.999223
+run generation: 811 index = 18 smallest_sw = 796, average sw =864.6,gene_size = 124 fault_coverage =0.999223
+run generation: 812 index = 18 smallest_sw = 796, average sw =864.15,gene_size = 124 fault_coverage =0.999223
+run generation: 813 index = 18 smallest_sw = 796, average sw =863.65,gene_size = 124 fault_coverage =0.999223
+run generation: 814 index = 18 smallest_sw = 796, average sw =862.6,gene_size = 124 fault_coverage =0.999223
+run generation: 815 index = 18 smallest_sw = 796, average sw =861.55,gene_size = 124 fault_coverage =0.999223
+run generation: 816 index = 18 smallest_sw = 796, average sw =861.55,gene_size = 124 fault_coverage =0.999223
+run generation: 817 index = 18 smallest_sw = 796, average sw =861.55,gene_size = 124 fault_coverage =0.999223
+run generation: 818 index = 18 smallest_sw = 796, average sw =861.05,gene_size = 124 fault_coverage =0.999223
+run generation: 819 index = 18 smallest_sw = 796, average sw =858.9,gene_size = 124 fault_coverage =0.999223
+run generation: 820 index = 18 smallest_sw = 796, average sw =858.1,gene_size = 124 fault_coverage =0.999223
+run generation: 821 index = 18 smallest_sw = 796, average sw =858.1,gene_size = 124 fault_coverage =0.999223
+run generation: 822 index = 18 smallest_sw = 796, average sw =857.35,gene_size = 124 fault_coverage =0.999223
+run generation: 823 index = 18 smallest_sw = 796, average sw =855.85,gene_size = 124 fault_coverage =0.999223
+run generation: 824 index = 18 smallest_sw = 796, average sw =854.95,gene_size = 124 fault_coverage =0.999223
+run generation: 825 index = 19 smallest_sw = 795, average sw =854.05,gene_size = 126 fault_coverage =0.999223
+run generation: 826 index = 19 smallest_sw = 795, average sw =854.05,gene_size = 126 fault_coverage =0.999223
+run generation: 827 index = 19 smallest_sw = 795, average sw =853,gene_size = 126 fault_coverage =0.999223
+run generation: 828 index = 19 smallest_sw = 795, average sw =852.7,gene_size = 126 fault_coverage =0.999223
+run generation: 829 index = 19 smallest_sw = 795, average sw =852,gene_size = 126 fault_coverage =0.999223
+run generation: 830 index = 19 smallest_sw = 795, average sw =852,gene_size = 126 fault_coverage =0.999223
+run generation: 831 index = 19 smallest_sw = 795, average sw =851.45,gene_size = 126 fault_coverage =0.999223
+run generation: 832 index = 19 smallest_sw = 795, average sw =850.6,gene_size = 126 fault_coverage =0.999223
+run generation: 833 index = 19 smallest_sw = 795, average sw =850.6,gene_size = 126 fault_coverage =0.999223
+run generation: 834 index = 19 smallest_sw = 795, average sw =849.55,gene_size = 126 fault_coverage =0.999223
+run generation: 835 index = 19 smallest_sw = 795, average sw =849.2,gene_size = 126 fault_coverage =0.999223
+run generation: 836 index = 19 smallest_sw = 795, average sw =849.2,gene_size = 126 fault_coverage =0.999223
+run generation: 837 index = 19 smallest_sw = 795, average sw =848.55,gene_size = 126 fault_coverage =0.999223
+run generation: 838 index = 19 smallest_sw = 795, average sw =847.05,gene_size = 126 fault_coverage =0.999223
+run generation: 839 index = 19 smallest_sw = 795, average sw =845.45,gene_size = 126 fault_coverage =0.999223
+run generation: 840 index = 19 smallest_sw = 795, average sw =845.15,gene_size = 126 fault_coverage =0.999223
+run generation: 841 index = 19 smallest_sw = 795, average sw =845.15,gene_size = 126 fault_coverage =0.999223
+run generation: 842 index = 19 smallest_sw = 795, average sw =845.15,gene_size = 126 fault_coverage =0.999223
+run generation: 843 index = 19 smallest_sw = 795, average sw =845.15,gene_size = 126 fault_coverage =0.999223
+run generation: 844 index = 19 smallest_sw = 792, average sw =845,gene_size = 125 fault_coverage =0.999223
+run generation: 845 index = 19 smallest_sw = 792, average sw =844.2,gene_size = 125 fault_coverage =0.999223
+run generation: 846 index = 19 smallest_sw = 792, average sw =844.1,gene_size = 125 fault_coverage =0.999223
+run generation: 847 index = 19 smallest_sw = 792, average sw =843.75,gene_size = 125 fault_coverage =0.999223
+run generation: 848 index = 19 smallest_sw = 792, average sw =843.75,gene_size = 125 fault_coverage =0.999223
+run generation: 849 index = 19 smallest_sw = 792, average sw =843.6,gene_size = 125 fault_coverage =0.999223
+run generation: 850 index = 19 smallest_sw = 792, average sw =843.6,gene_size = 125 fault_coverage =0.999223
+run generation: 851 index = 19 smallest_sw = 792, average sw =843.15,gene_size = 125 fault_coverage =0.999223
+run generation: 852 index = 19 smallest_sw = 792, average sw =843.05,gene_size = 125 fault_coverage =0.999223
+run generation: 853 index = 19 smallest_sw = 792, average sw =843.05,gene_size = 125 fault_coverage =0.999223
+run generation: 854 index = 19 smallest_sw = 792, average sw =842.25,gene_size = 125 fault_coverage =0.999223
+run generation: 855 index = 19 smallest_sw = 792, average sw =841.2,gene_size = 125 fault_coverage =0.999223
+run generation: 856 index = 19 smallest_sw = 792, average sw =840.7,gene_size = 125 fault_coverage =0.999223
+run generation: 857 index = 19 smallest_sw = 792, average sw =839.7,gene_size = 125 fault_coverage =0.999223
+run generation: 858 index = 19 smallest_sw = 792, average sw =839.15,gene_size = 125 fault_coverage =0.999223
+run generation: 859 index = 19 smallest_sw = 792, average sw =837.6,gene_size = 125 fault_coverage =0.999223
+run generation: 860 index = 19 smallest_sw = 792, average sw =836.65,gene_size = 125 fault_coverage =0.999223
+run generation: 861 index = 19 smallest_sw = 792, average sw =836.65,gene_size = 125 fault_coverage =0.999223
+run generation: 862 index = 18 smallest_sw = 787, average sw =835.95,gene_size = 123 fault_coverage =0.999223
+run generation: 863 index = 18 smallest_sw = 787, average sw =835.15,gene_size = 123 fault_coverage =0.999223
+run generation: 864 index = 18 smallest_sw = 787, average sw =835.15,gene_size = 123 fault_coverage =0.999223
+run generation: 865 index = 18 smallest_sw = 787, average sw =835.15,gene_size = 123 fault_coverage =0.999223
+run generation: 866 index = 18 smallest_sw = 787, average sw =835.15,gene_size = 123 fault_coverage =0.999223
+run generation: 867 index = 18 smallest_sw = 787, average sw =835.15,gene_size = 123 fault_coverage =0.999223
+run generation: 868 index = 18 smallest_sw = 787, average sw =835.15,gene_size = 123 fault_coverage =0.999223
+run generation: 869 index = 18 smallest_sw = 787, average sw =834.8,gene_size = 123 fault_coverage =0.999223
+run generation: 870 index = 18 smallest_sw = 787, average sw =834.8,gene_size = 123 fault_coverage =0.999223
+run generation: 871 index = 18 smallest_sw = 787, average sw =834.3,gene_size = 123 fault_coverage =0.999223
+run generation: 872 index = 18 smallest_sw = 787, average sw =833.8,gene_size = 123 fault_coverage =0.999223
+run generation: 873 index = 18 smallest_sw = 787, average sw =833.25,gene_size = 123 fault_coverage =0.999223
+run generation: 874 index = 18 smallest_sw = 787, average sw =832.15,gene_size = 123 fault_coverage =0.999223
+run generation: 875 index = 18 smallest_sw = 787, average sw =831.3,gene_size = 123 fault_coverage =0.999223
+run generation: 876 index = 18 smallest_sw = 787, average sw =830.45,gene_size = 123 fault_coverage =0.999223
+run generation: 877 index = 18 smallest_sw = 787, average sw =830.05,gene_size = 123 fault_coverage =0.999223
+run generation: 878 index = 18 smallest_sw = 787, average sw =829.5,gene_size = 123 fault_coverage =0.999223
+run generation: 879 index = 18 smallest_sw = 787, average sw =829.2,gene_size = 123 fault_coverage =0.999223
+run generation: 880 index = 0 smallest_sw = 784, average sw =828.15,gene_size = 139 fault_coverage =0.999223
+run generation: 881 index = 0 smallest_sw = 784, average sw =828.05,gene_size = 139 fault_coverage =0.999223
+run generation: 882 index = 0 smallest_sw = 784, average sw =827.2,gene_size = 139 fault_coverage =0.999223
+run generation: 883 index = 0 smallest_sw = 784, average sw =827.2,gene_size = 139 fault_coverage =0.999223
+run generation: 884 index = 0 smallest_sw = 784, average sw =826.75,gene_size = 139 fault_coverage =0.999223
+run generation: 885 index = 0 smallest_sw = 784, average sw =824.75,gene_size = 139 fault_coverage =0.999223
+run generation: 886 index = 0 smallest_sw = 784, average sw =824.75,gene_size = 139 fault_coverage =0.999223
+run generation: 887 index = 0 smallest_sw = 784, average sw =823.7,gene_size = 139 fault_coverage =0.999223
+run generation: 888 index = 0 smallest_sw = 784, average sw =823.7,gene_size = 139 fault_coverage =0.999223
+run generation: 889 index = 0 smallest_sw = 784, average sw =822,gene_size = 139 fault_coverage =0.999223
+run generation: 890 index = 0 smallest_sw = 784, average sw =821.9,gene_size = 139 fault_coverage =0.999223
+run generation: 891 index = 0 smallest_sw = 784, average sw =821.65,gene_size = 139 fault_coverage =0.999223
+run generation: 892 index = 0 smallest_sw = 784, average sw =820.6,gene_size = 139 fault_coverage =0.999223
+run generation: 893 index = 0 smallest_sw = 784, average sw =819.85,gene_size = 139 fault_coverage =0.999223
+run generation: 894 index = 0 smallest_sw = 784, average sw =819.4,gene_size = 139 fault_coverage =0.999223
+run generation: 895 index = 0 smallest_sw = 784, average sw =819.4,gene_size = 139 fault_coverage =0.999223
+run generation: 896 index = 0 smallest_sw = 784, average sw =819.4,gene_size = 139 fault_coverage =0.999223
+run generation: 897 index = 0 smallest_sw = 784, average sw =819.4,gene_size = 139 fault_coverage =0.999223
+run generation: 898 index = 0 smallest_sw = 784, average sw =819.4,gene_size = 139 fault_coverage =0.999223
+run generation: 899 index = 0 smallest_sw = 784, average sw =818.95,gene_size = 139 fault_coverage =0.999223
+run generation: 900 index = 0 smallest_sw = 784, average sw =818.95,gene_size = 139 fault_coverage =0.999223
+run generation: 901 index = 0 smallest_sw = 783, average sw =818.2,gene_size = 138 fault_coverage =0.999223
+run generation: 902 index = 0 smallest_sw = 783, average sw =817.9,gene_size = 138 fault_coverage =0.999223
+run generation: 903 index = 0 smallest_sw = 783, average sw =817.15,gene_size = 138 fault_coverage =0.999223
+run generation: 904 index = 18 smallest_sw = 775, average sw =815.95,gene_size = 122 fault_coverage =0.999223
+run generation: 905 index = 18 smallest_sw = 775, average sw =815.95,gene_size = 122 fault_coverage =0.999223
+run generation: 906 index = 18 smallest_sw = 775, average sw =815.75,gene_size = 122 fault_coverage =0.999223
+run generation: 907 index = 18 smallest_sw = 775, average sw =815.7,gene_size = 122 fault_coverage =0.999223
+run generation: 908 index = 18 smallest_sw = 775, average sw =815.6,gene_size = 122 fault_coverage =0.999223
+run generation: 909 index = 18 smallest_sw = 775, average sw =815.1,gene_size = 122 fault_coverage =0.999223
+run generation: 910 index = 18 smallest_sw = 775, average sw =813.85,gene_size = 122 fault_coverage =0.999223
+run generation: 911 index = 18 smallest_sw = 775, average sw =811.7,gene_size = 122 fault_coverage =0.999223
+run generation: 912 index = 18 smallest_sw = 775, average sw =811.7,gene_size = 122 fault_coverage =0.999223
+run generation: 913 index = 18 smallest_sw = 775, average sw =811.7,gene_size = 122 fault_coverage =0.999223
+run generation: 914 index = 18 smallest_sw = 775, average sw =811.65,gene_size = 122 fault_coverage =0.999223
+run generation: 915 index = 18 smallest_sw = 775, average sw =811.3,gene_size = 122 fault_coverage =0.999223
+run generation: 916 index = 18 smallest_sw = 775, average sw =810.9,gene_size = 122 fault_coverage =0.999223
+run generation: 917 index = 18 smallest_sw = 775, average sw =810.75,gene_size = 122 fault_coverage =0.999223
+run generation: 918 index = 18 smallest_sw = 775, average sw =809.1,gene_size = 122 fault_coverage =0.999223
+run generation: 919 index = 18 smallest_sw = 775, average sw =808.9,gene_size = 122 fault_coverage =0.999223
+run generation: 920 index = 18 smallest_sw = 775, average sw =808.45,gene_size = 122 fault_coverage =0.999223
+run generation: 921 index = 18 smallest_sw = 767, average sw =807.95,gene_size = 122 fault_coverage =0.999223
+run generation: 922 index = 18 smallest_sw = 767, average sw =807.95,gene_size = 122 fault_coverage =0.999223
+run generation: 923 index = 18 smallest_sw = 767, average sw =807.25,gene_size = 122 fault_coverage =0.999223
+run generation: 924 index = 18 smallest_sw = 767, average sw =807.25,gene_size = 122 fault_coverage =0.999223
+run generation: 925 index = 18 smallest_sw = 767, average sw =807.25,gene_size = 122 fault_coverage =0.999223
+run generation: 926 index = 18 smallest_sw = 767, average sw =807.25,gene_size = 122 fault_coverage =0.999223
+run generation: 927 index = 18 smallest_sw = 767, average sw =807.25,gene_size = 122 fault_coverage =0.999223
+run generation: 928 index = 18 smallest_sw = 767, average sw =806.95,gene_size = 122 fault_coverage =0.999223
+run generation: 929 index = 18 smallest_sw = 767, average sw =806.95,gene_size = 122 fault_coverage =0.999223
+run generation: 930 index = 18 smallest_sw = 767, average sw =806.95,gene_size = 122 fault_coverage =0.999223
+run generation: 931 index = 18 smallest_sw = 767, average sw =806.85,gene_size = 122 fault_coverage =0.999223
+run generation: 932 index = 18 smallest_sw = 767, average sw =806.5,gene_size = 122 fault_coverage =0.999223
+run generation: 933 index = 18 smallest_sw = 767, average sw =805,gene_size = 122 fault_coverage =0.999223
+run generation: 934 index = 18 smallest_sw = 767, average sw =805,gene_size = 122 fault_coverage =0.999223
+run generation: 935 index = 18 smallest_sw = 767, average sw =804.55,gene_size = 122 fault_coverage =0.999223
+run generation: 936 index = 18 smallest_sw = 767, average sw =803.8,gene_size = 122 fault_coverage =0.999223
+run generation: 937 index = 18 smallest_sw = 767, average sw =803.8,gene_size = 122 fault_coverage =0.999223
+run generation: 938 index = 18 smallest_sw = 767, average sw =803.5,gene_size = 122 fault_coverage =0.999223
+run generation: 939 index = 18 smallest_sw = 767, average sw =802.85,gene_size = 122 fault_coverage =0.999223
+run generation: 940 index = 18 smallest_sw = 767, average sw =802.85,gene_size = 122 fault_coverage =0.999223
+run generation: 941 index = 18 smallest_sw = 767, average sw =802.85,gene_size = 122 fault_coverage =0.999223
+run generation: 942 index = 18 smallest_sw = 767, average sw =802.35,gene_size = 122 fault_coverage =0.999223
+run generation: 943 index = 18 smallest_sw = 767, average sw =802.35,gene_size = 122 fault_coverage =0.999223
+run generation: 944 index = 18 smallest_sw = 767, average sw =801.6,gene_size = 122 fault_coverage =0.999223
+run generation: 945 index = 18 smallest_sw = 767, average sw =801.6,gene_size = 122 fault_coverage =0.999223
+run generation: 946 index = 18 smallest_sw = 767, average sw =801.35,gene_size = 122 fault_coverage =0.999223
+run generation: 947 index = 18 smallest_sw = 761, average sw =801.05,gene_size = 122 fault_coverage =0.999223
+run generation: 948 index = 18 smallest_sw = 761, average sw =800.65,gene_size = 122 fault_coverage =0.999223
+run generation: 949 index = 18 smallest_sw = 761, average sw =800.35,gene_size = 122 fault_coverage =0.999223
+run generation: 950 index = 18 smallest_sw = 761, average sw =800.25,gene_size = 122 fault_coverage =0.999223
+run generation: 951 index = 18 smallest_sw = 761, average sw =799.25,gene_size = 122 fault_coverage =0.999223
+run generation: 952 index = 18 smallest_sw = 761, average sw =798.4,gene_size = 122 fault_coverage =0.999223
+run generation: 953 index = 18 smallest_sw = 761, average sw =797.75,gene_size = 122 fault_coverage =0.999223
+run generation: 954 index = 18 smallest_sw = 761, average sw =797.6,gene_size = 122 fault_coverage =0.999223
+run generation: 955 index = 18 smallest_sw = 761, average sw =797.3,gene_size = 122 fault_coverage =0.999223
+run generation: 956 index = 18 smallest_sw = 761, average sw =797.25,gene_size = 122 fault_coverage =0.999223
+run generation: 957 index = 18 smallest_sw = 761, average sw =797.25,gene_size = 122 fault_coverage =0.999223
+run generation: 958 index = 18 smallest_sw = 761, average sw =797.1,gene_size = 122 fault_coverage =0.999223
+run generation: 959 index = 18 smallest_sw = 761, average sw =796.35,gene_size = 122 fault_coverage =0.999223
+run generation: 960 index = 18 smallest_sw = 761, average sw =795.5,gene_size = 122 fault_coverage =0.999223
+run generation: 961 index = 18 smallest_sw = 761, average sw =795.2,gene_size = 122 fault_coverage =0.999223
+run generation: 962 index = 18 smallest_sw = 761, average sw =794.6,gene_size = 122 fault_coverage =0.999223
+run generation: 963 index = 18 smallest_sw = 761, average sw =792.9,gene_size = 122 fault_coverage =0.999223
+run generation: 964 index = 4 smallest_sw = 755, average sw =791.5,gene_size = 122 fault_coverage =0.999223
+run generation: 965 index = 4 smallest_sw = 755, average sw =791.5,gene_size = 122 fault_coverage =0.999223
+run generation: 966 index = 4 smallest_sw = 755, average sw =791.4,gene_size = 122 fault_coverage =0.999223
+run generation: 967 index = 4 smallest_sw = 755, average sw =790.85,gene_size = 122 fault_coverage =0.999223
+run generation: 968 index = 4 smallest_sw = 755, average sw =789,gene_size = 122 fault_coverage =0.999223
+run generation: 969 index = 4 smallest_sw = 755, average sw =788.5,gene_size = 122 fault_coverage =0.999223
+run generation: 970 index = 4 smallest_sw = 755, average sw =787,gene_size = 122 fault_coverage =0.999223
+run generation: 971 index = 4 smallest_sw = 755, average sw =787,gene_size = 122 fault_coverage =0.999223
+run generation: 972 index = 4 smallest_sw = 755, average sw =786.65,gene_size = 122 fault_coverage =0.999223
+run generation: 973 index = 4 smallest_sw = 755, average sw =786.65,gene_size = 122 fault_coverage =0.999223
+run generation: 974 index = 4 smallest_sw = 755, average sw =786.15,gene_size = 122 fault_coverage =0.999223
+run generation: 975 index = 4 smallest_sw = 755, average sw =786.15,gene_size = 122 fault_coverage =0.999223
+run generation: 976 index = 4 smallest_sw = 755, average sw =785.55,gene_size = 122 fault_coverage =0.999223
+run generation: 977 index = 4 smallest_sw = 755, average sw =785,gene_size = 122 fault_coverage =0.999223
+run generation: 978 index = 4 smallest_sw = 755, average sw =783.2,gene_size = 122 fault_coverage =0.999223
+run generation: 979 index = 4 smallest_sw = 755, average sw =783.2,gene_size = 122 fault_coverage =0.999223
+run generation: 980 index = 4 smallest_sw = 755, average sw =782.7,gene_size = 122 fault_coverage =0.999223
+run generation: 981 index = 4 smallest_sw = 755, average sw =782.4,gene_size = 122 fault_coverage =0.999223
+run generation: 982 index = 4 smallest_sw = 755, average sw =781.8,gene_size = 122 fault_coverage =0.999223
+run generation: 983 index = 4 smallest_sw = 755, average sw =781.8,gene_size = 122 fault_coverage =0.999223
+run generation: 984 index = 4 smallest_sw = 755, average sw =781.65,gene_size = 122 fault_coverage =0.999223
+run generation: 985 index = 4 smallest_sw = 755, average sw =780.85,gene_size = 122 fault_coverage =0.999223
+run generation: 986 index = 4 smallest_sw = 755, average sw =780.85,gene_size = 122 fault_coverage =0.999223
+run generation: 987 index = 2 smallest_sw = 752, average sw =779.8,gene_size = 125 fault_coverage =0.999223
+run generation: 988 index = 2 smallest_sw = 752, average sw =779.2,gene_size = 125 fault_coverage =0.999223
+run generation: 989 index = 2 smallest_sw = 752, average sw =779.2,gene_size = 125 fault_coverage =0.999223
+run generation: 990 index = 2 smallest_sw = 752, average sw =779.2,gene_size = 125 fault_coverage =0.999223
+run generation: 991 index = 2 smallest_sw = 752, average sw =779.2,gene_size = 125 fault_coverage =0.999223
+run generation: 992 index = 2 smallest_sw = 752, average sw =778.75,gene_size = 125 fault_coverage =0.999223
+run generation: 993 index = 2 smallest_sw = 752, average sw =778.2,gene_size = 125 fault_coverage =0.999223
+run generation: 994 index = 2 smallest_sw = 752, average sw =778.2,gene_size = 125 fault_coverage =0.999223
+run generation: 995 index = 2 smallest_sw = 752, average sw =777.15,gene_size = 125 fault_coverage =0.999223
+run generation: 996 index = 2 smallest_sw = 752, average sw =777.15,gene_size = 125 fault_coverage =0.999223
+run generation: 997 index = 2 smallest_sw = 752, average sw =777,gene_size = 125 fault_coverage =0.999223
+run generation: 998 index = 2 smallest_sw = 752, average sw =776.9,gene_size = 125 fault_coverage =0.999223
+run generation: 999 index = 4 smallest_sw = 748, average sw =776.35,gene_size = 121 fault_coverage =0.999223
+final test vector =11110010001000 10000000110101 00100000011000 10001101111010 11000110111001 00000100010110 11110000000100 10111011011110 10000000100000 11101010000100 00100001011000 10000010000100 10001000010010 10000000010010 10110000010000 10000010110010 10100110011010 11110000010100 10110100010110 11101111001100 10001001011110 10000000000110 11001000101110 11011110110100 10100111110111 00000100010001 11001011001010 10001010101100 11100110011110 11000101011000 00000100111111 10100110111011 00110110101000 10110000010110 11000010010100 10110111001011 00100001010100 10110001011000 10000100110010 11110000111110 10010111000000 11110000011000 10001001111110 00000100111100 11110011000100 11011111000100 11000010000101 10100101100100 11001001111110 11111000000110 10000000001101 11101111101010 10110100000111 11101001100000 10000001001100 10011011101000 00001000110000 10011010101110 10000000110010 00000001011001 10001000111110 10000000111000 10011000100000 11101001100010 11000000111011 11111000100000 00100000000010 10000100011011 10100110111000 10001001111000 11010111001000 00101101000010 11001010111110 10001100111000 00101010000000 10011000010110 10100000010110 11101100111110 10101100001110 00000000001111 10111101000000 10000100001010 10010110011101 01111111011011 11010101101100 11110011100100 10000100110011 10010110000011 11000101011100 10000000010001 11101010011111 11110110011000 11001000111000 00000000100111 10000000101011 10011000100000 10011000100000 10001000000011 11000110110000 11001011111110 11001000011110 10000000111010 11101100011001 01001011000000 11111110001110 00000000010111 10110000010010 11000110010000 11000000100000 10000001111110 11001011100110 10000000001011 10001100000100 10000000100011 11000110000100 10000110110010 10011100010011 10000000011000 11010011001110 10110000110110 00101110110110 
+reordered sw = 294
+reordered fc = 0.999223
+sw before algorithm = 844
+initial test number = 183
+1 0 1 1 1 1 0 1 0 0 0 0 0 0  
+0 0 1 0 1 1 0 1 0 0 0 0 1 0  
+0 0 1 0 0 0 0 0 0 0 0 0 1 0  
+0 0 1 0 1 0 1 0 0 0 0 0 0 0  
+0 1 0 0 1 0 1 1 0 0 0 0 0 0  
+1 1 0 0 1 0 1 1 0 0 1 0 1 0  
+1 1 0 0 1 0 1 1 1 0 0 1 1 0  
+1 1 0 0 1 0 1 1 1 1 1 1 1 0  
+1 1 0 0 1 0 0 1 1 1 1 1 1 0  
+1 0 0 0 1 0 0 1 1 1 1 1 1 0  
+1 0 0 0 1 0 0 0 1 1 1 1 1 0  
+1 1 0 0 1 0 0 0 0 1 1 1 1 0  
+1 1 0 0 1 0 0 0 1 0 1 1 1 0  
+1 1 0 0 1 0 1 0 1 1 1 1 1 0  
+1 0 0 0 1 0 1 0 1 0 1 1 0 0  
+1 0 0 1 1 0 1 0 1 0 1 1 1 0  
+1 0 0 1 1 0 1 1 1 0 1 0 0 0  
+1 0 0 1 1 0 0 0 1 0 0 0 0 0  
+1 0 0 1 1 0 0 0 1 0 0 0 0 0  
+1 0 0 1 1 0 0 0 1 0 0 0 0 0  
+1 1 1 1 1 0 0 0 1 0 0 0 0 0  
+1 1 1 0 1 0 0 1 1 0 0 0 0 0  
+1 1 1 0 1 0 0 1 1 0 0 0 1 0  
+1 1 1 0 1 1 1 1 1 0 1 0 1 0  
+1 1 1 0 1 1 1 1 0 0 1 1 0 0  
+1 1 0 1 1 1 1 1 0 0 0 1 0 0  
+1 1 0 1 1 1 1 0 1 1 0 1 0 0  
+1 1 0 0 0 1 1 0 1 1 0 0 0 0  
+1 1 0 0 0 1 1 0 0 1 0 0 0 0  
+1 1 0 0 0 1 1 0 0 0 0 1 0 0  
+1 1 0 0 0 0 1 0 0 0 0 1 0 1  
+1 1 0 0 0 0 1 0 0 1 0 1 0 0  
+1 0 0 0 0 0 1 0 0 0 0 1 0 0  
+1 0 0 0 0 0 0 0 0 0 0 1 1 0  
+1 0 1 0 0 0 0 0 0 1 0 1 1 0  
+1 0 1 1 0 0 0 0 0 1 0 1 1 0  
+1 0 1 1 0 0 0 0 1 1 0 1 1 0  
+1 1 1 1 0 0 0 0 1 1 1 1 1 0  
+1 1 1 1 0 0 0 0 0 1 1 0 0 0  
+1 0 1 1 0 0 0 1 0 1 1 0 0 0  
+0 0 1 0 0 0 0 1 0 1 1 0 0 0  
+0 0 1 0 0 0 0 0 0 1 1 0 0 0  
+1 0 0 0 0 0 0 0 0 1 1 0 0 0  
+1 0 0 0 0 0 0 0 1 1 1 0 0 0  
+1 0 0 0 0 0 0 0 1 1 1 0 1 0  
+1 0 0 0 0 0 0 0 1 1 0 0 1 0  
+1 0 0 0 0 0 1 0 1 1 0 0 1 0  
+1 0 0 0 0 1 1 0 1 1 0 0 1 0  
+1 0 0 0 0 1 0 0 1 1 0 0 1 0  
+1 0 0 0 0 1 0 0 1 1 0 0 1 1  
+1 0 0 0 0 1 0 0 0 1 1 0 1 1  
+1 0 0 0 0 0 0 0 0 0 1 0 1 1  
+1 0 0 0 0 0 0 0 1 0 1 0 1 1  
+1 0 0 0 0 0 0 0 1 0 0 0 1 1  
+1 0 0 0 1 0 0 0 0 0 0 0 1 1  
+1 0 0 0 1 0 0 0 0 1 0 0 1 0  
+1 0 0 0 0 0 0 0 0 1 0 0 1 0  
+1 0 1 1 0 0 0 0 0 1 0 0 1 0  
+1 0 1 1 0 0 0 0 0 1 0 0 0 0  
+1 1 1 1 0 0 0 0 0 1 0 1 0 0  
+1 1 1 1 0 0 0 0 0 0 0 1 0 0  
+1 1 1 1 1 0 0 0 0 0 0 1 1 0  
+1 1 1 1 1 1 1 0 0 0 1 1 1 0  
+1 1 1 0 0 1 1 0 0 1 1 1 1 0  
+1 0 1 0 0 1 1 0 0 1 1 0 1 0  
+1 0 1 0 0 1 1 0 1 1 1 0 1 1  
+1 0 1 0 0 1 1 0 1 1 1 0 0 0  
+0 0 1 1 0 1 1 0 1 0 1 0 0 0  
+1 1 1 1 0 1 1 0 0 1 1 0 0 0  
+1 1 1 1 0 0 1 0 0 0 1 0 0 0  
+1 1 1 1 0 0 1 1 0 0 0 1 0 0  
+1 1 1 1 0 0 1 1 1 0 0 1 0 0  
+1 0 1 0 0 1 0 1 1 0 0 1 0 0  
+1 0 1 0 0 1 1 1 1 1 0 1 1 1  
+0 0 1 0 1 1 1 0 1 1 0 1 1 0  
+1 1 1 0 1 1 0 0 1 1 1 1 1 0  
+1 0 1 0 1 1 0 0 0 0 1 1 1 0  
+1 0 0 0 0 1 0 0 0 0 1 0 1 0  
+1 0 0 1 0 1 1 0 0 0 0 0 1 1  
+1 0 1 1 0 1 0 0 0 0 0 1 1 1  
+1 0 1 1 0 1 0 0 0 1 0 1 1 0  
+0 0 0 0 0 1 0 0 0 1 0 1 1 0  
+0 0 0 0 0 0 0 0 0 1 0 1 1 1  
+0 0 0 0 0 0 0 0 1 0 0 1 1 1  
+0 0 0 0 0 0 0 0 0 0 1 1 1 1  
+1 0 0 0 0 0 0 0 0 0 1 1 0 1  
+1 0 0 0 0 0 0 1 0 0 1 1 0 0  
+1 0 0 0 0 0 0 1 1 1 1 1 1 0  
+1 0 0 0 1 0 0 1 0 1 1 1 1 0  
+1 0 0 1 1 0 0 0 0 1 0 1 1 0  
+1 0 0 1 1 1 0 0 0 1 0 0 1 1  
+0 0 0 0 0 1 0 0 0 1 0 0 0 1  
+1 0 0 0 0 0 0 0 0 1 0 0 0 1  
+1 0 0 0 0 0 0 0 1 1 0 1 0 1  
+1 0 0 0 0 0 0 0 1 0 0 0 0 0  
+1 1 0 0 0 0 0 0 1 0 0 0 0 0  
+1 1 0 0 1 0 0 0 1 1 1 0 0 0  
+1 0 0 0 1 1 0 0 1 1 1 0 0 0  
+1 0 0 0 1 0 0 1 1 1 1 0 0 0  
+1 0 0 0 1 1 0 1 1 1 1 0 1 0  
+1 1 0 0 0 1 0 1 0 1 1 0 0 0  
+1 1 0 0 0 1 0 1 0 1 1 1 0 0  
+1 1 0 1 0 1 0 1 1 0 1 1 0 0  
+1 1 0 1 0 1 1 1 0 0 1 0 0 0  
+1 0 0 1 0 1 1 1 0 0 0 0 0 0  
+1 0 1 1 0 1 1 1 0 0 1 0 1 1  
+0 1 1 1 1 1 1 1 0 1 1 0 1 1  
+1 1 1 0 1 1 0 0 0 1 1 0 0 1  
+1 1 0 0 0 1 1 0 1 1 1 0 0 1  
+1 1 0 0 0 0 0 0 1 1 1 0 1 1  
+0 0 0 0 0 1 0 0 1 1 1 1 1 1  
+0 0 0 0 0 1 0 0 1 1 1 1 0 0  
+0 0 0 0 1 0 0 0 1 1 0 0 0 0  
+0 0 1 0 0 0 0 1 0 1 0 1 0 0  
+0 0 0 0 0 0 0 1 0 1 1 0 0 1  
+1 0 0 1 0 1 1 0 0 1 1 1 0 1  
+1 1 0 1 0 0 1 1 0 0 1 1 1 0  
+1 0 1 1 1 0 1 1 0 1 1 1 1 0  
+1 1 1 0 1 0 1 0 0 1 1 1 1 1  
+1 1 1 0 1 0 1 0 0 0 0 1 0 0  
+1 0 0 0 1 1 0 0 0 0 0 1 0 0  
+Total_sw_after = 66720 ,Total_sw_before = 101192

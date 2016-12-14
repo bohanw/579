@@ -34,6 +34,8 @@ extern void Interactive();
 
 GetLongOpt option;
 
+int post_process = 0;
+
 
 
 int SetupOption(int argc, char ** argv)
@@ -158,6 +160,7 @@ int main(int argc, char ** argv)
 
             int xfilling_ratio = Redun_PIvector.size()/PIvector.size();
 
+
             //Circuit.printParameters();
             //int count = Circuit.CalSwitchActivity(PIvector);
             //cout<<"count = "<<count<<endl;
@@ -165,7 +168,7 @@ int main(int argc, char ** argv)
             //vector<vector<char> >& reorderedPI = Circuit.reorder(PIvector);
             //Circuit.printPI(reorderedPI);
 
-            
+if(post_process ==  0){            
 // genetic algorithm - first phase
 //******************************************************************************
 
@@ -175,8 +178,8 @@ int main(int argc, char ** argv)
             // the number of gene each individual has is gaussian random distribution N ~ (X/2, X/4)
             // gene is selected randomly from the gene pool and assigned to each individual
 
-            string phase1_evolution = "result_s344_opt_phase1_evolution";
-            string phase2_evolution = "result_s344_opt_phase2_evolution";
+            string phase1_evolution = "result_s298_opt_100indiv_phase1_evolution";
+            string phase2_evolution = "result_s298_opt_100indivphase2_evolution";
             srand(time(NULL));
             cout.precision(5);
             int pop_size = POPSIZE;
@@ -441,6 +444,26 @@ int main(int argc, char ** argv)
     cout <<"Total_sw_after = "<<Total_sw_after << " ,Total_sw_before = " << Total_sw_before << endl;
     OutputStrm2 <<"Total_sw_after = "<<Total_sw_after << " ,Total_sw_before = " << Total_sw_before << endl;
     OutputStrm2.close();
+}
+
+    if(post_process == 1){
+        cout << "gold_faultCoverage = "<< gold_faultCoverage << endl;
+        int ini_pi_sw = Circuit.CalSwitchActivity(PIvector);
+        int Total_sw_before = Circuit.ComputeTotalsw(PIvector);
+
+        vector<vector<char> > post_vector = readfile();
+        vector<vector<char> > post_after_reorder = Circuit.reorder(post_vector);
+
+        int final_pi_sw = Circuit.CalSwitchActivity(post_after_reorder);
+        int Total_sw_final = Circuit.ComputeTotalsw(post_after_reorder);
+
+        cout << "ini_pi_sw = "<<ini_pi_sw<<endl;
+        cout << "ini test size = " << PIvector.size()<<endl;
+        cout << "Total_sw_before = "<<Total_sw_before << endl;
+        cout <<"................"<<endl;
+        cout << "final_pi_sw = "<< final_pi_sw << endl;
+        cout << "Total_sw_final = "<< Total_sw_final << endl;
+}
 
 // output file
             // ofstream OutputStrm;
